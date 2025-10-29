@@ -15,113 +15,62 @@
     'parent' => 0,
     'isfolder' => 0,
     'introtext' => '',
-    'content' => '
-    
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-		  <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-			<div class="col-md-9 ftco-animate pb-5">
-				<p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cars <i class="ion-ios-arrow-forward"></i></span></p>
-			  <h1 class="mb-3 bread">Choose Your Car</h1>
-			</div>
-		  </div>
-		</div>
-	  </section>
-		  
-  
-		  <section class="ftco-section bg-light">
-		  <div class="container">
-			  <div class="row">
-				  <div class="col-md-4">
-					  <div class="car-wrap rounded ftco-animate">
-						  <div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/3.jpg);">
-						  </div>
-						  <div class="text">
-							  <h2 class="mb-0" style="color: #102c4e !important;">Mini Cars</h2>
-							  <div class="d-flex mb-3">
-								  <span class="cat">Suzuki WagonR or Similar</span>
-								  <p class="price ml-auto">$ 45 <span>/day</span></p>
-							  </div>
-							  <p class="d-flex mb-0 d-block"><a href="[[~4]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~4]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						  </div>
-					  </div>
-				  </div>
-				  <div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/1.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Compact Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Toyota Vitz or Similar</span>
-								<p class="price ml-auto">$ 55 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="[[~5]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~5]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/6.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Standard Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Honda Grace or Similar</span>
-								<p class="price ml-auto">$ 85 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="[[~6]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~6]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/4.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Premium Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Honda Civic or Similar</span>
-								<p class="price ml-auto">$ 100 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="[[~7]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~7]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/5.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Sport Utility Vehicle</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Toyota C-HR or Similar</span>
-								<p class="price ml-auto">$ 110 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="[[~8]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~8]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/2.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Luxury Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Mercedez Benz or Similar</span>
-								<p class="price ml-auto">$ 210 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="[[~9]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~9]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-  
-			  </div>
-		
-		  </div>
-	  </section>',
+    'content' => '<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Cars <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Choose Your Car</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row">
+
+      <?php
+      // Connect to DB
+      include \'assets\\includes\\db_connect.php\'; // file with your DB connection
+
+      $query = "SELECT * FROM vehicles";
+      $result = mysqli_query($conn, $query);
+
+      while ($row = mysqli_fetch_assoc($result)) {
+          $id = $row[\'id\'];
+          $name = $row[\'name\'];
+          $price = $row[\'price_per_day\'];
+          $description = $row[\'description\'];
+          $image = $row[\'image\'];
+      ?>
+          <div class="col-md-4">
+              <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end" style="background-image: url(\'<?php echo $image; ?>\');">
+                  </div>
+                  <div class="text">
+                      <h2 class="mb-0" style="color: #102c4e !important;"><?php echo $name; ?></h2>
+                      <div class="d-flex mb-3">
+                          <span class="cat"><?php echo $description; ?></span>
+                          <p class="price ml-auto">$ <?php echo number_format($price, 2); ?> <span>/day</span></p>
+                      </div>
+                      <p class="d-flex mb-0 d-block">
+                          <a href="book.php?id=<?php echo $id; ?>" class="btn btn-primary py-2 mr-1">Book now</a>
+                          <a href="details.php?id=<?php echo $id; ?>" class="btn btn-secondary py-2 ml-1">Details</a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      <?php } ?>
+
+    </div>
+  </div>
+</section>
+',
     'richtext' => 1,
     'template' => 2,
     'menuindex' => 1,
@@ -129,8 +78,8 @@
     'cacheable' => 1,
     'createdby' => 1,
     'createdon' => 1756714223,
-    'editedby' => 1,
-    'editedon' => 1756718566,
+    'editedby' => 2,
+    'editedon' => 1761714360,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -210,113 +159,62 @@
 	    </div>
 	  </nav>
 
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Cars <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Choose Your Car</h1>
+      </div>
+    </div>
+  </div>
+</section>
 
-    
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-		  <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-			<div class="col-md-9 ftco-animate pb-5">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cars <i class="ion-ios-arrow-forward"></i></span></p>
-			  <h1 class="mb-3 bread">Choose Your Car</h1>
-			</div>
-		  </div>
-		</div>
-	  </section>
-		  
-  
-		  <section class="ftco-section bg-light">
-		  <div class="container">
-			  <div class="row">
-				  <div class="col-md-4">
-					  <div class="car-wrap rounded ftco-animate">
-						  <div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/3.jpg);">
-						  </div>
-						  <div class="text">
-							  <h2 class="mb-0" style="color: #102c4e !important;">Mini Cars</h2>
-							  <div class="d-flex mb-3">
-								  <span class="cat">Suzuki WagonR or Similar</span>
-								  <p class="price ml-auto">$ 45 <span>/day</span></p>
-							  </div>
-							  <p class="d-flex mb-0 d-block"><a href="index.php?id=4" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=4" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						  </div>
-					  </div>
-				  </div>
-				  <div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/1.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Compact Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Toyota Vitz or Similar</span>
-								<p class="price ml-auto">$ 55 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="index.php?id=5" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=5" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/6.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Standard Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Honda Grace or Similar</span>
-								<p class="price ml-auto">$ 85 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="index.php?id=6" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=6" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/4.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Premium Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Honda Civic or Similar</span>
-								<p class="price ml-auto">$ 100 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="index.php?id=7" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=7" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/5.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Sport Utility Vehicle</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Toyota C-HR or Similar</span>
-								<p class="price ml-auto">$ 110 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="index.php?id=8" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=8" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="car-wrap rounded ftco-animate">
-						<div class="img rounded d-flex align-items-end" style="background-image: url(assets/images/fleet/2.jpg);">
-						</div>
-						<div class="text">
-							<h2 class="mb-0" style="color: #102c4e !important;">Luxury Cars</h2>
-							<div class="d-flex mb-3">
-								<span class="cat">Mercedez Benz or Similar</span>
-								<p class="price ml-auto">$ 210 <span>/day</span></p>
-							</div>
-							<p class="d-flex mb-0 d-block"><a href="index.php?id=9" class="btn btn-primary py-2 mr-1">Book now</a> <a href="index.php?id=9" class="btn btn-secondary py-2 ml-1">Details</a></p>
-						</div>
-					</div>
-				</div>
-  
-			  </div>
-		
-		  </div>
-	  </section>
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row">
+
+      <?php
+      // Connect to DB
+      include \'assets\\includes\\db_connect.php\'; // file with your DB connection
+
+      $query = "SELECT * FROM vehicles";
+      $result = mysqli_query($conn, $query);
+
+      while ($row = mysqli_fetch_assoc($result)) {
+          $id = $row[\'id\'];
+          $name = $row[\'name\'];
+          $price = $row[\'price_per_day\'];
+          $description = $row[\'description\'];
+          $image = $row[\'image\'];
+      ?>
+          <div class="col-md-4">
+              <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end" style="background-image: url(\'<?php echo $image; ?>\');">
+                  </div>
+                  <div class="text">
+                      <h2 class="mb-0" style="color: #102c4e !important;"><?php echo $name; ?></h2>
+                      <div class="d-flex mb-3">
+                          <span class="cat"><?php echo $description; ?></span>
+                          <p class="price ml-auto">$ <?php echo number_format($price, 2); ?> <span>/day</span></p>
+                      </div>
+                      <p class="d-flex mb-0 d-block">
+                          <a href="book.php?id=<?php echo $id; ?>" class="btn btn-primary py-2 mr-1">Book now</a>
+                          <a href="details.php?id=<?php echo $id; ?>" class="btn btn-secondary py-2 ml-1">Details</a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      <?php } ?>
+
+    </div>
+  </div>
+</section>
+
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
 	<div class="container">
@@ -489,12 +387,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 	      </div>
 	    </div>
 	  </nav>',
-    '[[~4]]' => 'index.php?id=4',
-    '[[~5]]' => 'index.php?id=5',
-    '[[~6]]' => 'index.php?id=6',
-    '[[~7]]' => 'index.php?id=7',
-    '[[~8]]' => 'index.php?id=8',
-    '[[~9]]' => 'index.php?id=9',
     '[[$footer?]]' => '
 <footer class="ftco-footer ftco-bg-dark ftco-section">
 	<div class="container">
