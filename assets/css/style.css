@@ -8999,7 +8999,7 @@ h1, h2, h3, h4, h5,
   border: 1px solid #102C4E !important;
   margin: 0 auto;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 20px; }
+}
   .services .icon span {
     font-size: 60px;
     color: #d09c00; }
@@ -9093,7 +9093,7 @@ h1, h2, h3, h4, h5,
   height: 52px !important;
   background: #fff !important;
   color: #000000 !important;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
