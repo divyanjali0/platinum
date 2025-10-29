@@ -1,0 +1,4 @@
+[28-Oct-2025 06:44:05 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/platinu5/public_html/manager/controllers/default/header.php:349
+Stack trace:
+#0 {main}
+  thrown in /home/platinu5/public_html/manager/controllers/default/header.php on line 349
