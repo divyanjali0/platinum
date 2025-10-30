@@ -1,0 +1,213 @@
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\mysql\modContext.php : 205) [modContext_mysql] Encountered error loading resources for cache map generation: HY000 // Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797348, '')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:09:54] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-10-30 05:09:54] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, 'modx.user.contextTokens|a:1:{s:3:\"mgr\";i:2;}manager_language|s:2:\"en\";modx.user.0.resourceGroups|a:1:{s:3:\"mgr\";a:0:{}}modx.user.0.attributes|a:1:{s:3:\"mgr\";a:5:{s:32:\"MODX\\Revolution\\modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";i:0;s:6:\"policy\";a:1:{s:4:\"load\";b:1;}}}}s:38:\"MODX\\Revolution\\modAccessResourceGroup\";a:0:{}s:33:\"MODX\\Revolution\\modAccessCategory\";a:0:{}s:44:\"MODX\\Revolution\\Sources\\modAccessMediaSource\";a:0:{}s:34:\"MODX\\Revolution\\modAccessNamespace\";a:0:{}}}modx.mgr.user.token|s:52:\"modx68b540e6de8ad9.76783708_26902e46edd9d30.71462960\";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, '')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, '')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+

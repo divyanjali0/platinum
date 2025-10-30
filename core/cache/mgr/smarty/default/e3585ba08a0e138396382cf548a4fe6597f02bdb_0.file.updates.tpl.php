@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.5, created on 2025-10-29 05:48:59
+/* Smarty version 4.5.5, created on 2025-10-30 05:15:36
   from 'C:\xampp\htdocs\platinum\manager\templates\default\dashboard\updates.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.5',
-  'unifunc' => 'content_69019cbbab0447_96220202',
+  'unifunc' => 'content_6902e66831c992_73609192',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_69019cbbab0447_96220202 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6902e66831c992_73609192 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="modx-grid-updates" class="updates-widget">
     <div class="table-wrapper">
         <table class="table">

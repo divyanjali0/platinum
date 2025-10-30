@@ -28,6 +28,30 @@ try {
     return "<p>?? Error loading car details: " . htmlspecialchars($e->getMessage()) . "</p>";
 }
 
+// Fetch add-ons from DB
+$addons_html = '<div class="row" id="addons_section" style="margin-top:15px; display:none;"><div class="col-12"><h6 style="font-weight:600;">Available Add-ons</h6><div class="form-row">';
+try {
+    $stmt = $conn->prepare("SELECT id, name, price_per_day FROM addons ORDER BY name ASC");
+    $stmt->execute();
+    $addons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($addons) {
+        foreach ($addons as $addon) {
+            $addons_html .= '<div class="form-group col-md-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="addon_' . $addon['id'] . '" name="addons[]" value="' . $addon['id'] . '">
+                    <label class="form-check-label" for="addon_' . $addon['id'] . '">' . htmlspecialchars($addon['name']) . ' (<strong>$' . number_format($addon['price_per_day'], 2) . '</strong>/day)</label>
+                </div>
+            </div>';
+        }
+    } else {
+        $addons_html .= '<p>No add-ons available.</p>';
+    }
+} catch (PDOException $e) {
+    $addons_html .= '<p>?? Error loading add-ons.</p>';
+}
+$addons_html .= '</div></div></div>';
+
 // Build output using heredoc
 $output = <<<HTML
 <!-- Hero Section -->
@@ -45,12 +69,11 @@ $output = <<<HTML
 
 <section class="ftco-section ftco-car-details">
     <div class="container">
+        <!-- Car Info Section -->
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="car-details text-center">
-                    <h2>{$car_name}</h2>
-                    <span class="subheading">{$car_description}</span>
-                </div>
+            <div class="col-md-12 text-center">
+                <h2>{$car_name}</h2>
+                <span class="subheading">{$car_description}</span>
             </div>
         </div>
 
@@ -61,9 +84,7 @@ $output = <<<HTML
                     <div class="media-body py-md-4">
                         <div class="d-flex mb-3 align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
-                            <div class="text">
-                                <h3 class="heading mb-0 pl-3">Seats <span>{$seats} Adults</span></h3>
-                            </div>
+                            <div class="text"><h3 class="heading mb-0 pl-3">Seats <span>{$seats} Adults</span></h3></div>
                         </div>
                     </div>
                 </div>
@@ -75,9 +96,7 @@ $output = <<<HTML
                     <div class="media-body py-md-4">
                         <div class="d-flex mb-3 align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-backpack"></span></div>
-                            <div class="text">
-                                <h3 class="heading mb-0 pl-3">Luggage <span>{$luggages} Bags</span></h3>
-                            </div>
+                            <div class="text"><h3 class="heading mb-0 pl-3">Luggage <span>{$luggages} Bags</span></h3></div>
                         </div>
                     </div>
                 </div>
@@ -89,9 +108,7 @@ $output = <<<HTML
                     <div class="media-body py-md-4">
                         <div class="d-flex mb-3 align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
-                            <div class="text">
-                                <h3 class="heading mb-0 pl-3">Transmission <span>Automatic</span></h3>
-                            </div>
+                            <div class="text"><h3 class="heading mb-0 pl-3">Transmission <span>Automatic</span></h3></div>
                         </div>
                     </div>
                 </div>
@@ -103,84 +120,24 @@ $output = <<<HTML
                     <div class="media-body py-md-4">
                         <div class="d-flex mb-3 align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
-                            <div class="text">
-                                <h3 class="heading mb-0 pl-3">Fuel <span>Petrol</span></h3>
-                            </div>
+                            <div class="text"><h3 class="heading mb-0 pl-3">Fuel <span>Petrol</span></h3></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Features & Description Tabs -->
-        <div class="row">
-            <div class="col-md-12 pills">
-                <div class="bd-example bd-example-tabs">
-                    <div class="d-flex justify-content-center">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Description</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <ul class="features">
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Airconditions</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Child Seat</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Luggage</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Music</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <ul class="features">
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Seat Belt</li>
-                                        <li class="remove"><span class="ion-ios-close"></span>Sleeping Bed</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Water</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
-                                        <li class="remove"><span class="ion-ios-close"></span>Onboard computer</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <ul class="features">
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Audio input</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Car Kit</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Remote central locking</li>
-                                        <li class="check"><span class="ion-ios-checkmark"></span>Climate control</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
-                            <p style="text-align: justify;">Compact cars are the perfect choice for city driving, offering a compact size that makes navigating through narrow streets and tight parking spaces much easier. With their fuel efficiency, they are also an economical option for both short trips and longer journeys. The Toyota Vitz, for example, is known for its practicality, comfort, and affordable pricing, making it a popular choice among urban drivers.</p>
-                            <p style="text-align: justify;">These cars are ideal for those who prioritize convenience without compromising on performance. Whether you're driving through bustling city streets or taking a weekend getaway, compact cars like the Toyota Vitz offer a smooth, enjoyable driving experience. With features like spacious interiors, advanced safety systems, and efficient engines, they deliver both reliability and comfort in a compact package.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
 
         <!-- Booking Form -->
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-12">
                 <div class="contact-form">
-                    <h2 class="text-center mb-4" style="font-weight: 600;">Schedule Your Ride</h2>
+                    <h2 class="text-center mb-4">Schedule Your Ride</h2>
                     <form action="connection.php" method="POST">
                         <input type="hidden" name="car_id" value="{$car_id}">
 
                         <div class="row">
-                            <!-- Left column: Pickup/Drop-off -->
+                            <!-- Left Column: Pickup/Drop-off -->
                             <div class="col-md-6">
-                                <!-- Pickup Row -->
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="pickup_location">Pickup Location</label>
@@ -192,7 +149,6 @@ $output = <<<HTML
                                     </div>
                                 </div>
 
-                                <!-- Drop-off Row -->
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="dropoff_location">Drop-off Location</label>
@@ -205,7 +161,7 @@ $output = <<<HTML
                                 </div>
                             </div>
 
-                            <!-- Right column: Customer Info -->
+                            <!-- Right Column: Customer Info -->
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
@@ -238,13 +194,128 @@ $output = <<<HTML
                             </div>
                         </div>
 
+                        <hr style="border-top: 1px solid rgb(0 0 0);">
+
+                        {$addons_html}
+
+                        <!-- Rent a Car & Airport Transfer fields -->
+                        <div class="row">
+                            <!-- Rent a Car fields -->
+                            <div class="col-12" id="rent_car_fields" style="display:none; margin-top:6px;">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="mileage">Mileage Preference</label>
+                                        <select class="form-control" id="mileage" name="mileage">
+                                            <option value="" disabled selected>Select mileage</option>
+                                            <option value="100km">100 km</option>
+                                            <option value="200km">200 km</option>
+                                            <option value="unlimited">Unlimited</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="car_passengers">Number of Passengers</label>
+                                        <input type="number" class="form-control" id="car_passengers" name="car_passengers" placeholder="Enter number of passengers">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="chauffeur">Do you need a chauffeur?</label>
+                                        <select class="form-control" id="chauffeur" name="chauffeur">
+                                            <option value="" disabled selected>Select an option</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="drivers_license">Do you need a driver’s license?</label>
+                                        <select class="form-control" id="drivers_license" name="drivers_license">
+                                            <option value="" disabled selected>Select an option</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Conditional fields if driver’s license yes -->
+                                <div id="license_fields" style="display:none;">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="passport">Passport</label>
+                                            <input type="file" class="form-control" id="passport" name="passport">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="idp">International Driving Permit (IDP)</label>
+                                            <input type="file" class="form-control" id="idp" name="idp">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="photo_applicant">Photo of Applicant</label>
+                                            <input type="file" class="form-control" id="photo_applicant" name="photo_applicant">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="other_requirements">Other Requirements</label>
+                                    <input type="text" class="form-control" id="other_requirements" name="other_requirements">
+                                </div>
+                            </div>
+
+                            <!-- Airport Transfer fields -->
+                            <div class="col-12" id="airport_transfer_fields" style="display:none; margin-top:6px;">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="transfer_passengers">Number of Passengers</label>
+                                        <input type="number" class="form-control" id="transfer_passengers" name="transfer_passengers" placeholder="Enter number of passengers">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="flight_number">Flight Number</label>
+                                        <input type="text" class="form-control" id="flight_number" name="flight_number" placeholder="Enter Flight Number">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="transfer_other">Other Requirements</label>
+                                        <input type="text" class="form-control" id="transfer_other" name="transfer_other">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
 
+        <script>
+            const serviceType = document.getElementById('service_type');
+            const rentCarFields = document.getElementById('rent_car_fields');
+            const airportFields = document.getElementById('airport_transfer_fields');
+            const addonsSection = document.getElementById('addons_section');
+            const driversLicense = document.getElementById('drivers_license');
+            const licenseFields = document.getElementById('license_fields');
 
+            serviceType.addEventListener('change', function() {
+                if (this.value === 'rent_car') {
+                    rentCarFields.style.display = 'block';
+                    airportFields.style.display = 'none';
+                    addonsSection.style.display = 'block'; // show add-ons
+                } else if (this.value === 'airport_transfer') {
+                    rentCarFields.style.display = 'none';
+                    airportFields.style.display = 'block';
+                    addonsSection.style.display = 'block'; // hide add-ons
+                } else {
+                    rentCarFields.style.display = 'none';
+                    airportFields.style.display = 'none';
+                    addonsSection.style.display = 'none'; // hide add-ons
+                }
+            });
+
+            if(driversLicense) {
+                driversLicense.addEventListener('change', function() {
+                    licenseFields.style.display = (this.value === 'yes') ? 'block' : 'none';
+                });
+            }
+        </script>
     </div>
 </section>
 HTML;
