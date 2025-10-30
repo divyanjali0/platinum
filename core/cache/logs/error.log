@@ -212,3 +212,5 @@ Array
 )
 
 [2025-10-30 06:48:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 76) PHP warning: Undefined array key "reservation"
+[2025-10-30 11:09:44] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 154) PHP warning: Undefined variable $price_per_day
+[2025-10-30 11:10:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 21) PHP warning: Undefined array key "price_per_day"
