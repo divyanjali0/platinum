@@ -211,3 +211,4 @@ Array
     [2] => MySQL server has gone away
 )
 
+[2025-10-30 06:48:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 76) PHP warning: Undefined array key "reservation"
