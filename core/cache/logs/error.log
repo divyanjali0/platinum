@@ -214,3 +214,19 @@ Array
 [2025-10-30 06:48:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 76) PHP warning: Undefined array key "reservation"
 [2025-10-30 11:09:44] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 154) PHP warning: Undefined variable $price_per_day
 [2025-10-30 11:10:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 21) PHP warning: Undefined array key "price_per_day"
+[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
+[2025-10-30 18:00:18] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
+[2025-10-30 18:00:18] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
+[2025-10-30 18:02:19] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
+[2025-10-30 18:02:19] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 187) PHP warning: Undefined variable $pickup
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 192) PHP warning: Undefined variable $dropoff
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 197) PHP warning: Undefined variable $pickup_date
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 202) PHP warning: Undefined variable $pickup_time
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 207) PHP warning: Undefined variable $dropoff_date
+[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 212) PHP warning: Undefined variable $dropoff_time

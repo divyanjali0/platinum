@@ -1,5 +1,35 @@
 <?php
-// Include DB connection
+
+// Get trip data from session (if available)
+$pickup = $_SESSION['booking']['pickup_location'] ?? '';
+$dropoff = $_SESSION['booking']['dropoff_location'] ?? '';
+$pickup_date = $_SESSION['booking']['pickup_date'] ?? '';
+$pickup_time = $_SESSION['booking']['pickup_time'] ?? '';
+$dropoff_date = $_SESSION['booking']['dropoff_date'] ?? '';
+$dropoff_time = $_SESSION['booking']['dropoff_time'] ?? '';
+
+// ✅ Normalize formats for HTML5 inputs
+if (!empty($pickup_date)) {
+    $timestamp = strtotime($pickup_date);
+    if ($timestamp) $pickup_date = date('Y-m-d', $timestamp);
+}
+
+if (!empty($dropoff_date)) {
+    $timestamp = strtotime($dropoff_date);
+    if ($timestamp) $dropoff_date = date('Y-m-d', $timestamp);
+}
+
+if (!empty($pickup_time)) {
+    $timestamp = strtotime($pickup_time);
+    if ($timestamp) $pickup_time = date('H:i', $timestamp);
+}
+
+if (!empty($dropoff_time)) {
+    $timestamp = strtotime($dropoff_time);
+    if ($timestamp) $dropoff_time = date('H:i', $timestamp);
+}
+
+
 include_once MODX_BASE_PATH . 'assets/includes/db_connect.php';
 
 // Get car ID from URL
@@ -38,10 +68,21 @@ try {
 
     if ($addons) {
         foreach ($addons as $addon) {
-            $addons_html .= '<div class="form-group col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="addon_' . $addon['id'] . '" name="addons[]" value="' . $addon['id'] . '">
-                    <label class="form-check-label" for="addon_' . $addon['id'] . '">' . htmlspecialchars($addon['name']) . ' (<strong>$' . number_format($addon['price_per_day'], 2) . '</strong>/day)</label>
+            $addons_html .= '
+            <div class="form-group col-md-6">
+                <div class="form-check d-flex align-items-center justify-content-around">
+                    <div>
+                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_' . $addon['id'] . '" name="addons[]" value="' . $addon['id'] . '">
+                        <label class="form-check-label" for="addon_' . $addon['id'] . '">'
+                            . htmlspecialchars($addon['name']) . 
+                            ' (<strong>$' . number_format($addon['price_per_day'], 2) . '</strong>/day)
+                        </label>
+                    </div>
+                    <select class="form-control form-control-sm addon-qty" name="addon_qty[' . $addon['id'] . ']" id="addon_qty_' . $addon['id'] . '" style="width:70px;" disabled>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                 </div>
             </div>';
         }
@@ -65,7 +106,7 @@ $output = <<<HTML
                     <span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span>
                     <span>Car Details <i class="ion-ios-arrow-forward"></i></span>
                 </p>
-                <h1 class="mb-3 bread" style="font-size: large;">{$car_name}</h1>
+                <h1 class="bread" style="font-size: large;">{$car_name}</h1>
             </div>
         </div>
     </div>
@@ -158,6 +199,22 @@ $output = <<<HTML
             font-weight: 600;
             text-decoration: none;
         }
+
+        .price-summary {
+            border-radius: 8px;
+            padding: 12px 15px;
+            background-color: #f8f9fa;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .price-summary h6 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .price-summary p {
+            margin-bottom: 5px;
+        }
+
         </style>
 
         <div class="row">
@@ -168,26 +225,53 @@ $output = <<<HTML
                     <form>
                         <div class="form-group">
                             <label for="pickup_location">Pickup Location</label>
-                            <input type="text" class="form-control" id="pickup_location" placeholder="Enter pickup location">
+                            <input type="text" class="form-control" id="pickup_location" 
+                                value="{$pickup}" placeholder="Enter pickup location">
                         </div>
                         <div class="form-group">
                             <label for="dropoff_location">Drop-off Location</label>
-                            <input type="text" class="form-control" id="dropoff_location" placeholder="Enter drop-off location">
+                            <input type="text" class="form-control" id="dropoff_location" 
+                                value="{$dropoff}" placeholder="Enter drop-off location">
                         </div>
                         <div class="form-group">
                             <label for="pickup_date">Pickup Date</label>
-                            <input type="date" class="form-control" id="pickup_date">
+                            <input type="date" class="form-control" id="pickup_date" 
+                                value="{$pickup_date}">
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup_time">Pickup Time</label>
+                            <input type="time" class="form-control" id="pickup_time" 
+                                value="{$pickup_time}">
                         </div>
                         <div class="form-group">
                             <label for="dropoff_date">Drop-off Date</label>
-                            <input type="date" class="form-control" id="dropoff_date">
+                            <input type="date" class="form-control" id="dropoff_date" 
+                                value="{$dropoff_date}">
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoff_time">Drop-off Time</label>
+                            <input type="time" class="form-control" id="dropoff_time" 
+                                value="{$dropoff_time}">
+                        </div>
+
+                        <!-- Trip summary -->
+                        <div class="form-group mt-3">
+                            <label><strong>Number of Trip Days:</strong></label>
+                            <p id="trip_days">-</p>
                         </div>
                     </form>
                 </div>
 
+                <div class="price-summary mt-3">
+                    <h6>Trip Summary</h6>
+                    <hr class="my-2">
+                    <p><strong>Price per Day:</strong> $ {$price_per_day}</p>
+                    <p><strong>Estimated Total:</strong> <span id="trip_total">–</span></p>
+                </div>
+
                 <div class="help-box">
-                    <h6>Help Center!</h6>
-                    <p><a href="[[~13]]">Frequently Asked Questions</a></p>
+                    <h6 style="font-weight:600;">Help Center!</h6>
+                    <p class="mb-0"><a href="[[~13]]">Frequently Asked Questions</a></p>
                 </div>
             </div>
 
@@ -325,6 +409,50 @@ $output = <<<HTML
             </div>
         </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const pickupDateInput = document.getElementById('pickup_date');
+    const dropoffDateInput = document.getElementById('dropoff_date');
+    const tripDaysEl = document.getElementById('trip_days');
+    const tripTotalEl = document.getElementById('trip_total');
+    const helpTotalEl = document.getElementById('help_total');
+    const pricePerDay = parseFloat("{$price_per_day}");
+
+    function calculateTrip() {
+        const pickupDate = new Date(pickupDateInput.value);
+        const dropoffDate = new Date(dropoffDateInput.value);
+
+        if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
+            // Calculate difference in full days
+            const diffTime = dropoffDate - pickupDate;
+            let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            // Always at least 1 day
+            if (days < 1) days = 1;
+
+            const total = days * pricePerDay;
+
+            tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
+            tripTotalEl.textContent = "$" + total.toFixed(2);
+            helpTotalEl.textContent = "$" + total.toFixed(2);
+        } else {
+            tripDaysEl.textContent = "–";
+            tripTotalEl.textContent = "–";
+            helpTotalEl.textContent = "–";
+        }
+    }
+
+    // Calculate when date changes
+    pickupDateInput.addEventListener('change', calculateTrip);
+    dropoffDateInput.addEventListener('change', calculateTrip);
+
+    // Calculate once on page load if session has dates
+    calculateTrip();
+});
+</script>
+
+
+
         <script>
         const steps = document.querySelectorAll('.form-step');
         const progressItems = document.querySelectorAll('.progressbar li');
@@ -366,6 +494,21 @@ $output = <<<HTML
         // Initialize
         showStep(currentStep);
         </script>
+
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Enable/disable quantity dropdowns based on checkbox
+    document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const qtySelect = document.getElementById('addon_qty_' + this.value);
+            if (qtySelect) {
+                qtySelect.disabled = !this.checked;
+            }
+        });
+    });
+});
+</script>
+
 </section>
 HTML;
 

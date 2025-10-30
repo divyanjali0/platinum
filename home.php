@@ -1,3 +1,6 @@
+
+
+
 <div class="hero-wrap ftco-degree-bg" style="background-image: url('assets/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -22,48 +25,46 @@
 			  <div class="col-md-12	featured-top">
 				  <div class="row no-gutters">
 						<div class="col-md-4 d-flex align-items-center">
-							<form action="#" class="request-form ftco-animate bg-primary">
-						<h2>Reserve your Vehicle</h2>
-							  <div class="form-group">
-								  <label for="" class="label">Pick-up Location</label>
-								  <input type="text" class="form-control" id="pickup_location" name="pickup_location" placeholder="City, Airport, Station, etc">
-							  </div>
-							  <div class="form-group">
-								  <label for="" class="label">Drop-off Location</label>
-								  <input type="text" class="form-control" id="dropoff_location" name="dropoff_location" placeholder="City, Airport, Station, etc">
-							  </div>
-							  <div class="d-flex">
-								  <div class="form-group mr-2">
-						  <label for="" class="label">Pick-up Date</label>
-						  <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
-						</div>
-						<div class="form-group">
-							<label for="" class="label">Pick-up Time</label>
-							<input type="text" class="form-control" id="time_pick" placeholder="Time">
-						  </div>
-					
-					</div>
+							[[!SaveFormSession]]
+							<form action="[[~[[*id]]]]" method="post" class="request-form ftco-animate bg-primary">
+							<h2>Reserve your Vehicle</h2>
 
-					<div class="d-flex">
-						<div class="form-group mr-2">
-				<label for="" class="label">Drop - Off Date</label>
-				<input type="text" class="form-control" id="book_pick_date" placeholder="Date">
-			  </div>
-			  <div class="form-group">
-				  <label for="" class="label">Drop - Off Time</label>
-				  <input type="text" class="form-control" id="time_pick" placeholder="Time">
-				</div>
-		  
-		  </div>
+							<div class="form-group">
+								<label class="label">Pick-up Location</label>
+								<input type="text" class="form-control" name="pickup_location" id="pickup_location" placeholder="City, Airport, Station, etc" required>
+							</div>
 
+							<div class="form-group">
+								<label class="label">Drop-off Location</label>
+								<input type="text" class="form-control" name="dropoff_location" id="dropoff_location" placeholder="City, Airport, Station, etc" required>
+							</div>
 
+							<div class="d-flex">
+								<div class="form-group mr-2">
+								<label class="label">Pick-up Date</label>
+								<input type="text" class="form-control" name="pickup_date" id="book_pick_date" placeholder="Date" required>
+								</div>
+								<div class="form-group">
+								<label class="label">Pick-up Time</label>
+								<input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="Time">
+								</div>
+							</div>
 
-					
-					<div class="form-group">
-                        <a href="[[~2]]" class="btn btn-secondary py-3 px-4">Rent A Car Now</a>
-                    </div>
-                    
-						  </form>
+							<div class="d-flex">
+								<div class="form-group mr-2">
+								<label class="label">Drop-off Date</label>
+								<input type="text" class="form-control" name="book_drop_date" id="book_pick_date" placeholder="Date" required>
+								</div>
+								<div class="form-group">
+								<label class="label">Drop-off Time</label>
+								<input type="text" class="form-control" name="time_drop" id="time_pick" placeholder="Time">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn-secondary py-3 px-4">Rent A Car Now</button>
+							</div>
+							</form>
 						</div>
 						<div class="col-md-8 d-flex align-items-center">
 							<div class="services-wrap rounded-right w-100">
