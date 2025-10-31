@@ -319,28 +319,28 @@ $output = <<<HTML
                         <h4>Passengers & Transfers</h4>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="passenger_name">Full Name</label>
+                                <label for="passenger_name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="passenger_name" name="passenger_name" required>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="passenger_email">Email</label>
+                                <label for="passenger_email">Email <span class="text-danger">*</span></label>
                                 <input type="email" class="form-control" id="passenger_email" name="passenger_email" required>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="passenger_phone">Phone</label>
+                                <label for="passenger_phone">Phone <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="passenger_phone" name="passenger_phone" required>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="flight_number">Flight Number</label>
-                                <input type="text" class="form-control" id="flight_number" name="flight_number">
+                                <label for="flight_number">Flight Number <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="flight_number" name="flight_number" required>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="mileage">Mileage</label>
-                                <select class="form-control" id="mileage" name="mileage">
+                                <label for="mileage">Mileage <span class="text-danger">*</span></label>
+                                <select class="form-control" id="mileage" name="mileage" required>
                                     <option value="">Select Mileage</option>
                                     <option value="0-50">0-50 km</option>
                                     <option value="unlimited">Unlimited</option>
@@ -348,8 +348,8 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="need_driver">Do you need a Driver?</label>
-                                <select class="form-control" id="need_driver" name="need_driver">
+                                <label for="need_driver">Do you need a Driver? <span class="text-danger">*</span></label>
+                                <select class="form-control" id="need_driver" name="need_driver" required>
                                     <option value="">Select</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -357,8 +357,8 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="need_license">Do you need a Driver's License?</label>
-                                <select class="form-control" id="need_license" name="need_license">
+                                <label for="need_license">Do you need a Driver's License? <span class="text-danger">*</span></label>
+                                <select class="form-control" id="need_license" name="need_license" required>
                                     <option value="">Select</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -381,8 +381,8 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="num_passengers">Number of Passengers</label>
-                                <input type="number" class="form-control" id="num_passengers" name="num_passengers" min="1" value="1">
+                                <label for="num_passengers">Number of Passengers <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="num_passengers" name="num_passengers" min="1" value="1" required>
                             </div>
 
                             <div class="form-group col-md-6">
