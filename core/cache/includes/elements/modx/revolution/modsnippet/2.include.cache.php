@@ -319,36 +319,36 @@ $output = <<<HTML
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="passenger_name">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="passenger_name" name="passenger_name" required>
+                                <input type="text" class="form-control required-field" id="passenger_name" name="passenger_name" placeholder="Enter your full name">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="passenger_email">Email <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" id="passenger_email" name="passenger_email" required>
+                                <input type="email" class="form-control required-field" id="passenger_email" name="passenger_email" placeholder="Enter your email">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="passenger_phone">Phone <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="passenger_phone" name="passenger_phone" required>
+                                <input type="text" class="form-control required-field" id="passenger_phone" name="passenger_phone" placeholder="Enter your phone number">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="flight_number">Flight Number <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="flight_number" name="flight_number" required>
+                                <input type="text" class="form-control required-field" id="flight_number" name="flight_number" placeholder="Enter flight number">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="mileage">Mileage <span class="text-danger">*</span></label>
-                                <select class="form-control" id="mileage" name="mileage" required>
+                                <select class="form-control required-field" id="mileage" name="mileage">
                                     <option value="">Select Mileage</option>
-                                    <option value="0-50">0-50 km</option>
+                                    <option value="0-50">0–50 km</option>
                                     <option value="unlimited">Unlimited</option>
                                 </select>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="need_driver">Do you need a Driver? <span class="text-danger">*</span></label>
-                                <select class="form-control" id="need_driver" name="need_driver" required>
+                                <select class="form-control required-field" id="need_driver" name="need_driver">
                                     <option value="">Select</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -357,7 +357,7 @@ $output = <<<HTML
 
                             <div class="form-group col-md-6">
                                 <label for="need_license">Do you need a Driver's License? <span class="text-danger">*</span></label>
-                                <select class="form-control" id="need_license" name="need_license" required>
+                                <select class="form-control required-field" id="need_license" name="need_license">
                                     <option value="">Select</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -381,14 +381,16 @@ $output = <<<HTML
 
                             <div class="form-group col-md-6">
                                 <label for="num_passengers">Number of Passengers <span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" id="num_passengers" name="num_passengers" min="1" value="1" required>
+                                <input type="number" class="form-control required-field" id="num_passengers" name="num_passengers" min="1" value="1">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="other_info">Other Information</label>
-                                <input type="text" class="form-control" id="other_info" name="other_info">
+                                <input type="text" class="form-control" id="other_info" name="other_info" placeholder="Any notes...">
                             </div>
                         </div>
+
+                        <div id="validation_error" class="text-danger mb-3" style="display:none;">?? Please fill all required fields before continuing.</div>
 
                         <button type="button" class="btn btn-secondary prev-step">Back</button>
                         <button type="button" class="btn btn-primary next-step">Next</button>
@@ -507,31 +509,56 @@ $output = <<<HTML
                 currentStep = step;
             }
 
+            // ? Validation before moving forward
+            function validateStep(stepIndex) {
+                const step = steps[stepIndex];
+                const requiredFields = step.querySelectorAll('.required-field');
+                let valid = true;
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        valid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+
+                const errorBox = step.querySelector('#validation_error');
+                if (errorBox) errorBox.style.display = valid ? 'none' : 'block';
+
+                return valid;
+            }
+
             document.querySelectorAll('.next-step').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const current = document.querySelector('.form-step.active');
                     const nextStep = parseInt(current.dataset.step) + 1;
 
-                    // move to next step
+                    // ? Validate Step 3 before moving to Step 4
+                    if (current.dataset.step === "3" && !validateStep(2)) {
+                        return;
+                    }
+
                     showStep(nextStep - 1);
 
-                    // ? When moving into step 4, fill summary
+                    // Fill confirmation details when entering step 4
                     if (nextStep === 4) fillConfirmation();
                 });
             });
 
             document.querySelectorAll('.prev-step').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    if(currentStep > 0) showStep(currentStep - 1);
+                    if (currentStep > 0) showStep(currentStep - 1);
                 });
             });
 
-            // Progress bar clickable
+            // Make progress bar clickable
             progressItems.forEach((item, index) => {
                 item.addEventListener('click', () => showStep(index));
             });
 
-            // License upload visibility
+            // License upload toggle
             const needLicense = document.getElementById('need_license');
             const licenseUploads = document.getElementById('license_uploads');
             needLicense.addEventListener('change', function() {
