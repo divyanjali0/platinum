@@ -870,7 +870,13 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_\' . $addon[\'id\'] . \'" name="addons[]" value="\' . $addon[\'id\'] . \'">
+                        <input 
+                        class="form-check-input addon-checkbox" 
+                        type="checkbox" 
+                        id="addon_\' . $addon[\'id\'] . \'" 
+                        name="addons[]" 
+                        value="\' . $addon[\'id\'] . \'" 
+                        data-price="\' . $addon[\'price_per_day\'] . \'">
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -1195,6 +1201,7 @@ $output = <<<HTML
                         <div id="confirmation_summary" class="p-3 mb-3 border rounded bg-light">
                             <h4><strong>Total Price :</strong> <span id="conf_total"></span></h4>
 
+                            <hr>
                             <h5 class="mb-2">Vehicle Details</h5>
                             <p><strong>Car:</strong> {$car_name}</p>
 
@@ -1239,29 +1246,41 @@ $output = <<<HTML
                 const helpTotalEl = document.getElementById(\'help_total\');
                 const pricePerDay = parseFloat("{$price_per_day}");
 
-                function calculateTrip() {
-                    const pickupDate = new Date(pickupDateInput.value);
-                    const dropoffDate = new Date(dropoffDateInput.value);
+function calculateTrip() {
+    const pickupDate = new Date(pickupDateInput.value);
+    const dropoffDate = new Date(dropoffDateInput.value);
+    const helpTotalEl = document.getElementById(\'help_total\'); // optional – add to your HTML if needed
 
-                    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
-                        // Calculate difference in full days
-                        const diffTime = dropoffDate - pickupDate;
-                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
+        // Calculate rental days
+        const diffTime = dropoffDate - pickupDate;
+        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (days < 1) days = 1;
 
-                        // Always at least 1 day
-                        if (days < 1) days = 1;
+        // Base rental total
+        let total = days * pricePerDay;
 
-                        const total = days * pricePerDay;
+        // ? Add add-ons
+        document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
+            const addonPrice = parseFloat(cb.dataset.price || 0);
+            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+            const qty = parseInt(qtySelect?.value || 1);
+            total += addonPrice * qty * days;
+        });
 
-                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
-                        tripTotalEl.textContent = "$" + total.toFixed(2);
-                        helpTotalEl.textContent = "$" + total.toFixed(2);
-                    } else {
-                        tripDaysEl.textContent = "–";
-                        tripTotalEl.textContent = "–";
-                        helpTotalEl.textContent = "–";
-                    }
-                }
+        // Update UI
+        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
+        tripTotalEl.textContent = "$" + total.toFixed(2);
+        if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
+
+    } else {
+        tripDaysEl.textContent = "–";
+        tripTotalEl.textContent = "–";
+        if (helpTotalEl) helpTotalEl.textContent = "–";
+    }
+}
+
+
 
                 // Calculate when date changes
                 pickupDateInput.addEventListener(\'change\', calculateTrip);
@@ -1269,6 +1288,10 @@ $output = <<<HTML
 
                 // Calculate once on page load if session has dates
                 calculateTrip();
+
+                document.querySelectorAll(\'.addon-checkbox, .addon-qty\').forEach(el => {
+    el.addEventListener(\'change\', calculateTrip);
+});
             });
         </script>
 
@@ -1385,7 +1408,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const diff = dropoff - pickup;
             days = Math.ceil(diff / (1000 * 60 * 60 * 24));
         }
-        const total = days * pricePerDay;
+let total = days * pricePerDay;
+
+// ? Include add-ons
+const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
+checkedAddons.forEach(cb => {
+    const addonPrice = parseFloat(cb.dataset.price || 0);
+    const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
+    total += addonPrice * qty * days;
+});
         document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
         document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
 
@@ -1500,7 +1531,13 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_\' . $addon[\'id\'] . \'" name="addons[]" value="\' . $addon[\'id\'] . \'">
+                        <input 
+                        class="form-check-input addon-checkbox" 
+                        type="checkbox" 
+                        id="addon_\' . $addon[\'id\'] . \'" 
+                        name="addons[]" 
+                        value="\' . $addon[\'id\'] . \'" 
+                        data-price="\' . $addon[\'price_per_day\'] . \'">
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -1825,6 +1862,7 @@ $output = <<<HTML
                         <div id="confirmation_summary" class="p-3 mb-3 border rounded bg-light">
                             <h4><strong>Total Price :</strong> <span id="conf_total"></span></h4>
 
+                            <hr>
                             <h5 class="mb-2">Vehicle Details</h5>
                             <p><strong>Car:</strong> {$car_name}</p>
 
@@ -1869,29 +1907,41 @@ $output = <<<HTML
                 const helpTotalEl = document.getElementById(\'help_total\');
                 const pricePerDay = parseFloat("{$price_per_day}");
 
-                function calculateTrip() {
-                    const pickupDate = new Date(pickupDateInput.value);
-                    const dropoffDate = new Date(dropoffDateInput.value);
+function calculateTrip() {
+    const pickupDate = new Date(pickupDateInput.value);
+    const dropoffDate = new Date(dropoffDateInput.value);
+    const helpTotalEl = document.getElementById(\'help_total\'); // optional – add to your HTML if needed
 
-                    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
-                        // Calculate difference in full days
-                        const diffTime = dropoffDate - pickupDate;
-                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
+        // Calculate rental days
+        const diffTime = dropoffDate - pickupDate;
+        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (days < 1) days = 1;
 
-                        // Always at least 1 day
-                        if (days < 1) days = 1;
+        // Base rental total
+        let total = days * pricePerDay;
 
-                        const total = days * pricePerDay;
+        // ? Add add-ons
+        document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
+            const addonPrice = parseFloat(cb.dataset.price || 0);
+            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+            const qty = parseInt(qtySelect?.value || 1);
+            total += addonPrice * qty * days;
+        });
 
-                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
-                        tripTotalEl.textContent = "$" + total.toFixed(2);
-                        helpTotalEl.textContent = "$" + total.toFixed(2);
-                    } else {
-                        tripDaysEl.textContent = "–";
-                        tripTotalEl.textContent = "–";
-                        helpTotalEl.textContent = "–";
-                    }
-                }
+        // Update UI
+        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
+        tripTotalEl.textContent = "$" + total.toFixed(2);
+        if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
+
+    } else {
+        tripDaysEl.textContent = "–";
+        tripTotalEl.textContent = "–";
+        if (helpTotalEl) helpTotalEl.textContent = "–";
+    }
+}
+
+
 
                 // Calculate when date changes
                 pickupDateInput.addEventListener(\'change\', calculateTrip);
@@ -1899,6 +1949,10 @@ $output = <<<HTML
 
                 // Calculate once on page load if session has dates
                 calculateTrip();
+
+                document.querySelectorAll(\'.addon-checkbox, .addon-qty\').forEach(el => {
+    el.addEventListener(\'change\', calculateTrip);
+});
             });
         </script>
 
@@ -2015,7 +2069,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const diff = dropoff - pickup;
             days = Math.ceil(diff / (1000 * 60 * 60 * 24));
         }
-        const total = days * pricePerDay;
+let total = days * pricePerDay;
+
+// ? Include add-ons
+const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
+checkedAddons.forEach(cb => {
+    const addonPrice = parseFloat(cb.dataset.price || 0);
+    const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
+    total += addonPrice * qty * days;
+});
         document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
         document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
 
