@@ -283,35 +283,34 @@ $output = <<<HTML
                 
                 <div class="side-box">
                     <h5>Trip Details</h5>
-                    <form>
+                    <form id="bookingForm" action="assets/includes/connection.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="pickup_location">Pickup Location</label>
-                            <input type="text" class="form-control" id="pickup_location" 
+                            <input type="text" class="form-control" id="pickup_location" name="pickup_location"
                                 value="{$pickup}" placeholder="Enter pickup location">
                         </div>
                         <div class="form-group">
                             <label for="dropoff_location">Drop-off Location</label>
-                            <input type="text" class="form-control" id="dropoff_location" 
-                                value="{$dropoff}" placeholder="Enter drop-off location">
+                            <input type="text" class="form-control" id="dropoff_location" name="dropoff_location" value="{$dropoff}" placeholder="Enter drop-off location">
                         </div>
                         <div class="form-group">
                             <label for="pickup_date">Pickup Date</label>
-                            <input type="date" class="form-control" id="pickup_date" 
+                            <input type="date" class="form-control" id="pickup_date" name="pickup_date" 
                                 value="{$pickup_date}">
                         </div>
                         <div class="form-group">
                             <label for="pickup_time">Pickup Time</label>
-                            <input type="time" class="form-control" id="pickup_time" 
+                            <input type="time" class="form-control" id="pickup_time" name="pickup_time"
                                 value="{$pickup_time}">
                         </div>
                         <div class="form-group">
                             <label for="dropoff_date">Drop-off Date</label>
-                            <input type="date" class="form-control" id="dropoff_date" 
+                            <input type="date" class="form-control" id="dropoff_date"  name="dropoff_date" 
                                 value="{$dropoff_date}">
                         </div>
                         <div class="form-group">
                             <label for="dropoff_time">Drop-off Time</label>
-                            <input type="time" class="form-control" id="dropoff_time" 
+                            <input type="time" class="form-control" id="dropoff_time" name="dropoff_time"
                                 value="{$dropoff_time}">
                         </div>
 
@@ -331,7 +330,7 @@ $output = <<<HTML
 
             <!-- RIGHT COLUMN -->
             <div class="col-md-8">
-                <form id="multiStepForm" action="connection.php" method="POST" enctype="multipart/form-data">
+                <form id="multiStepForm" action="assets/includes/connection.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="car_id" value="{$car_id}">
 
                     <!-- STEP 1: VEHICLE -->
@@ -523,11 +522,25 @@ $output = <<<HTML
                             <button type="submit" class="btn btn-primary">Confirm & Submit</button>
                         </div>
                     </div>
+                    <input type="hidden" name="total_price" id="total_price" value="">
                 </form>
             </div>
+
+            <div id="toast_container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
         </div>
 
         <script>
+            document.querySelector('#multiStepForm').addEventListener('submit', function() {
+                ['pickup_location','dropoff_location','pickup_date','dropoff_date','pickup_time','dropoff_time'].forEach(id => {
+                    const val = document.getElementById(id)?.value || '';
+                    let hidden = document.createElement('input');
+                    hidden.type = 'hidden';
+                    hidden.name = id;
+                    hidden.value = val;
+                    this.appendChild(hidden);
+                });
+            });
+
             document.addEventListener("DOMContentLoaded", () => {
                 const pickupDateInput = document.getElementById('pickup_date');
                 const dropoffDateInput = document.getElementById('dropoff_date');
@@ -578,6 +591,52 @@ $output = <<<HTML
 
                 document.querySelectorAll('.addon-checkbox, .addon-qty').forEach(el => {
                     el.addEventListener('change', calculateTrip);
+                });
+            });
+        </script>
+
+        <script>
+            document.getElementById('multiStepForm').addEventListener('submit', function(e){
+                e.preventDefault(); 
+
+                const form = this;
+
+                // Get total price
+                const totalPrice = document.getElementById('conf_total').textContent.replace('$','').trim();
+                document.getElementById('total_price').value = totalPrice;
+
+                const formData = new FormData(form);
+
+                // Send via AJAX
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text()) 
+                .then(data => {
+                    // Show toast
+                    const toast = document.createElement('div');
+                    toast.textContent = 'Booking Submitted Successfully!';
+                    toast.style.background = '#28a745';
+                    toast.style.color = '#fff';
+                    toast.style.padding = '10px 20px';
+                    toast.style.borderRadius = '5px';
+                    toast.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+                    toast.style.marginBottom = '10px';
+                    toast.style.opacity = '0';
+                    toast.style.transition = 'opacity 0.5s';
+                    document.getElementById('toast_container').appendChild(toast);
+                    setTimeout(() => toast.style.opacity = 1, 10);
+
+                    // Redirect after 2s
+                    setTimeout(() => {
+                        toast.style.opacity = 0;
+                        setTimeout(() => window.location.href = '[[~2]]', 500);
+                    }, 2000);
+                })
+                .catch(err => {
+                    alert("Error submitting booking. Please try again.");
+                    console.error(err);
                 });
             });
         </script>
@@ -642,6 +701,7 @@ $output = <<<HTML
 
                 document.getElementById('conf_days').textContent = days + (days === 1 ? ' day' : ' days');
                 document.getElementById('conf_total').textContent = '$' + total.toFixed(2);
+                document.getElementById('total_price').value = total.toFixed(2); 
 
                 const addonsList = document.getElementById('conf_addons');
                 addonsList.innerHTML = '';
