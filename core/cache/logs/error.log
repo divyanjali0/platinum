@@ -230,3 +230,17 @@ Array
 [2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 202) PHP warning: Undefined variable $pickup_time
 [2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 207) PHP warning: Undefined variable $dropoff_date
 [2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 212) PHP warning: Undefined variable $dropoff_time
+[2025-10-30 20:43:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 596) PHP warning: Undefined variable $label
+[2025-10-30 20:43:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 596) PHP warning: Undefined variable $qty
+[2025-10-30 20:49:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-30 20:49:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
+[2025-10-30 20:50:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-30 20:50:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
+[2025-10-31 04:37:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-31 04:37:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
+[2025-10-31 04:47:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-31 04:47:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
+[2025-10-31 04:49:53] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-31 04:49:53] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
+[2025-10-31 04:50:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
+[2025-10-31 04:50:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty

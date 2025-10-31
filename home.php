@@ -53,11 +53,11 @@
 							<div class="d-flex">
 								<div class="form-group mr-2">
 								<label class="label">Drop-off Date</label>
-								<input type="text" class="form-control" name="book_drop_date" id="book_pick_date" placeholder="Date" required>
+								<input type="text" class="form-control" name="book_off_date" id="book_off_date" placeholder="Date" required>
 								</div>
 								<div class="form-group">
 								<label class="label">Drop-off Time</label>
-								<input type="text" class="form-control" name="time_drop" id="time_pick" placeholder="Time">
+								<input type="text" class="form-control" name="time_drop" id="time_drop" placeholder="Time">
 								</div>
 							</div>
 

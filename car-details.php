@@ -92,7 +92,7 @@ try {
 } catch (PDOException $e) {
     $addons_html .= '<p>⚠️ Error loading add-ons.</p>';
 }
-$addon_prices_js = json_encode(array_column($addons, 'price_per_day', 'id'));
+$addons_html .= '</div></div></div>';
 
 // Build output using heredoc
 $output = <<<HTML
@@ -121,7 +121,6 @@ $output = <<<HTML
                 <li>Extras</li>
                 <li>Passengers + Transfers</li>
                 <li>Confirmation</li>
-                <li>Payment</li>
             </ul>
         </div>
 
@@ -220,13 +219,13 @@ $output = <<<HTML
         <div class="row">
             <!-- LEFT COLUMN -->
             <div class="col-md-4">
-                <div class="price-summary mt-3">
+                 <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p><strong>Price per Day:</strong> $ {$price_per_day}</p>
-                    <p><strong>Estimated Total:</strong> <span id="trip_total">–</span></p>
+                    <p><strong>Price per Day :</strong> $ {$price_per_day}</p>
+                    <p><strong>Total Price :</strong> <span id="trip_total">-</span></p>
                 </div>
-
+                
                 <div class="side-box">
                     <h5>Trip Details</h5>
                     <form>
@@ -392,18 +391,43 @@ $output = <<<HTML
 
                     <!-- STEP 4: CONFIRMATION -->
                     <div class="form-step" data-step="4">
-                        <h4>Confirm Booking</h4>
-                        <p>Please check your details before proceeding.</p>
-                        <button type="button" class="btn btn-secondary prev-step">Back</button>
-                        <button type="button" class="btn btn-primary next-step">Next</button>
-                    </div>
+                        <h4>Confirm Your Booking</h4>
+                        <p class="text-muted">Please review your trip details below before submitting.</p>
+                        
+                        <div id="confirmation_summary" class="p-3 mb-3 border rounded bg-light">
+                            <h4><strong>Total Price :</strong> <span id="conf_total"></span></h4>
 
-                    <!-- STEP 5: PAYMENT -->
-                    <div class="form-step" data-step="5">
-                        <h4>Payment</h4>
-                        <p>Enter your payment details here.</p>
+                            <hr>
+                            <h5 class="mb-2">Vehicle Details</h5>
+                            <p><strong>Car:</strong> {$car_name}</p>
+
+                            <hr>
+                            <h5 class="mb-2">Trip Details</h5>
+                            <p><strong>Pickup Location:</strong> <span id="conf_pickup"></span></p>
+                            <p><strong>Drop-off Location:</strong> <span id="conf_dropoff"></span></p>
+                            <p><strong>Pickup Date:</strong> <span id="conf_pickup_date"></span> at <span id="conf_pickup_time"></span></p>
+                            <p><strong>Drop-off Date:</strong> <span id="conf_dropoff_date"></span> at <span id="conf_dropoff_time"></span></p>
+                            <p><strong>Trip Duration:</strong> <span id="conf_days"></span></p>
+
+                            <hr>
+                            <h5 class="mb-2">Extras</h5>
+                            <ul id="conf_addons"></ul>
+
+                            <hr>
+                            <h5 class="mb-2">Passenger Details</h5>
+                            <p><strong>Full Name:</strong> <span id="conf_name"></span></p>
+                            <p><strong>Email:</strong> <span id="conf_email"></span></p>
+                            <p><strong>Phone:</strong> <span id="conf_phone"></span></p>
+                            <p><strong>Flight Number:</strong> <span id="conf_flight"></span></p>
+                            <p><strong>Mileage:</strong> <span id="conf_mileage"></span></p>
+                            <p><strong>Need Driver:</strong> <span id="conf_driver"></span></p>
+                            <p><strong>Need License:</strong> <span id="conf_license"></span></p>
+                            <p><strong>Passengers:</strong> <span id="conf_passengers"></span></p>
+                            <p><strong>Other Info:</strong> <span id="conf_other"></span></p>
+                        </div>
+
                         <button type="button" class="btn btn-secondary prev-step">Back</button>
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-success">Confirm & Submit</button>
                     </div>
                 </form>
             </div>
@@ -415,78 +439,43 @@ $output = <<<HTML
                 const dropoffDateInput = document.getElementById('dropoff_date');
                 const tripDaysEl = document.getElementById('trip_days');
                 const tripTotalEl = document.getElementById('trip_total');
+                const helpTotalEl = document.getElementById('help_total');
                 const pricePerDay = parseFloat("{$price_per_day}");
-                const addonPrices = {$addon_prices_js}; // from PHP
 
-                // Core function to calculate totals
                 function calculateTrip() {
                     const pickupDate = new Date(pickupDateInput.value);
                     const dropoffDate = new Date(dropoffDateInput.value);
-                    let days = 0;
 
                     if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
+                        // Calculate difference in full days
                         const diffTime = dropoffDate - pickupDate;
-                        days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                        // Always at least 1 day
                         if (days < 1) days = 1;
+
+                        const total = days * pricePerDay;
+
+                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
+                        tripTotalEl.textContent = "$" + total.toFixed(2);
+                        helpTotalEl.textContent = "$" + total.toFixed(2);
                     } else {
                         tripDaysEl.textContent = "–";
                         tripTotalEl.textContent = "–";
-                        return;
+                        helpTotalEl.textContent = "–";
                     }
-
-                    // --- Base car total ---
-                    let total = days * pricePerDay;
-
-                    // --- Add-ons total ---
-                    document.querySelectorAll('.addon-checkbox:checked').forEach(cb => {
-                        const addonId = cb.value;
-                        const qtySelect = document.getElementById('addon_qty_' + addonId);
-                        const qty = qtySelect ? parseInt(qtySelect.value) || 1 : 1;
-                        const addonPrice = parseFloat(addonPrices[addonId]) || 0;
-                        total += addonPrice * qty * days;
-                    });
-
-                    // --- Update UI ---
-                    tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
-                    tripTotalEl.textContent = "$" + total.toFixed(2);
                 }
 
-                // Listen for changes
-                [pickupDateInput, dropoffDateInput].forEach(el => el.addEventListener('change', calculateTrip));
-                document.addEventListener('change', e => {
-                    if (e.target.classList.contains('addon-checkbox') || e.target.classList.contains('addon-qty')) {
-                        calculateTrip();
-                    }
-                });
+                // Calculate when date changes
+                pickupDateInput.addEventListener('change', calculateTrip);
+                dropoffDateInput.addEventListener('change', calculateTrip);
 
-                // Enable/disable quantity dropdowns
-                document.querySelectorAll('.addon-checkbox').forEach(cb => {
-                    cb.addEventListener('change', function() {
-                        const qtySelect = document.getElementById('addon_qty_' + this.value);
-                        if (qtySelect) qtySelect.disabled = !this.checked;
-                    });
-                });
-
-                // Initial calculation
+                // Calculate once on page load if session has dates
                 calculateTrip();
             });
         </script>
 
 
-
-        <script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Enable/disable quantity dropdowns based on checkbox
-    document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            const qtySelect = document.getElementById('addon_qty_' + this.value);
-            if (qtySelect) {
-                qtySelect.disabled = !this.checked;
-            }
-        });
-    });
-});
-</script>
 
         <script>
         const steps = document.querySelectorAll('.form-step');
@@ -502,11 +491,19 @@ document.addEventListener("DOMContentLoaded", () => {
             currentStep = step;
         }
 
-        document.querySelectorAll('.next-step').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if(currentStep < steps.length - 1) showStep(currentStep + 1);
-            });
-        });
+document.querySelectorAll('.next-step').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const current = document.querySelector('.form-step.active');
+        const nextStep = parseInt(current.dataset.step) + 1;
+
+        // move to next step
+        showStep(nextStep - 1);
+
+        // ✅ When moving into step 4, fill summary
+        if (nextStep === 4) fillConfirmation();
+    });
+});
+
 
         document.querySelectorAll('.prev-step').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -529,6 +526,99 @@ document.addEventListener("DOMContentLoaded", () => {
         // Initialize
         showStep(currentStep);
         </script>
+
+        <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Enable/disable quantity dropdowns based on checkbox
+    document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const qtySelect = document.getElementById('addon_qty_' + this.value);
+            if (qtySelect) {
+                qtySelect.disabled = !this.checked;
+            }
+        });
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const inputs = {
+        pickup: document.getElementById('pickup_location'),
+        dropoff: document.getElementById('dropoff_location'),
+        pickupDate: document.getElementById('pickup_date'),
+        pickupTime: document.getElementById('pickup_time'),
+        dropoffDate: document.getElementById('dropoff_date'),
+        dropoffTime: document.getElementById('dropoff_time'),
+        name: document.getElementById('passenger_name'),
+        email: document.getElementById('passenger_email'),
+        phone: document.getElementById('passenger_phone'),
+        flight: document.getElementById('flight_number'),
+        mileage: document.getElementById('mileage'),
+        driver: document.getElementById('need_driver'),
+        license: document.getElementById('need_license'),
+        passengers: document.getElementById('num_passengers'),
+        other: document.getElementById('other_info'),
+    };
+
+    const pricePerDay = parseFloat("{$price_per_day}");
+
+    function fillConfirmation() {
+        document.getElementById('conf_pickup').textContent = inputs.pickup.value || '-';
+        document.getElementById('conf_dropoff').textContent = inputs.dropoff.value || '-';
+        document.getElementById('conf_pickup_date').textContent = inputs.pickupDate.value || '-';
+        document.getElementById('conf_pickup_time').textContent = inputs.pickupTime.value || '-';
+        document.getElementById('conf_dropoff_date').textContent = inputs.dropoffDate.value || '-';
+        document.getElementById('conf_dropoff_time').textContent = inputs.dropoffTime.value || '-';
+        document.getElementById('conf_name').textContent = inputs.name.value || '-';
+        document.getElementById('conf_email').textContent = inputs.email.value || '-';
+        document.getElementById('conf_phone').textContent = inputs.phone.value || '-';
+        document.getElementById('conf_flight').textContent = inputs.flight.value || '-';
+        document.getElementById('conf_mileage').textContent = inputs.mileage.value || '-';
+        document.getElementById('conf_driver').textContent = inputs.driver.value || '-';
+        document.getElementById('conf_license').textContent = inputs.license.value || '-';
+        document.getElementById('conf_passengers').textContent = inputs.passengers.value || '-';
+        document.getElementById('conf_other').textContent = inputs.other.value || '-';
+
+        // Calculate trip duration
+        const pickup = new Date(inputs.pickupDate.value);
+        const dropoff = new Date(inputs.dropoffDate.value);
+        let days = 1;
+        if (pickup && dropoff && dropoff >= pickup) {
+            const diff = dropoff - pickup;
+            days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        }
+        const total = days * pricePerDay;
+        document.getElementById('conf_days').textContent = days + (days === 1 ? ' day' : ' days');
+        document.getElementById('conf_total').textContent = '$' + total.toFixed(2);
+
+        // Add-ons
+        const addonsList = document.getElementById('conf_addons');
+        addonsList.innerHTML = '';
+        const checkedAddons = document.querySelectorAll('.addon-checkbox:checked');
+        if (checkedAddons.length > 0) {
+            checkedAddons.forEach(cb => {
+const label = cb.closest('.form-check').querySelector('label').textContent.trim();
+                const qty = document.getElementById('addon_qty_' + cb.value)?.value || '1';
+                const li = document.createElement('li');
+                li.textContent = `${label} × ${qty}`;
+                addonsList.appendChild(li);
+            });
+        } else {
+            addonsList.innerHTML = '<li>No extras selected.</li>';
+        }
+    }
+
+    // Hook into step navigation
+    document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const step = document.querySelector('.form-step.active').dataset.step;
+            if (step == "3") fillConfirmation(); // Fill summary before showing step 4
+        });
+    });
+});
+</script>
+
 
 </section>
 HTML;
