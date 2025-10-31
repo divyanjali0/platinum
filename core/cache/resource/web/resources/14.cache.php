@@ -870,13 +870,15 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                        <input 
+                      <input 
                         class="form-check-input addon-checkbox" 
                         type="checkbox" 
                         id="addon_\' . $addon[\'id\'] . \'" 
                         name="addons[]" 
                         value="\' . $addon[\'id\'] . \'" 
+                        data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"
                         data-price="\' . $addon[\'price_per_day\'] . \'">
+
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -1143,7 +1145,6 @@ $output = <<<HTML
                                         <p><strong>Seats:</strong> {$seats} | <strong>Luggages:</strong> {$luggages}</p>
                                     </div>
                                 </div>
-
                                 <p><strong>Price per Day :</strong> \\$ {$price_per_day}</p>
                             </div>
                         </div>
@@ -1444,10 +1445,17 @@ $output = <<<HTML
                 addonsList.innerHTML = \'\';
                 if (checkedAddons.length > 0) {
                     checkedAddons.forEach(cb => {
-                        const label = document.querySelector(\'label[for="\' + cb.id + \'"]\').textContent.trim();
+let label = cb.dataset.name;
+if (!label || label.trim() === \'\') {
+  const labelEl = document.querySelector(\'label[for="\' + cb.id + \'"]\');
+  if (labelEl) label = labelEl.textContent.replace(/\\(.*?\\)/, \'\').trim();
+  else label = \'Unknown Add-on\';
+}
                         const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
+                        const price = parseFloat(cb.dataset.price || 0);
+                        const lineTotal = (price * qty * days).toFixed(2);
                         const li = document.createElement(\'li\');
-                        li.textContent = `${label} × ${qty}`;
+                        li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
                         addonsList.appendChild(li);
                     });
                 } else {
@@ -1503,8 +1511,16 @@ $output = <<<HTML
 
                     showStep(nextStep - 1);
 
-                    // Fill confirmation details when entering step 4
-                    if (nextStep === 4) fillConfirmation();
+                    if (nextStep === 4) {
+                        // Sync add-on selections before filling confirmation
+                        document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
+                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+                            if (qtySelect) {
+                                qtySelect.disabled = !cb.checked;
+                            }
+                        });
+                        fillConfirmation();
+                    }
                 });
             });
 
@@ -1626,13 +1642,15 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                        <input 
+                      <input 
                         class="form-check-input addon-checkbox" 
                         type="checkbox" 
                         id="addon_\' . $addon[\'id\'] . \'" 
                         name="addons[]" 
                         value="\' . $addon[\'id\'] . \'" 
+                        data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"
                         data-price="\' . $addon[\'price_per_day\'] . \'">
+
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -1899,7 +1917,6 @@ $output = <<<HTML
                                         <p><strong>Seats:</strong> {$seats} | <strong>Luggages:</strong> {$luggages}</p>
                                     </div>
                                 </div>
-
                                 <p><strong>Price per Day :</strong> \\$ {$price_per_day}</p>
                             </div>
                         </div>
@@ -2200,10 +2217,17 @@ $output = <<<HTML
                 addonsList.innerHTML = \'\';
                 if (checkedAddons.length > 0) {
                     checkedAddons.forEach(cb => {
-                        const label = document.querySelector(\'label[for="\' + cb.id + \'"]\').textContent.trim();
+let label = cb.dataset.name;
+if (!label || label.trim() === \'\') {
+  const labelEl = document.querySelector(\'label[for="\' + cb.id + \'"]\');
+  if (labelEl) label = labelEl.textContent.replace(/\\(.*?\\)/, \'\').trim();
+  else label = \'Unknown Add-on\';
+}
                         const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
+                        const price = parseFloat(cb.dataset.price || 0);
+                        const lineTotal = (price * qty * days).toFixed(2);
                         const li = document.createElement(\'li\');
-                        li.textContent = `${label} × ${qty}`;
+                        li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
                         addonsList.appendChild(li);
                     });
                 } else {
@@ -2259,8 +2283,16 @@ $output = <<<HTML
 
                     showStep(nextStep - 1);
 
-                    // Fill confirmation details when entering step 4
-                    if (nextStep === 4) fillConfirmation();
+                    if (nextStep === 4) {
+                        // Sync add-on selections before filling confirmation
+                        document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
+                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+                            if (qtySelect) {
+                                qtySelect.disabled = !cb.checked;
+                            }
+                        });
+                        fillConfirmation();
+                    }
                 });
             });
 
