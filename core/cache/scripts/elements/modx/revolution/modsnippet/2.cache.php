@@ -203,6 +203,12 @@ $output = <<<HTML
             text-decoration: none;
         }
 
+        .buttons {
+            display: flex;
+            justify-content: end;
+            gap: 8px;
+        }
+
         .price-summary {
             border-radius: 8px;
             padding: 12px 15px;
@@ -218,6 +224,47 @@ $output = <<<HTML
             margin-bottom: 5px;
         }
 
+        #confirmation_summary {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .conf-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .conf-row p {
+            width: 48%;
+            margin: 0;
+            word-break: break-word;
+        }
+
+        .conf-row.full p {
+            width: 100%;
+        }
+
+        #confirmation_summary strong {
+            color: #333;
+        }
+
+        #confirmation_summary span {
+            color: #555;
+        }
+
+        #confirmation_summary ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        #confirmation_summary li {
+            list-style-type: disc;
+        }
         </style>
 
         <div class="row">
@@ -300,16 +347,22 @@ $output = <<<HTML
                                 <p><strong>Price per Day :</strong> \\$ {$price_per_day}</p>
                             </div>
                         </div>
-                        <a href="[[~2]]" class="btn btn-secondary">Back</a>
-                        <button type="button" class="btn btn-primary next-step">Next</button>
+
+                        <div class="buttons">
+                            <a href="[[~2]]" class="btn btn-secondary">Back</a>
+                            <button type="button" class="btn btn-primary next-step">Next</button>
+                        </div>
                     </div>
 
                     <!-- STEP 2: EXTRAS -->
                     <div class="form-step" data-step="2">
                         <h4>Choose Extras</h4>
                         {$addons_html}
-                        <button type="button" class="btn btn-secondary prev-step">Back</button>
-                        <button type="button" class="btn btn-primary next-step">Next</button>
+
+                        <div class="buttons">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="button" class="btn btn-primary next-step">Next</button>
+                        </div>
                     </div>
 
                     <!-- STEP 3: PASSENGERS & TRANSFERS -->
@@ -391,8 +444,10 @@ $output = <<<HTML
 
                         <div id="validation_error" class="text-danger mb-3" style="display:none;"> Please fill all required fields before continuing.</div>
 
-                        <button type="button" class="btn btn-secondary prev-step">Back</button>
-                        <button type="button" class="btn btn-primary next-step">Next</button>
+                        <div class="buttons">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="button" class="btn btn-primary next-step">Next</button>
+                        </div>
                     </div>
 
                     <!-- STEP 4: CONFIRMATION -->
@@ -400,40 +455,70 @@ $output = <<<HTML
                         <h4>Confirm Your Booking</h4>
                         <p class="text-muted">Please review your trip details below before submitting.</p>
                         
-                        <div id="confirmation_summary" class="p-3 mb-3 border rounded bg-light">
-                            <h4><strong>Total Price :</strong> <span id="conf_total"></span></h4>
+                        <div id="confirmation_summary" class="p-4 bg-light rounded shadow-sm">
+                            <h4 class="mb-3 text-center"><strong>Confirm Your Booking</strong></h4>
+                            <h5 class="text-primary text-center mb-4"><strong>Total Price:</strong> <span id="conf_total"></span></h5>
+
+                            <hr> 
+                            <!-- Trip Info -->
+                            <div class="conf-row">
+                                <p><strong>Pickup Location:</strong> <span id="conf_pickup"></span></p>
+                                <p><strong>Drop-off Location:</strong> <span id="conf_dropoff"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Pickup Date:</strong> <span id="conf_pickup_date"></span></p>
+                                <p><strong>Drop-off Date:</strong> <span id="conf_dropoff_date"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Pickup Time:</strong> <span id="conf_pickup_time"></span></p>
+                                <p><strong>Drop-off Time:</strong> <span id="conf_dropoff_time"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Trip Duration:</strong> <span id="conf_days"></span></p>
+                                <p><strong>Car:</strong> {$car_name}</p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Price/Day:</strong> \\$ {$price_per_day}</p>
+                                <p><strong>Seats:</strong> {$seats}</p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Luggage:</strong> {$luggages}</p>
+                                <p><strong>Mileage:</strong> <span id="conf_mileage"></span></p>
+                            </div>
 
                             <hr>
-                            <h5 class="mb-2">Vehicle Details</h5>
-                            <p><strong>Car:</strong> {$car_name}</p>
+
+                            <!-- Passenger Info -->
+                            <div class="conf-row">
+                                <p><strong>Name:</strong> <span id="conf_name"></span></p>
+                                <p><strong>Email:</strong> <span id="conf_email"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Phone:</strong> <span id="conf_phone"></span></p>
+                                <p><strong>Flight Number:</strong> <span id="conf_flight"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Passengers:</strong> <span id="conf_passengers"></span></p>
+                                <p><strong>Need Driver:</strong> <span id="conf_driver"></span></p>
+                            </div>
+                            <div class="conf-row">
+                                <p><strong>Need License:</strong> <span id="conf_license"></span></p>
+                                <p><strong>Other Info:</strong> <span id="conf_other"></span></p>
+                            </div>
 
                             <hr>
-                            <h5 class="mb-2">Trip Details</h5>
-                            <p><strong>Pickup Location:</strong> <span id="conf_pickup"></span></p>
-                            <p><strong>Drop-off Location:</strong> <span id="conf_dropoff"></span></p>
-                            <p><strong>Pickup Date:</strong> <span id="conf_pickup_date"></span> at <span id="conf_pickup_time"></span></p>
-                            <p><strong>Drop-off Date:</strong> <span id="conf_dropoff_date"></span> at <span id="conf_dropoff_time"></span></p>
-                            <p><strong>Trip Duration:</strong> <span id="conf_days"></span></p>
 
-                            <hr>
-                            <h5 class="mb-2">Extras</h5>
-                            <ul id="conf_addons"></ul>
-
-                            <hr>
-                            <h5 class="mb-2">Passenger Details</h5>
-                            <p><strong>Full Name:</strong> <span id="conf_name"></span></p>
-                            <p><strong>Email:</strong> <span id="conf_email"></span></p>
-                            <p><strong>Phone:</strong> <span id="conf_phone"></span></p>
-                            <p><strong>Flight Number:</strong> <span id="conf_flight"></span></p>
-                            <p><strong>Mileage:</strong> <span id="conf_mileage"></span></p>
-                            <p><strong>Need Driver:</strong> <span id="conf_driver"></span></p>
-                            <p><strong>Need License:</strong> <span id="conf_license"></span></p>
-                            <p><strong>Passengers:</strong> <span id="conf_passengers"></span></p>
-                            <p><strong>Other Info:</strong> <span id="conf_other"></span></p>
+                            <!-- Extras -->
+                            <div class="conf-row full">
+                                <p><strong>Extras:</strong></p>
+                                <ul id="conf_addons" style="margin-left: 20px;"><li>No extras selected.</li></ul>
+                            </div>
                         </div>
 
-                        <button type="button" class="btn btn-secondary prev-step">Back</button>
-                        <button type="submit" class="btn btn-success">Confirm & Submit</button>
+                        <div class="buttons">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="submit" class="btn btn-primary">Confirm & Submit</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -495,82 +580,81 @@ $output = <<<HTML
         </script>
 
         <script>
-function fillConfirmation() {
-    const inputs = {
-        pickup: document.getElementById(\'pickup_location\'),
-        dropoff: document.getElementById(\'dropoff_location\'),
-        pickupDate: document.getElementById(\'pickup_date\'),
-        pickupTime: document.getElementById(\'pickup_time\'),
-        dropoffDate: document.getElementById(\'dropoff_date\'),
-        dropoffTime: document.getElementById(\'dropoff_time\'),
-        name: document.getElementById(\'passenger_name\'),
-        email: document.getElementById(\'passenger_email\'),
-        phone: document.getElementById(\'passenger_phone\'),
-        flight: document.getElementById(\'flight_number\'),
-        mileage: document.getElementById(\'mileage\'),
-        driver: document.getElementById(\'need_driver\'),
-        license: document.getElementById(\'need_license\'),
-        passengers: document.getElementById(\'num_passengers\'),
-        other: document.getElementById(\'other_info\'),
-    };
+            function fillConfirmation() {
+                const inputs = {
+                    pickup: document.getElementById(\'pickup_location\'),
+                    dropoff: document.getElementById(\'dropoff_location\'),
+                    pickupDate: document.getElementById(\'pickup_date\'),
+                    pickupTime: document.getElementById(\'pickup_time\'),
+                    dropoffDate: document.getElementById(\'dropoff_date\'),
+                    dropoffTime: document.getElementById(\'dropoff_time\'),
+                    name: document.getElementById(\'passenger_name\'),
+                    email: document.getElementById(\'passenger_email\'),
+                    phone: document.getElementById(\'passenger_phone\'),
+                    flight: document.getElementById(\'flight_number\'),
+                    mileage: document.getElementById(\'mileage\'),
+                    driver: document.getElementById(\'need_driver\'),
+                    license: document.getElementById(\'need_license\'),
+                    passengers: document.getElementById(\'num_passengers\'),
+                    other: document.getElementById(\'other_info\'),
+                };
 
-    const pricePerDay = parseFloat("{$price_per_day}");
+                const pricePerDay = parseFloat("{$price_per_day}");
 
-    // Fill trip details
-    document.getElementById(\'conf_pickup\').textContent = inputs.pickup.value || \'-\';
-    document.getElementById(\'conf_dropoff\').textContent = inputs.dropoff.value || \'-\';
-    document.getElementById(\'conf_pickup_date\').textContent = inputs.pickupDate.value || \'-\';
-    document.getElementById(\'conf_pickup_time\').textContent = inputs.pickupTime.value || \'-\';
-    document.getElementById(\'conf_dropoff_date\').textContent = inputs.dropoffDate.value || \'-\';
-    document.getElementById(\'conf_dropoff_time\').textContent = inputs.dropoffTime.value || \'-\';
-    document.getElementById(\'conf_name\').textContent = inputs.name.value || \'-\';
-    document.getElementById(\'conf_email\').textContent = inputs.email.value || \'-\';
-    document.getElementById(\'conf_phone\').textContent = inputs.phone.value || \'-\';
-    document.getElementById(\'conf_flight\').textContent = inputs.flight.value || \'-\';
-    document.getElementById(\'conf_mileage\').textContent = inputs.mileage.value || \'-\';
-    document.getElementById(\'conf_driver\').textContent = inputs.driver.value || \'-\';
-    document.getElementById(\'conf_license\').textContent = inputs.license.value || \'-\';
-    document.getElementById(\'conf_passengers\').textContent = inputs.passengers.value || \'-\';
-    document.getElementById(\'conf_other\').textContent = inputs.other.value || \'-\';
+                // Fill trip details
+                document.getElementById(\'conf_pickup\').textContent = inputs.pickup.value || \'-\';
+                document.getElementById(\'conf_dropoff\').textContent = inputs.dropoff.value || \'-\';
+                document.getElementById(\'conf_pickup_date\').textContent = inputs.pickupDate.value || \'-\';
+                document.getElementById(\'conf_pickup_time\').textContent = inputs.pickupTime.value || \'-\';
+                document.getElementById(\'conf_dropoff_date\').textContent = inputs.dropoffDate.value || \'-\';
+                document.getElementById(\'conf_dropoff_time\').textContent = inputs.dropoffTime.value || \'-\';
+                document.getElementById(\'conf_name\').textContent = inputs.name.value || \'-\';
+                document.getElementById(\'conf_email\').textContent = inputs.email.value || \'-\';
+                document.getElementById(\'conf_phone\').textContent = inputs.phone.value || \'-\';
+                document.getElementById(\'conf_flight\').textContent = inputs.flight.value || \'-\';
+                document.getElementById(\'conf_mileage\').textContent = inputs.mileage.value || \'-\';
+                document.getElementById(\'conf_driver\').textContent = inputs.driver.value || \'-\';
+                document.getElementById(\'conf_license\').textContent = inputs.license.value || \'-\';
+                document.getElementById(\'conf_passengers\').textContent = inputs.passengers.value || \'-\';
+                document.getElementById(\'conf_other\').textContent = inputs.other.value || \'-\';
 
-    // Calculate trip days
-    const pickup = new Date(inputs.pickupDate.value);
-    const dropoff = new Date(inputs.dropoffDate.value);
-    let days = 1;
-    if (pickup && dropoff && dropoff >= pickup) {
-        const diff = dropoff - pickup;
-        days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-    }
+                // Calculate trip days
+                const pickup = new Date(inputs.pickupDate.value);
+                const dropoff = new Date(inputs.dropoffDate.value);
+                let days = 1;
+                if (pickup && dropoff && dropoff >= pickup) {
+                    const diff = dropoff - pickup;
+                    days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+                }
 
-    let total = days * pricePerDay;
+                let total = days * pricePerDay;
 
-    // Add-ons
-    const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
-    checkedAddons.forEach(cb => {
-        const addonPrice = parseFloat(cb.dataset.price || 0);
-        const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
-        total += addonPrice * qty * days;
-    });
+                // Add-ons
+                const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
+                checkedAddons.forEach(cb => {
+                    const addonPrice = parseFloat(cb.dataset.price || 0);
+                    const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
+                    total += addonPrice * qty * days;
+                });
 
-    document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
-    document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
+                document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
+                document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
 
-    const addonsList = document.getElementById(\'conf_addons\');
-    addonsList.innerHTML = \'\';
-    if (checkedAddons.length > 0) {
-        checkedAddons.forEach(cb => {
-            const label = cb.closest(\'.form-check\').querySelector(\'label\').textContent.trim();
-            const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
-            const li = document.createElement(\'li\');
-            li.textContent = `${label} × ${qty}`;
-            addonsList.appendChild(li);
-        });
-    } else {
-        addonsList.innerHTML = \'<li>No extras selected.</li>\';
-    }
-}
-</script>
-
+                const addonsList = document.getElementById(\'conf_addons\');
+                addonsList.innerHTML = \'\';
+                if (checkedAddons.length > 0) {
+                    checkedAddons.forEach(cb => {
+                        const label = document.querySelector(\'label[for="\' + cb.id + \'"]\').textContent.trim();
+                        const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
+                        const li = document.createElement(\'li\');
+                        li.textContent = `${label} × ${qty}`;
+                        addonsList.appendChild(li);
+                    });
+                } else {
+                    addonsList.innerHTML = \'<li>No extras selected.</li>\';
+                }
+            }
+        </script>
 
         <script>
             const steps = document.querySelectorAll(\'.form-step\');
