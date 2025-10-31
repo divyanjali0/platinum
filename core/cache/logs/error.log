@@ -371,3 +371,15 @@ Array
 [2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $label
 [2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $qty
 [2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $lineTotal
+[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
+[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
+[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $lineTotal
+[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $label
+[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $qty
+[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $lineTotal
+[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
+[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
+[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
+[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
+[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal

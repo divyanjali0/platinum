@@ -593,53 +593,51 @@ $output = <<<HTML
             });
         </script>
 
-<script>
-document.getElementById(\'multiStepForm\').addEventListener(\'submit\', function(e){
-    e.preventDefault(); // stop normal form submission
+        <script>
+            document.getElementById(\'multiStepForm\').addEventListener(\'submit\', function(e){
+                e.preventDefault(); 
 
-    const form = this;
+                const form = this;
 
-    // Get total price
-    const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'$\',\'\').trim();
-    document.getElementById(\'total_price\').value = totalPrice;
+                // Get total price
+                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'$\',\'\').trim();
+                document.getElementById(\'total_price\').value = totalPrice;
 
-    const formData = new FormData(form);
+                const formData = new FormData(form);
 
-    // Send via AJAX
-    fetch(form.action, {
-        method: \'POST\',
-        body: formData
-    })
-    .then(response => response.text()) // you can parse JSON if your PHP returns JSON
-    .then(data => {
-        // Show toast
-        const toast = document.createElement(\'div\');
-        toast.textContent = \'? Booking Confirmed!\';
-        toast.style.background = \'#28a745\';
-        toast.style.color = \'#fff\';
-        toast.style.padding = \'10px 20px\';
-        toast.style.borderRadius = \'5px\';
-        toast.style.boxShadow = \'0 2px 5px rgba(0,0,0,0.2)\';
-        toast.style.marginBottom = \'10px\';
-        toast.style.opacity = \'0\';
-        toast.style.transition = \'opacity 0.5s\';
-        document.getElementById(\'toast_container\').appendChild(toast);
-        setTimeout(() => toast.style.opacity = 1, 10);
+                // Send via AJAX
+                fetch(form.action, {
+                    method: \'POST\',
+                    body: formData
+                })
+                .then(response => response.text()) 
+                .then(data => {
+                    // Show toast
+                    const toast = document.createElement(\'div\');
+                    toast.textContent = \'Booking Submitted Successfully!\';
+                    toast.style.background = \'#28a745\';
+                    toast.style.color = \'#fff\';
+                    toast.style.padding = \'10px 20px\';
+                    toast.style.borderRadius = \'5px\';
+                    toast.style.boxShadow = \'0 2px 5px rgba(0,0,0,0.2)\';
+                    toast.style.marginBottom = \'10px\';
+                    toast.style.opacity = \'0\';
+                    toast.style.transition = \'opacity 0.5s\';
+                    document.getElementById(\'toast_container\').appendChild(toast);
+                    setTimeout(() => toast.style.opacity = 1, 10);
 
-        // Redirect after 2s
-        setTimeout(() => {
-            toast.style.opacity = 0;
-            setTimeout(() => window.location.href = \'[[~2]]\', 500);
-        }, 2000);
-    })
-    .catch(err => {
-        alert("?? Error submitting booking. Please try again.");
-        console.error(err);
-    });
-});
-</script>
-
-
+                    // Redirect after 2s
+                    setTimeout(() => {
+                        toast.style.opacity = 0;
+                        setTimeout(() => window.location.href = \'[[~2]]\', 500);
+                    }, 2000);
+                })
+                .catch(err => {
+                    alert("Error submitting booking. Please try again.");
+                    console.error(err);
+                });
+            });
+        </script>
 
         <script>
             function fillConfirmation() {

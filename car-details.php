@@ -810,7 +810,6 @@ $output = <<<HTML
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                // Enable/disable quantity dropdowns based on checkbox
                 document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
                     checkbox.addEventListener('change', function() {
                         const qtySelect = document.getElementById('addon_qty_' + this.value);
