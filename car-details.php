@@ -72,15 +72,7 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                      <input 
-                        class="form-check-input addon-checkbox" 
-                        type="checkbox" 
-                        id="addon_' . $addon['id'] . '" 
-                        name="addons[]" 
-                        value="' . $addon['id'] . '" 
-                        data-name="' . htmlspecialchars(trim($addon['name']), ENT_QUOTES) . '"
-                        data-price="' . $addon['price_per_day'] . '">
-
+                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_' . $addon['id'] . '" name="addons[]" value="' . $addon['id'] . '" data-name="' . htmlspecialchars(trim($addon['name']), ENT_QUOTES) . '"data-price="' . $addon['price_per_day'] . '">
                         <label class="form-check-label" for="addon_' . $addon['id'] . '">'
                             . htmlspecialchars($addon['name']) . 
                             ' (<strong>$' . number_format($addon['price_per_day'], 2) . '</strong>/day)
@@ -98,7 +90,7 @@ try {
         $addons_html .= '<p>No add-ons available.</p>';
     }
 } catch (PDOException $e) {
-    $addons_html .= '<p>⚠️ Error loading add-ons.</p>';
+    $addons_html .= '<p>Error loading add-ons.</p>';
 }
 $addons_html .= '</div></div></div>';
 
@@ -282,7 +274,7 @@ $output = <<<HTML
                 
                 <div class="side-box">
                     <h5>Trip Details</h5>
-                    <form id="bookingForm" action="assets/includes/save-booking.php" method="POST" enctype="multipart/form-data">
+                    <form id="bookingForm" action="assets/includes/connection.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="pickup_location">Pickup Location</label>
                             <input type="text" class="form-control" id="pickup_location" name="pickup_location"
@@ -329,7 +321,7 @@ $output = <<<HTML
 
             <!-- RIGHT COLUMN -->
             <div class="col-md-8">
-                <form id="multiStepForm" action="assets/includes/save-booking.php" method="POST" enctype="multipart/form-data">
+                <form id="multiStepForm" action="assets/includes/connection.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="car_id" value="{$car_id}">
 
                     <!-- STEP 1: VEHICLE -->

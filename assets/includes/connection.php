@@ -22,6 +22,17 @@
     $need_license     = $_POST['need_license'] ?? 'no';
     $other_info       = trim($_POST['other_info'] ?? '');
     $total_price      = floatval($_POST['total_price'] ?? 0);
+    $addons = $_POST['addons'] ?? [];
+    $addon_qty = $_POST['addon_qty'] ?? [];
+
+    $addons_data = [];
+    if (!empty($addons)) {
+        foreach ($addons as $addon_id) {
+            $addons_data[$addon_id] = intval($addon_qty[$addon_id] ?? 1);
+        }
+    }
+
+    $addons_json = json_encode($addons_data);
 
     $pickup  = strtotime($pickup_date);
     $dropoff = strtotime($dropoff_date);
@@ -66,12 +77,14 @@
             (vehicle_id, pickup_location, dropoff_location, pickup_date, dropoff_date, 
             pickup_time, dropoff_time, trip_days, mileage,
             passenger_name, passenger_email, passenger_phone, flight_number, passengers, 
-            need_driver, need_license, passport_image, passport_image2, idp_image, total_price, created_at)
+            need_driver, need_license, passport_image, passport_image2, idp_image, total_price,
+            addons, addon_quantities, created_at)
             VALUES 
             (:vehicle_id, :pickup_location, :dropoff_location, :pickup_date, :dropoff_date, 
             :pickup_time, :dropoff_time, :trip_days, :mileage,
             :passenger_name, :passenger_email, :passenger_phone, :flight_number, :passengers, 
-            :need_driver, :need_license, :passport_image, :passport_image2, :idp_image, :total_price, NOW())
+            :need_driver, :need_license, :passport_image, :passport_image2, :idp_image, :total_price,
+            :addons, :addon_quantities, NOW())
         ");
 
         $stmt->execute([
@@ -94,9 +107,10 @@
             ':passport_image'  => $passport_path,    
             ':passport_image2' => $passport2_path,  
             ':idp_image'       => $idp_path,        
-            ':total_price'     => $total_price
+            ':total_price'     => $total_price,
+            ':addons'          => json_encode(array_keys($addons_data)), 
+            ':addon_quantities'=> $addons_json 
         ]);
-
 
         echo "<h3 style='color:green;'>✅ Booking Successful!</h3>";
         echo "<p>Thank you, <strong>{$name}</strong>. Your booking has been saved.</p>";
