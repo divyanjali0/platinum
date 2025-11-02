@@ -276,8 +276,7 @@ $output = <<<HTML
                  <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p><strong>Price per Day :</strong> $ {$price_per_day}</p>
-                    <p><strong>Total Price :</strong> <span id="trip_total">-</span></p>
+                    <p style="font-size: 24px;"><strong>Total Price :</strong> <span id="trip_total">-</span></p>
                 </div>
                 
                 <div class="side-box">
@@ -809,7 +808,6 @@ $output = <<<HTML
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                // Enable/disable quantity dropdowns based on checkbox
                 document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
                     checkbox.addEventListener('change', function() {
                         const qtySelect = document.getElementById('addon_qty_' + this.value);

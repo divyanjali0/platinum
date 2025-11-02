@@ -1,11 +1,83 @@
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\mysql\modContext.php : 205) [modContext_mysql] Encountered error loading resources for cache map generation: HY000 // Array
-(
-    [0] => HY000
-    [1] => 2006
-    [2] => MySQL server has gone away
-)
-
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-10-31 08:32:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 694) PHP warning: Undefined variable $addonTotal
+[2025-10-31 08:32:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 696) PHP warning: Undefined variable $name
+[2025-10-31 08:32:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 696) PHP warning: Undefined variable $qty
+[2025-10-31 08:34:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 696) PHP warning: Undefined variable $name
+[2025-10-31 08:34:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 696) PHP warning: Undefined variable $qty
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $label
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $qty
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $label
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $value
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
+[2025-10-31 08:34:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $total
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $label
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $qty
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $label
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $value
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
+[2025-10-31 08:37:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $total
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $label
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $qty
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $label
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $value
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
+[2025-10-31 08:38:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $total
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $label
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $qty
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 690) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $label
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 736) PHP warning: Undefined variable $value
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
+[2025-10-31 08:39:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $total
+[2025-10-31 08:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
+[2025-10-31 08:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
+[2025-10-31 08:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:43:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
+[2025-10-31 08:43:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
+[2025-10-31 08:43:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 346) PHP warning: Array to string conversion
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 346) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 346) PHP warning: Undefined variable $img
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 347) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $img
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 361) PHP warning: Array to string conversion
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 361) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 361) PHP warning: Undefined variable $img
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 362) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 362) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 362) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 362) PHP warning: Undefined variable $index
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $label
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $qty
+[2025-10-31 08:45:17] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:47:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 106) PHP warning: Undefined variable $car_images
+[2025-10-31 08:47:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 106) PHP warning: foreach() argument must be of type array|object, null given
+[2025-10-31 08:47:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $label
+[2025-10-31 08:47:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $qty
+[2025-10-31 08:47:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 742) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:49:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
+[2025-10-31 08:49:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
+[2025-10-31 08:49:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:56:32] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $label
+[2025-10-31 08:56:32] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $qty
+[2025-10-31 08:56:32] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $lineTotal
+[2025-10-31 08:56:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $label
+[2025-10-31 08:56:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $qty
+[2025-10-31 08:56:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $lineTotal
+[2025-10-31 09:02:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $label
+[2025-10-31 09:02:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $qty
+[2025-10-31 09:02:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $lineTotal
+[2025-10-31 09:05:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $label
+[2025-10-31 09:05:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $qty
+[2025-10-31 09:05:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 718) PHP warning: Undefined variable $lineTotal
+[2025-11-02 11:31:09] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\Smarty\modSmarty.php : 160) unable to write file C:\xampp\htdocs\platinum\core\cache\mgr\smarty\default\1e75a8456a719408f1c52c609ea499291ceb8ccc_0.file.login.tpl.php
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -13,7 +85,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -21,7 +93,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -29,7 +101,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -37,7 +109,8 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
 Array
 (
     [0] => HY000
@@ -45,7 +118,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -53,8 +126,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
-INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797348, '')
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -62,9 +134,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:09:54] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
-[2025-10-30 05:09:54] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -72,7 +142,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -80,7 +150,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -88,7 +158,8 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
 Array
 (
     [0] => HY000
@@ -96,7 +167,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -104,7 +175,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -112,7 +183,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -120,7 +191,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -128,7 +199,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -136,8 +207,8 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
-INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, 'modx.user.contextTokens|a:1:{s:3:\"mgr\";i:2;}manager_language|s:2:\"en\";modx.user.0.resourceGroups|a:1:{s:3:\"mgr\";a:0:{}}modx.user.0.attributes|a:1:{s:3:\"mgr\";a:5:{s:32:\"MODX\\Revolution\\modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";i:0;s:6:\"policy\";a:1:{s:4:\"load\";b:1;}}}}s:38:\"MODX\\Revolution\\modAccessResourceGroup\";a:0:{}s:33:\"MODX\\Revolution\\modAccessCategory\";a:0:{}s:44:\"MODX\\Revolution\\Sources\\modAccessMediaSource\";a:0:{}s:34:\"MODX\\Revolution\\modAccessNamespace\";a:0:{}}}modx.mgr.user.token|s:52:\"modx68b540e6de8ad9.76783708_26902e46edd9d30.71462960\";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}')
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
 Array
 (
     [0] => HY000
@@ -145,7 +216,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -153,7 +224,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -161,7 +232,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -169,7 +240,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -177,7 +248,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -185,8 +256,8 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
-INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, '')
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
 Array
 (
     [0] => HY000
@@ -194,7 +265,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -202,8 +273,7 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 05:10:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
-INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('cpe6evoqe95fn4b9prmseicrv0', 1761797447, '')
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
 Array
 (
     [0] => HY000
@@ -211,175 +281,542 @@ Array
     [2] => MySQL server has gone away
 )
 
-[2025-10-30 06:48:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 76) PHP warning: Undefined array key "reservation"
-[2025-10-30 11:09:44] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 154) PHP warning: Undefined variable $price_per_day
-[2025-10-30 11:10:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 21) PHP warning: Undefined array key "price_per_day"
-[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 17:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 17:56:48] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name showSessionData.
-[2025-10-30 18:00:18] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
-[2025-10-30 18:00:18] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
-[2025-10-30 18:02:19] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
-[2025-10-30 18:02:19] (ERROR @ C:\xampp\htdocs\platinum\core\src\Revolution\modParser.php : 512) Could not find snippet with name SaveFormSession.
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 187) PHP warning: Undefined variable $pickup
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 192) PHP warning: Undefined variable $dropoff
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 197) PHP warning: Undefined variable $pickup_date
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 202) PHP warning: Undefined variable $pickup_time
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 207) PHP warning: Undefined variable $dropoff_date
-[2025-10-30 18:52:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 212) PHP warning: Undefined variable $dropoff_time
-[2025-10-30 20:43:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 596) PHP warning: Undefined variable $label
-[2025-10-30 20:43:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 596) PHP warning: Undefined variable $qty
-[2025-10-30 20:49:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-30 20:49:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-30 20:50:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-30 20:50:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-31 04:37:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-31 04:37:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-31 04:47:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-31 04:47:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-31 04:49:53] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-31 04:49:53] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-31 04:50:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $label
-[2025-10-31 04:50:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 602) PHP warning: Undefined variable $qty
-[2025-10-31 05:10:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $label
-[2025-10-31 05:10:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $qty
-[2025-10-31 05:10:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 630) PHP warning: Undefined variable $label
-[2025-10-31 05:10:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 630) PHP warning: Undefined variable $qty
-[2025-10-31 05:11:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 630) PHP warning: Undefined variable $label
-[2025-10-31 05:11:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 630) PHP warning: Undefined variable $qty
-[2025-10-31 05:11:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 633) PHP warning: Undefined variable $label
-[2025-10-31 05:11:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 633) PHP warning: Undefined variable $qty
-[2025-10-31 05:15:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 633) PHP warning: Undefined variable $label
-[2025-10-31 05:15:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 633) PHP warning: Undefined variable $qty
-[2025-10-31 05:18:47] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $label
-[2025-10-31 05:18:47] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $qty
-[2025-10-31 05:19:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $label
-[2025-10-31 05:19:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 629) PHP warning: Undefined variable $qty
-[2025-10-31 05:24:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 656) PHP warning: Undefined variable $label
-[2025-10-31 05:24:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 656) PHP warning: Undefined variable $qty
-[2025-10-31 05:27:27] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 566) PHP warning: Undefined variable $label
-[2025-10-31 05:27:27] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 566) PHP warning: Undefined variable $qty
-[2025-10-31 05:31:06] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 603) PHP warning: Undefined variable $label
-[2025-10-31 05:31:06] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 603) PHP warning: Undefined variable $qty
-[2025-10-31 05:34:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 620) PHP warning: Undefined variable $label
-[2025-10-31 05:34:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 620) PHP warning: Undefined variable $qty
-[2025-10-31 05:35:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 636) PHP warning: Undefined variable $label
-[2025-10-31 05:35:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 636) PHP warning: Undefined variable $qty
-[2025-10-31 05:39:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 637) PHP warning: Undefined variable $label
-[2025-10-31 05:39:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 637) PHP warning: Undefined variable $qty
-[2025-10-31 05:41:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 651) PHP warning: Undefined variable $label
-[2025-10-31 05:41:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 651) PHP warning: Undefined variable $qty
-[2025-10-31 05:50:19] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 652) PHP warning: Undefined variable $label
-[2025-10-31 05:50:19] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 652) PHP warning: Undefined variable $qty
-[2025-10-31 05:50:19] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 652) PHP warning: Undefined variable $lineTotal
-[2025-10-31 05:55:48] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $label
-[2025-10-31 05:55:48] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $qty
-[2025-10-31 05:55:48] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $lineTotal
-[2025-10-31 05:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $label
-[2025-10-31 05:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $qty
-[2025-10-31 05:56:34] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $lineTotal
-[2025-10-31 05:56:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $label
-[2025-10-31 05:56:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $qty
-[2025-10-31 05:56:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 654) PHP warning: Undefined variable $lineTotal
-[2025-10-31 05:58:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $label
-[2025-10-31 05:58:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $qty
-[2025-10-31 05:58:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $lineTotal
-[2025-10-31 05:59:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $label
-[2025-10-31 05:59:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $qty
-[2025-10-31 05:59:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:11:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $label
-[2025-10-31 06:11:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $qty
-[2025-10-31 06:11:59] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:14:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $label
-[2025-10-31 06:14:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $qty
-[2025-10-31 06:14:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 659) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:15:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:15:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:15:56] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:16:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:16:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:16:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:16:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:16:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:16:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:16:40] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:16:40] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:16:40] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:17:46] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:17:46] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:17:46] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:17:49] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:18:02] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $label
-[2025-10-31 06:18:02] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $qty
-[2025-10-31 06:18:02] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 658) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $label
-[2025-10-31 06:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $qty
-[2025-10-31 06:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:20:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $label
-[2025-10-31 06:20:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $qty
-[2025-10-31 06:20:36] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:22:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $label
-[2025-10-31 06:22:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $qty
-[2025-10-31 06:22:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 670) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:26:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:26:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:26:15] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:27:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:27:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:27:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:28:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:28:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:28:13] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:28:16] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:28:16] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:28:16] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:28:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:28:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:28:58] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:30:07] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:30:07] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:30:07] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 06:30:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 06:30:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 06:30:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:17:22] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $label
-[2025-10-31 07:17:22] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $qty
-[2025-10-31 07:17:22] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 671) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:19:52] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $label
-[2025-10-31 07:19:52] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $qty
-[2025-10-31 07:19:52] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $label
-[2025-10-31 07:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $qty
-[2025-10-31 07:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:20:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $label
-[2025-10-31 07:20:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $qty
-[2025-10-31 07:20:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:21:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $label
-[2025-10-31 07:21:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $qty
-[2025-10-31 07:21:24] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 710) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:23:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $label
-[2025-10-31 07:23:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $qty
-[2025-10-31 07:23:35] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $label
-[2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $qty
-[2025-10-31 07:23:38] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 721) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $label
-[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $qty
-[2025-10-31 07:35:21] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 753) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $label
-[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $qty
-[2025-10-31 07:53:01] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 754) PHP warning: Undefined variable $lineTotal
-[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
-[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
-[2025-10-31 07:55:45] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
-[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $label
-[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $qty
-[2025-10-31 08:02:14] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 719) PHP warning: Undefined variable $lineTotal
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_register_queues` (`name`, `options`) VALUES ('locks', 'a:1:{s:9:\"directory\";s:5:\"locks\";}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('thg06nja2r6m6mocj4u03plhbs', 1762093159, 'modx.user.contextTokens|a:1:{s:3:\"mgr\";i:2;}manager_language|s:2:\"en\";modx.user.0.resourceGroups|a:1:{s:3:\"mgr\";a:0:{}}modx.user.0.attributes|a:1:{s:3:\"mgr\";a:5:{s:32:\"MODX\\Revolution\\modAccessContext\";a:1:{s:3:\"web\";a:1:{i:0;a:3:{s:9:\"principal\";i:0;s:9:\"authority\";i:0;s:6:\"policy\";a:1:{s:4:\"load\";b:1;}}}}s:38:\"MODX\\Revolution\\modAccessResourceGroup\";a:0:{}s:33:\"MODX\\Revolution\\modAccessCategory\";a:0:{}s:44:\"MODX\\Revolution\\Sources\\modAccessMediaSource\";a:0:{}s:34:\"MODX\\Revolution\\modAccessNamespace\";a:0:{}}}modx.mgr.user.token|s:52:\"modx68b540e6de8ad9.76783708_26907684ad47605.95944036\";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-02 15:19:24] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:24] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:25] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:25] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:28] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:28] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:29] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:29] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:32] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:33] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:33] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:36] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:36] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:19:37] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:37] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:19:39] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:39] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:39] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:39] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:40] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:40] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:19:40] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:40] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:41] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:19:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:43] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:43] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:43] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:43] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:44] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:44] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:44] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:44] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:45] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:45] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:47] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:47] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:47] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:47] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:48] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:48] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:49] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:49] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:49] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:49] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:51] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:51] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:19:51] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:51] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:51] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:51] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:19:53] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:53] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:53] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:53] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:55] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:19:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:55] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:19:55] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:19:56] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:56] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:19:56] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:56] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:19:57] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:57] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:57] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:59] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:59] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:19:59] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:19:59] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:00] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:00] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:00] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:00] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:01] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:03] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:03] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:04] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:04] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:04] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:04] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:04] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:04] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:05] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:07] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:08] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:08] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:20:08] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:08] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:09] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:10] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:10] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:11] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:12] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:12] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:20:12] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:12] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:12] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:12] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:13] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:14] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:14] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:14] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:14] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:15] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:16] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:16] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:16] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:16] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:16] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:16] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:17] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:18] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:18] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:18] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:18] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:19] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:19] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:20] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:20] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:20] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:20] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:20] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:20] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:21] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:22] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:22] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:23] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:23] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:20:23] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:23] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:24] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:24] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:24] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:24] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:24] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:25] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:25] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:25] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-02 15:20:26] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:26] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:20:27] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:27] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:20:27] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:27] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:27] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:27] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:20:28] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:28] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:28] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:28] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:28] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC 
+[2025-11-02 15:20:29] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:29] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:29] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:30] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:30] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:20:30] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:30] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:31] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:31] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:31] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:31] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:20:31] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:31] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:32] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:32] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT modAccessContext.id, modAccessContext.target, modAccessContext.principal, modAccessContext.authority, modAccessContext.policy, Policy.data FROM `modx_access_context` AS `modAccessContext` LEFT JOIN `modx_access_policies` `Policy` ON `modAccessContext`.`policy` =  `Policy`.`id` WHERE  ( `modAccessContext`.`principal_class` = ? AND `modAccessContext`.`target` = ? )  ORDER BY modAccessContext.target,modAccessContext.principal,modAccessContext.authority,modAccessContext.policy ASC  - 
+[2025-11-02 15:20:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-02 15:20:33] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:33] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:33] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:34] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:34] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:35] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:35] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:35] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:36] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:36] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:36] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-02 15:20:37] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:38] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:38] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:38] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:39] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:39] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:39] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:40] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:40] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:40] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-02 15:20:41] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:42] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:43] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:43] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:43] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:45] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:45] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:46] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:47] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:47] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:49] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:49] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:50] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:54] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:54] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:58] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:20:58] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:02] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:02] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:06] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:06] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:10] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:10] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:14] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:14] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:18] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:18] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:22] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:22] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:26] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:26] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:30] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-02 15:21:30] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
