@@ -872,7 +872,7 @@ try {
                 <div class=\'text\'>
                     <div class=\'d-flex justify-content-between align-items-center mb-1\'>
                         <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
-                        <small class=\'text-muted\' style=\'font-size: 16px;\'>
+                        <small style=\'font-size: 16px; color: #d09c00;\'>
                             <i class=\'fa fa-users\'></i> $seats&nbsp; |
                             <i class=\'fa fa-suitcase ml-2\'></i> $luggage
                         </small>
@@ -881,7 +881,7 @@ try {
                         <span class=\'cat\'>$description</span>
                         <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
                     </div>
-                    <p class=\'d-flex mb-0 d-block\'>
+                    <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
                     </p>
                 </div>
@@ -927,7 +927,7 @@ try {
                 <div class=\'text\'>
                     <div class=\'d-flex justify-content-between align-items-center mb-1\'>
                         <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
-                        <small class=\'text-muted\' style=\'font-size: 16px;\'>
+                        <small style=\'font-size: 16px; color: #d09c00;\'>
                             <i class=\'fa fa-users\'></i> $seats&nbsp; |
                             <i class=\'fa fa-suitcase ml-2\'></i> $luggage
                         </small>
@@ -936,7 +936,7 @@ try {
                         <span class=\'cat\'>$description</span>
                         <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
                     </div>
-                    <p class=\'d-flex mb-0 d-block\'>
+                    <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
                     </p>
                 </div>

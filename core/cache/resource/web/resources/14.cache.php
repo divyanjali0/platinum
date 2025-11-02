@@ -870,15 +870,7 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                      <input 
-                        class="form-check-input addon-checkbox" 
-                        type="checkbox" 
-                        id="addon_\' . $addon[\'id\'] . \'" 
-                        name="addons[]" 
-                        value="\' . $addon[\'id\'] . \'" 
-                        data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"
-                        data-price="\' . $addon[\'price_per_day\'] . \'">
-
+                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_\' . $addon[\'id\'] . \'" name="addons[]" value="\' . $addon[\'id\'] . \'" data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"data-price="\' . $addon[\'price_per_day\'] . \'">
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -896,7 +888,7 @@ try {
         $addons_html .= \'<p>No add-ons available.</p>\';
     }
 } catch (PDOException $e) {
-    $addons_html .= \'<p>?? Error loading add-ons.</p>\';
+    $addons_html .= \'<p>Error loading add-ons.</p>\';
 }
 $addons_html .= \'</div></div></div>\';
 
@@ -1134,7 +1126,7 @@ $output = <<<HTML
                     <div class="form-step active" data-step="1">
                         <h4>Selected Vehicle</h4>
                         <div class="card mb-3">
-                            <img src="{$car_image}" class="card-img-top" alt="{$car_name}">
+                            <img src="{$car_image}" class="card-img-top" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title mb-0" style="font-weight:600;">{$car_name}</h5>
                                 <p class="card-text">{$car_description}</p>
@@ -1326,6 +1318,9 @@ $output = <<<HTML
             <div id="toast_container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
         <script>
             document.querySelector(\'#multiStepForm\').addEventListener(\'submit\', function() {
                 [\'pickup_location\',\'dropoff_location\',\'pickup_date\',\'dropoff_date\',\'pickup_time\',\'dropoff_time\'].forEach(id => {
@@ -1349,7 +1344,7 @@ $output = <<<HTML
                 function calculateTrip() {
                     const pickupDate = new Date(pickupDateInput.value);
                     const dropoffDate = new Date(dropoffDateInput.value);
-                    const helpTotalEl = document.getElementById(\'help_total\'); // optional – add to your HTML if needed
+                    const helpTotalEl = document.getElementById(\'help_total\'); 
 
                     if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
                         // Calculate rental days
@@ -1360,7 +1355,6 @@ $output = <<<HTML
                         // Base rental total
                         let total = days * pricePerDay;
 
-                        // ? Add add-ons
                         document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
                             const addonPrice = parseFloat(cb.dataset.price || 0);
                             const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
@@ -1374,9 +1368,9 @@ $output = <<<HTML
                         if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
 
                     } else {
-                        tripDaysEl.textContent = "–";
-                        tripTotalEl.textContent = "–";
-                        if (helpTotalEl) helpTotalEl.textContent = "–";
+                        tripDaysEl.textContent = "-";
+                        tripTotalEl.textContent = "-";
+                        if (helpTotalEl) helpTotalEl.textContent = "-";
                     }
                 }
 
@@ -1425,7 +1419,10 @@ $output = <<<HTML
                     document.getElementById(\'toast_container\').appendChild(toast);
                     setTimeout(() => toast.style.opacity = 1, 10);
 
-                    // Redirect after 2s
+                    // Generate PDF using jsPDF
+                    generatePDF();
+
+                    // Optional redirect after 2s
                     setTimeout(() => {
                         toast.style.opacity = 0;
                         setTimeout(() => window.location.href = \'[[~2]]\', 500);
@@ -1436,6 +1433,106 @@ $output = <<<HTML
                     console.error(err);
                 });
             });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script>
+            function generatePDF() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                const conf = {
+                    pickup: document.getElementById(\'conf_pickup\')?.textContent || \'-\',
+                    dropoff: document.getElementById(\'conf_dropoff\')?.textContent || \'-\',
+                    pickupDate: document.getElementById(\'conf_pickup_date\')?.textContent || \'-\',
+                    dropoffDate: document.getElementById(\'conf_dropoff_date\')?.textContent || \'-\',
+                    pickupTime: document.getElementById(\'conf_pickup_time\')?.textContent || \'-\',
+                    dropoffTime: document.getElementById(\'conf_dropoff_time\')?.textContent || \'-\',
+                    carName: document.querySelector(\'.form-step[data-step="1"] .card-title\')?.textContent || \'-\',
+                    tripDays: document.getElementById(\'conf_days\')?.textContent || \'-\',
+                    totalPrice: document.getElementById(\'conf_total\')?.textContent || \'-\',
+                    name: document.getElementById(\'conf_name\')?.textContent || \'-\',
+                    email: document.getElementById(\'conf_email\')?.textContent || \'-\',
+                    phone: document.getElementById(\'conf_phone\')?.textContent || \'-\',
+                    flight: document.getElementById(\'conf_flight\')?.textContent || \'-\',
+                    passengers: document.getElementById(\'conf_passengers\')?.textContent || \'-\',
+                    mileage: document.getElementById(\'conf_mileage\')?.textContent || \'-\',
+                    driver: document.getElementById(\'conf_driver\')?.textContent || \'-\',
+                    license: document.getElementById(\'conf_license\')?.textContent || \'-\',
+                    other: document.getElementById(\'conf_other\')?.textContent || \'-\',
+                    addons: Array.from(document.querySelectorAll(\'#conf_addons li\')).map(function(li){ return li.textContent; })
+                };
+
+                // --- Header with logo ---
+                let y = 15;
+                doc.setFontSize(22);
+                doc.setFont("helvetica", "bold");
+                doc.text("Platinum Car Rentals", 105, y, { align: "center" });
+
+                // Optional: logo on top left
+                const logoImg = new Image();
+                logoImg.src = \'/assets/images/logo1.png\'; 
+                logoImg.onload = function() {
+                    doc.addImage(logoImg, \'PNG\', 15, 5, 40, 15);
+                }
+
+                y += 10;
+                doc.setFontSize(14);
+                doc.setFont("helvetica", "normal");
+                doc.text("Booking Invoice", 105, y, { align: "center" });
+                y += 10;
+
+                // --- Trip Details Table ---
+                doc.setFontSize(12);
+                doc.setFont("helvetica", "bold");
+                doc.text("Trip Details", 10, y);
+                y += 6;
+
+                doc.setFont("helvetica", "normal");
+                doc.text("Pickup Location: " + conf.pickup, 10, y); y += 6;
+                doc.text("Drop-off Location: " + conf.dropoff, 10, y); y += 6;
+                doc.text("Pickup Date & Time: " + conf.pickupDate + " " + conf.pickupTime, 10, y); y += 6;
+                doc.text("Drop-off Date & Time: " + conf.dropoffDate + " " + conf.dropoffTime, 10, y); y += 6;
+                doc.text("Car: " + conf.carName, 10, y); y += 6;
+                doc.text("Trip Duration: " + conf.tripDays, 10, y); y += 6;
+                doc.text("Total Price: " + conf.totalPrice, 10, y); y += 10;
+
+                // --- Passenger Details ---
+                doc.setFont("helvetica", "bold");
+                doc.text("Passenger Details", 10, y); y += 6;
+
+                doc.setFont("helvetica", "normal");
+                doc.text("Name: " + conf.name, 10, y); y += 6;
+                doc.text("Email: " + conf.email, 10, y); y += 6;
+                doc.text("Phone: " + conf.phone, 10, y); y += 6;
+                doc.text("Flight Number: " + conf.flight, 10, y); y += 6;
+                doc.text("Passengers: " + conf.passengers, 10, y); y += 6;
+                doc.text("Mileage: " + conf.mileage, 10, y); y += 6;
+                doc.text("Driver Required: " + conf.driver, 10, y); y += 6;
+                doc.text("License Required: " + conf.license, 10, y); y += 6;
+                if(conf.other !== \'-\') doc.text("Other Info: " + conf.other, 10, y); y += 10;
+
+                // --- Add-ons ---
+                doc.setFont("helvetica", "bold");
+                doc.text("Extras / Add-ons", 10, y); y += 6;
+
+                doc.setFont("helvetica", "normal");
+                if(conf.addons.length > 0){
+                    conf.addons.forEach(function(addon){
+                        doc.text("- " + addon, 10, y);
+                        y += 6;
+                    });
+                } else {
+                    doc.text("- None", 10, y); y += 6;
+                }
+
+                // --- Footer ---
+                y += 10;
+                doc.setFont("helvetica", "bold");
+                doc.text("Thank you for choosing Platinum Car Rentals!", 105, y, { align: "center" });
+
+                doc.save("Booking_" + conf.name.replace(/\\\\s+/g, "_") + ".pdf");
+            }
         </script>
 
         <script>
@@ -1537,7 +1634,6 @@ $output = <<<HTML
                 currentStep = step;
             }
 
-            // ? Validation before moving forward
             function validateStep(stepIndex) {
                 const step = steps[stepIndex];
                 const requiredFields = step.querySelectorAll(\'.required-field\');
@@ -1563,7 +1659,6 @@ $output = <<<HTML
                     const current = document.querySelector(\'.form-step.active\');
                     const nextStep = parseInt(current.dataset.step) + 1;
 
-                    // ? Validate Step 3 before moving to Step 4
                     if (current.dataset.step === "3" && !validateStep(2)) {
                         return;
                     }
@@ -1571,14 +1666,13 @@ $output = <<<HTML
                     showStep(nextStep - 1);
 
                     if (nextStep === 4) {
-                        // Sync add-on selections before filling confirmation
                         document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
                             const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
                             if (qtySelect) {
                                 qtySelect.disabled = !cb.checked;
                             }
                         });
-                        fillConfirmation();
+                    fillConfirmation();
                     }
                 });
             });
@@ -1700,15 +1794,7 @@ try {
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                      <input 
-                        class="form-check-input addon-checkbox" 
-                        type="checkbox" 
-                        id="addon_\' . $addon[\'id\'] . \'" 
-                        name="addons[]" 
-                        value="\' . $addon[\'id\'] . \'" 
-                        data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"
-                        data-price="\' . $addon[\'price_per_day\'] . \'">
-
+                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_\' . $addon[\'id\'] . \'" name="addons[]" value="\' . $addon[\'id\'] . \'" data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"data-price="\' . $addon[\'price_per_day\'] . \'">
                         <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
                             . htmlspecialchars($addon[\'name\']) . 
                             \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
@@ -1726,7 +1812,7 @@ try {
         $addons_html .= \'<p>No add-ons available.</p>\';
     }
 } catch (PDOException $e) {
-    $addons_html .= \'<p>?? Error loading add-ons.</p>\';
+    $addons_html .= \'<p>Error loading add-ons.</p>\';
 }
 $addons_html .= \'</div></div></div>\';
 
@@ -1964,7 +2050,7 @@ $output = <<<HTML
                     <div class="form-step active" data-step="1">
                         <h4>Selected Vehicle</h4>
                         <div class="card mb-3">
-                            <img src="{$car_image}" class="card-img-top" alt="{$car_name}">
+                            <img src="{$car_image}" class="card-img-top" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title mb-0" style="font-weight:600;">{$car_name}</h5>
                                 <p class="card-text">{$car_description}</p>
@@ -2156,6 +2242,9 @@ $output = <<<HTML
             <div id="toast_container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
         <script>
             document.querySelector(\'#multiStepForm\').addEventListener(\'submit\', function() {
                 [\'pickup_location\',\'dropoff_location\',\'pickup_date\',\'dropoff_date\',\'pickup_time\',\'dropoff_time\'].forEach(id => {
@@ -2179,7 +2268,7 @@ $output = <<<HTML
                 function calculateTrip() {
                     const pickupDate = new Date(pickupDateInput.value);
                     const dropoffDate = new Date(dropoffDateInput.value);
-                    const helpTotalEl = document.getElementById(\'help_total\'); // optional – add to your HTML if needed
+                    const helpTotalEl = document.getElementById(\'help_total\'); 
 
                     if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
                         // Calculate rental days
@@ -2190,7 +2279,6 @@ $output = <<<HTML
                         // Base rental total
                         let total = days * pricePerDay;
 
-                        // ? Add add-ons
                         document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
                             const addonPrice = parseFloat(cb.dataset.price || 0);
                             const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
@@ -2204,9 +2292,9 @@ $output = <<<HTML
                         if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
 
                     } else {
-                        tripDaysEl.textContent = "–";
-                        tripTotalEl.textContent = "–";
-                        if (helpTotalEl) helpTotalEl.textContent = "–";
+                        tripDaysEl.textContent = "-";
+                        tripTotalEl.textContent = "-";
+                        if (helpTotalEl) helpTotalEl.textContent = "-";
                     }
                 }
 
@@ -2255,7 +2343,10 @@ $output = <<<HTML
                     document.getElementById(\'toast_container\').appendChild(toast);
                     setTimeout(() => toast.style.opacity = 1, 10);
 
-                    // Redirect after 2s
+                    // Generate PDF using jsPDF
+                    generatePDF();
+
+                    // Optional redirect after 2s
                     setTimeout(() => {
                         toast.style.opacity = 0;
                         setTimeout(() => window.location.href = \'[[~2]]\', 500);
@@ -2266,6 +2357,106 @@ $output = <<<HTML
                     console.error(err);
                 });
             });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script>
+            function generatePDF() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                const conf = {
+                    pickup: document.getElementById(\'conf_pickup\')?.textContent || \'-\',
+                    dropoff: document.getElementById(\'conf_dropoff\')?.textContent || \'-\',
+                    pickupDate: document.getElementById(\'conf_pickup_date\')?.textContent || \'-\',
+                    dropoffDate: document.getElementById(\'conf_dropoff_date\')?.textContent || \'-\',
+                    pickupTime: document.getElementById(\'conf_pickup_time\')?.textContent || \'-\',
+                    dropoffTime: document.getElementById(\'conf_dropoff_time\')?.textContent || \'-\',
+                    carName: document.querySelector(\'.form-step[data-step="1"] .card-title\')?.textContent || \'-\',
+                    tripDays: document.getElementById(\'conf_days\')?.textContent || \'-\',
+                    totalPrice: document.getElementById(\'conf_total\')?.textContent || \'-\',
+                    name: document.getElementById(\'conf_name\')?.textContent || \'-\',
+                    email: document.getElementById(\'conf_email\')?.textContent || \'-\',
+                    phone: document.getElementById(\'conf_phone\')?.textContent || \'-\',
+                    flight: document.getElementById(\'conf_flight\')?.textContent || \'-\',
+                    passengers: document.getElementById(\'conf_passengers\')?.textContent || \'-\',
+                    mileage: document.getElementById(\'conf_mileage\')?.textContent || \'-\',
+                    driver: document.getElementById(\'conf_driver\')?.textContent || \'-\',
+                    license: document.getElementById(\'conf_license\')?.textContent || \'-\',
+                    other: document.getElementById(\'conf_other\')?.textContent || \'-\',
+                    addons: Array.from(document.querySelectorAll(\'#conf_addons li\')).map(function(li){ return li.textContent; })
+                };
+
+                // --- Header with logo ---
+                let y = 15;
+                doc.setFontSize(22);
+                doc.setFont("helvetica", "bold");
+                doc.text("Platinum Car Rentals", 105, y, { align: "center" });
+
+                // Optional: logo on top left
+                const logoImg = new Image();
+                logoImg.src = \'/assets/images/logo1.png\'; 
+                logoImg.onload = function() {
+                    doc.addImage(logoImg, \'PNG\', 15, 5, 40, 15);
+                }
+
+                y += 10;
+                doc.setFontSize(14);
+                doc.setFont("helvetica", "normal");
+                doc.text("Booking Invoice", 105, y, { align: "center" });
+                y += 10;
+
+                // --- Trip Details Table ---
+                doc.setFontSize(12);
+                doc.setFont("helvetica", "bold");
+                doc.text("Trip Details", 10, y);
+                y += 6;
+
+                doc.setFont("helvetica", "normal");
+                doc.text("Pickup Location: " + conf.pickup, 10, y); y += 6;
+                doc.text("Drop-off Location: " + conf.dropoff, 10, y); y += 6;
+                doc.text("Pickup Date & Time: " + conf.pickupDate + " " + conf.pickupTime, 10, y); y += 6;
+                doc.text("Drop-off Date & Time: " + conf.dropoffDate + " " + conf.dropoffTime, 10, y); y += 6;
+                doc.text("Car: " + conf.carName, 10, y); y += 6;
+                doc.text("Trip Duration: " + conf.tripDays, 10, y); y += 6;
+                doc.text("Total Price: " + conf.totalPrice, 10, y); y += 10;
+
+                // --- Passenger Details ---
+                doc.setFont("helvetica", "bold");
+                doc.text("Passenger Details", 10, y); y += 6;
+
+                doc.setFont("helvetica", "normal");
+                doc.text("Name: " + conf.name, 10, y); y += 6;
+                doc.text("Email: " + conf.email, 10, y); y += 6;
+                doc.text("Phone: " + conf.phone, 10, y); y += 6;
+                doc.text("Flight Number: " + conf.flight, 10, y); y += 6;
+                doc.text("Passengers: " + conf.passengers, 10, y); y += 6;
+                doc.text("Mileage: " + conf.mileage, 10, y); y += 6;
+                doc.text("Driver Required: " + conf.driver, 10, y); y += 6;
+                doc.text("License Required: " + conf.license, 10, y); y += 6;
+                if(conf.other !== \'-\') doc.text("Other Info: " + conf.other, 10, y); y += 10;
+
+                // --- Add-ons ---
+                doc.setFont("helvetica", "bold");
+                doc.text("Extras / Add-ons", 10, y); y += 6;
+
+                doc.setFont("helvetica", "normal");
+                if(conf.addons.length > 0){
+                    conf.addons.forEach(function(addon){
+                        doc.text("- " + addon, 10, y);
+                        y += 6;
+                    });
+                } else {
+                    doc.text("- None", 10, y); y += 6;
+                }
+
+                // --- Footer ---
+                y += 10;
+                doc.setFont("helvetica", "bold");
+                doc.text("Thank you for choosing Platinum Car Rentals!", 105, y, { align: "center" });
+
+                doc.save("Booking_" + conf.name.replace(/\\\\s+/g, "_") + ".pdf");
+            }
         </script>
 
         <script>
@@ -2367,7 +2558,6 @@ $output = <<<HTML
                 currentStep = step;
             }
 
-            // ? Validation before moving forward
             function validateStep(stepIndex) {
                 const step = steps[stepIndex];
                 const requiredFields = step.querySelectorAll(\'.required-field\');
@@ -2393,7 +2583,6 @@ $output = <<<HTML
                     const current = document.querySelector(\'.form-step.active\');
                     const nextStep = parseInt(current.dataset.step) + 1;
 
-                    // ? Validate Step 3 before moving to Step 4
                     if (current.dataset.step === "3" && !validateStep(2)) {
                         return;
                     }
@@ -2401,14 +2590,13 @@ $output = <<<HTML
                     showStep(nextStep - 1);
 
                     if (nextStep === 4) {
-                        // Sync add-on selections before filling confirmation
                         document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
                             const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
                             if (qtySelect) {
                                 qtySelect.disabled = !cb.checked;
                             }
                         });
-                        fillConfirmation();
+                    fillConfirmation();
                     }
                 });
             });

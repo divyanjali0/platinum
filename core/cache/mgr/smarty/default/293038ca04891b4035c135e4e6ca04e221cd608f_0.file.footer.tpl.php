@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.5, created on 2025-11-02 15:18:54
+/* Smarty version 4.5.5, created on 2025-11-02 18:46:24
   from 'C:\xampp\htdocs\platinum\manager\templates\default\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.5',
-  'unifunc' => 'content_6907684e70cb30_58434593',
+  'unifunc' => 'content_690798f0dfce71_02266426',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6907684e70cb30_58434593 (Smarty_Internal_Template $_smarty_tpl) {
+function content_690798f0dfce71_02266426 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    </div>
     <!-- #modx-content-->
     <div id="modx-footer"></div>
