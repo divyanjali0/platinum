@@ -71,19 +71,35 @@
 
     // Save booking
     try {
+
+        $today = date('Ymd');
+
+        $stmt = $conn->prepare("SELECT id FROM bookings WHERE booking_number LIKE :today_pattern ORDER BY id DESC LIMIT 1");
+        $stmt->execute([':today_pattern' => "PD-{$today}-%"]);
+        $last_booking = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($last_booking) {
+            $last_seq = (int) substr($last_booking['id'], -3); 
+            $next_seq = $last_seq + 1;
+        } else {
+            $next_seq = 1;
+        }
+
+        $booking_number = 'PD-' . $today . '-' . str_pad($next_seq, 3, '0', STR_PAD_LEFT);
+
         $stmt = $conn->prepare("
             INSERT INTO bookings 
             (vehicle_id, pickup_location, dropoff_location, pickup_date, dropoff_date, 
             pickup_time, dropoff_time, trip_days, mileage,
             passenger_name, passenger_email, passenger_phone, flight_number, passengers, 
             need_driver, need_license, passport_image, passport_image2, idp_image, total_price,
-            addons, addon_quantities, created_at)
+            addons, addon_quantities,booking_number, created_at)
             VALUES 
             (:vehicle_id, :pickup_location, :dropoff_location, :pickup_date, :dropoff_date, 
             :pickup_time, :dropoff_time, :trip_days, :mileage,
             :passenger_name, :passenger_email, :passenger_phone, :flight_number, :passengers, 
             :need_driver, :need_license, :passport_image, :passport_image2, :idp_image, :total_price,
-            :addons, :addon_quantities, NOW())
+            :addons, :addon_quantities, :booking_number, NOW())
         ");
 
         $stmt->execute([
@@ -108,18 +124,8 @@
             ':idp_image'       => $idp_path,        
             ':total_price'     => $total_price,
             ':addons'          => json_encode(array_keys($addons_data)), 
-            ':addon_quantities'=> $addons_json 
-        ]);
-
-        $last_id = $conn->lastInsertId();
-
-        $today = date('Ymd'); 
-        $booking_number = 'PD-' . $today . '-' . str_pad($last_id, 3, '0', STR_PAD_LEFT);
-        
-        $update = $conn->prepare("UPDATE bookings SET booking_number = :booking_number WHERE id = :id");
-        $update->execute([
-            ':booking_number' => $booking_number,
-            ':id'             => $last_id
+            ':addon_quantities'=> $addons_json,
+            ':booking_number'  => $booking_number
         ]);
 
         echo "<h3 style='color:green;'>✅ Booking Successful!</h3>";
