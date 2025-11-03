@@ -232,60 +232,78 @@
 		  </div>
 	</section>
 	
-	<!-- Our Latest Services section starts -->
-	<section class="ftco-section">
+	<!-- Our Premium Services section starts -->
+	<section class="ftco-section" style="background: #ffffff;">
 		<div class="container">
-		<div class="row justify-content-center mb-5">
-			<div class="col-md-7 text-center heading-section ftco-animate">
-			<span class="subheading">Services</span>
-			<h2 class="mb-3">Our Latest Services</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-			<div class="services services-2 w-100 text-center">
-				<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-suv"></span></div>
-				<div class="text w-100">
-					<h3 class="heading mb-2">Luxury Sightseeing Tours</h3>
-					<p style="text-align: justify;">Platinum Drive offers premium sightseeing tours, allowing you to explore the city in style and comfort. Enjoy personalized routes, luxurious vehicles, and professional drivers to make your sightseeing experience unforgettable.</p>
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<span class="subheading" style="color: #d4af37; font-weight: 600; letter-spacing: 2px;">Services</span>
+					<h2 class="mb-3" style="color: #0a1628; font-weight: 700; text-transform: uppercase;">Our Exclusive Services</h2>
+					<p style="color: #0a1628; font-size: 1.05em; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+						At Platinum Drive, we redefine luxury transportation. From private sightseeing tours to seamless airport transfers, our services are tailored for comfort, style, and absolute peace of mind.
+					</p>
 				</div>
 			</div>
-			</div>
-			<div class="col-md-6">
-			<div class="services services-2 w-100 text-center">
-				<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
-				<div class="text w-100">
-				<h3 class="heading mb-2">City Transfer</h3>
-				<p style="text-align: justify;">Platinum Drive offers convenient city transfer services, ensuring a smooth and efficient journey within the city. Our professional drivers and comfortable vehicles provide a stress-free travel experience for business or leisure.</p>
+
+			<!-- Services Grid -->
+			<div class="row">
+				<!-- Service 1 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
+						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
+							<i class="fas fa-map-marked-alt"></i>
+						</div>
+						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Sightseeing Tours</h3>
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+							Explore the city in unmatched comfort and style. Personalized routes, elite vehicles, and professional chauffeurs make every tour unforgettable.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
+						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
+							<i class="fas fa-city"></i>
+						</div>
+						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">City Transfer</h3>
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+							Effortless and stylish travel within the city. Our professional drivers and premium fleet ensure stress-free and punctual transfers.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
+						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
+							<i class="fas fa-plane"></i>
+						</div>
+						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Airport Transfer</h3>
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+							Seamless airport pickups and drop-offs. Luxury vehicles, punctual service, and professional drivers ensure a smooth start or end to your journey.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 4 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
+						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
+							<i class="fas fa-road"></i>
+						</div>
+						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Drive Experience</h3>
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+							Comprehensive travel solutions for every journey. From city tours to special events, enjoy unrivaled luxury, comfort, and peace of mind with Platinum Drive.
+						</p>
+					</div>
 				</div>
 			</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-			<div class="services services-2 w-100 text-center">
-				<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
-				<div class="text w-100">
-				<h3 class="heading mb-2">Airport Transfer</h3>
-				<p style="text-align: justify;">Platinum Drive offers reliable airport transfer services, ensuring timely and comfortable transportation to and from the airport. Our professional drivers and well-maintained vehicles provide a hassle-free experience, so you can start or end your journey with ease.</p>
-				</div>
-			</div>
-			</div>
-			<div class="col-md-6">
-			<div class="services services-2 w-100 text-center">
-				<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
-				<div class="text w-100">
-				<h3 class="heading mb-2">Platinum Drive</h3>
-				<p style="text-align: justify;">Platinum Drive provides complete travel solutions, offering seamless transportation for every stage of your journey. From airport transfers to city tours and special event transportation, we ensure a comfortable and stress-free experience every time.</p>
-				</div>
-			</div>
-			</div>
-		</div>
 		</div>
 	</section>
-	<!-- Our Latest Services section ends -->
+	<!-- Our Premium Services section ends -->
 
-	
+
 	<!-- Counter Section starts -->
 	<section class="ftco-counter ftco-section img" id="section-counter" style="background: #102c4e;">
 	<div class="overlay"></div>
