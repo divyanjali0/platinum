@@ -56,11 +56,23 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(9);
-    doc.text("No: 375/2/1, Seeduwa, Sri Lanka", 74, y, { align: "center" });
-    y += 4;
-    doc.text("info@platinumdrive.lk | +94 76 820 0099", 74, y, { align: "center" });
 
+    // Split long address
+    let addressLines = doc.splitTextToSize("No: 375/2/1, Seeduwa, Sri Lanka", 120);
+    doc.text(addressLines, 74, y, { align: "center" });
+    y += addressLines.length * 4;
+
+    // Split long contact info
+    let contactLines = doc.splitTextToSize("info@platinumdrive.lk | +94 76 820 0099", 120);
+    doc.text(contactLines, 74, y, { align: "center" });
+    y += contactLines.length * 4;
+
+    // Booking number
+    let bookingNumber = conf.bookingNumber || "N/A";
+    doc.text(`Booking No: ${bookingNumber}`, 74, y, { align: "center" });
     y += 6;
+
+    // --- HEADER LINE ---
     doc.setDrawColor(gold[0], gold[1], gold[2]);
     doc.setLineWidth(0.5);
     doc.line(10, y, 140, y);
@@ -85,7 +97,7 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     // --- TRIP DETAILS BOX ---
     const tripBoxHeight = 38;
-    doc.setFillColor(250, 250, 228);
+    doc.setFillColor(250, 250, 225);
     doc.rect(12, y, 116, tripBoxHeight, "F");
     doc.setDrawColor(darkBlue[0], darkBlue[1], darkBlue[2]);
     doc.roundedRect(12, y, 116, tripBoxHeight, 3, 3);
@@ -103,22 +115,30 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
     doc.setFontSize(9);
     doc.setTextColor(0, 0, 0);
 
-    doc.text(`Pickup: ${conf.pickup}`, leftX, rowY);
-    doc.text(`Drop-off: ${conf.dropoff}`, rightX, rowY);
-    rowY += 6;
+    // Wrap long text
+    let pickupLines = doc.splitTextToSize(`Pickup: ${conf.pickup}`, 55);
+    doc.text(pickupLines, leftX, rowY);
+    let dropoffLines = doc.splitTextToSize(`Drop-off: ${conf.dropoff}`, 55);
+    doc.text(dropoffLines, rightX, rowY);
+    rowY += Math.max(pickupLines.length, dropoffLines.length) * 4;
 
-    doc.text(`Pickup: ${conf.pickupDate} ${conf.pickupTime}`, leftX, rowY);
-    doc.text(`Drop-off: ${conf.dropoffDate} ${conf.dropoffTime}`, rightX, rowY);
-    rowY += 6;
+    let pickupTimeLines = doc.splitTextToSize(`Pickup Time: ${conf.pickupDate} ${conf.pickupTime}`, 55);
+    doc.text(pickupTimeLines, leftX, rowY);
+    let dropoffTimeLines = doc.splitTextToSize(`Drop-off Time: ${conf.dropoffDate} ${conf.dropoffTime}`, 55);
+    doc.text(dropoffTimeLines, rightX, rowY);
+    rowY += Math.max(pickupTimeLines.length, dropoffTimeLines.length) * 4;
 
-    doc.text(`Car: ${conf.carName}`, leftX, rowY);
-    doc.text(`Duration: ${conf.tripDays}`, rightX, rowY);
+    let carLines = doc.splitTextToSize(`Car: ${conf.carName}`, 55);
+    doc.text(carLines, leftX, rowY);
+    let durationLines = doc.splitTextToSize(`Duration: ${conf.tripDays}`, 55);
+    doc.text(durationLines, rightX, rowY);
+    rowY += Math.max(carLines.length, durationLines.length) * 4;
 
     y += tripBoxHeight + 8;
 
     // --- PASSENGER DETAILS ---
     const passengerBoxHeight = 48;
-    doc.setFillColor(250, 250, 228);
+    doc.setFillColor(250, 250, 225);
     doc.rect(12, y, 116, passengerBoxHeight, "F");
     doc.roundedRect(12, y, 116, passengerBoxHeight, 3, 3);
 
@@ -135,20 +155,29 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
     doc.setFontSize(9);
     doc.setTextColor(0, 0, 0);
 
-    doc.text(`Name: ${conf.name}`, leftPX, py);
-    doc.text(`Phone: ${conf.phone}`, rightPX, py);
-    py += 6;
+    let nameLines = doc.splitTextToSize(`Name: ${conf.name}`, 55);
+    doc.text(nameLines, leftPX, py);
+    let phoneLines = doc.splitTextToSize(`Phone: ${conf.phone}`, 55);
+    doc.text(phoneLines, rightPX, py);
+    py += Math.max(nameLines.length, phoneLines.length) * 4;
 
-    doc.text(`Email: ${conf.email}`, leftPX, py);
-    doc.text(`Flight Number: ${conf.flight}`, rightPX, py);
-    py += 6;
+    let emailLines = doc.splitTextToSize(`Email: ${conf.email}`, 55);
+    doc.text(emailLines, leftPX, py);
+    let flightLines = doc.splitTextToSize(`Flight Number: ${conf.flight}`, 55);
+    doc.text(flightLines, rightPX, py);
+    py += Math.max(emailLines.length, flightLines.length) * 4;
 
-    doc.text(`Passengers: ${conf.passengers}`, leftPX, py);
-    doc.text(`Mileage: ${conf.mileage}`, rightPX, py);
-    py += 6;
+    let passengerLines = doc.splitTextToSize(`Passengers: ${conf.passengers}`, 55);
+    doc.text(passengerLines, leftPX, py);
+    let mileageLines = doc.splitTextToSize(`Mileage: ${conf.mileage}`, 55);
+    doc.text(mileageLines, rightPX, py);
+    py += Math.max(passengerLines.length, mileageLines.length) * 4;
 
-    doc.text(`Driver: ${conf.driver}`, leftPX, py);
-    doc.text(`License: ${conf.license}`, rightPX, py);
+    let driverLines = doc.splitTextToSize(`Driver: ${conf.driver}`, 55);
+    doc.text(driverLines, leftPX, py);
+    let licenseLines = doc.splitTextToSize(`License: ${conf.license}`, 55);
+    doc.text(licenseLines, rightPX, py);
+    py += Math.max(driverLines.length, licenseLines.length) * 4;
 
     y += passengerBoxHeight + 8;
 
@@ -164,8 +193,9 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
     doc.setTextColor(0, 0, 0);
     if (conf.addons.length > 0) {
         conf.addons.forEach(addon => {
-            doc.text(`- ${addon}`, 18, y);
-            y += 4;
+            let addonLines = doc.splitTextToSize(`- ${addon}`, 100);
+            doc.text(addonLines, 18, y);
+            y += addonLines.length * 4;
         });
     } else {
         doc.text("- None", 18, y);
