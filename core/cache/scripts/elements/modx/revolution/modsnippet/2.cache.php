@@ -259,6 +259,14 @@ $output = <<<HTML
         #confirmation_summary li {
             list-style-type: disc;
         }
+
+        .carousel-control-next , .carousel-control-prev {
+            height: fit-content;
+            top: 50%;
+            color: black;
+            background-color: black;
+            width: auto;
+        }
         </style>
 
         <div class="row">
@@ -326,7 +334,28 @@ $output = <<<HTML
                     <div class="form-step active" data-step="1">
                         <h4>Selected Vehicle</h4>
                         <div class="card mb-3">
-                            <img src="{$car_image}" class="card-img-top" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
+                            <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" style="height: 22rem; border-radius: 10px; overflow: hidden;">
+                                <div class="carousel-item active">
+                                <img src="{$car_image}" class="d-block w-100" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
+                                </div>
+                                <!-- Add more images here -->
+                                <div class="carousel-item">
+                                <img src="{$car_image1}" class="d-block w-100" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="{$car_image2}" class="d-block w-100" alt="{$car_name}" style="height: 22rem; object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <!-- Carousel controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title mb-0" style="font-weight:600;">{$car_name}</h5>
                                 <p class="card-text">{$car_description}</p>
