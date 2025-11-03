@@ -502,10 +502,10 @@ $output = <<<HTML
                             <hr>
 
                             <!-- Extras -->
-                            <div class="conf-row full">
+                            <!-- <div class="conf-row full">
                                 <p><strong>Extras:</strong></p>
                                 <ul id="conf_addons" style="margin-left: 20px;"><li>No extras selected.</li></ul>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="buttons">
@@ -703,26 +703,26 @@ $output = <<<HTML
                 document.getElementById('conf_total').textContent = '$' + total.toFixed(2);
                 document.getElementById('total_price').value = total.toFixed(2); 
 
-                const addonsList = document.getElementById('conf_addons');
-                addonsList.innerHTML = '';
-                if (checkedAddons.length > 0) {
-                    checkedAddons.forEach(cb => {
-                        let label = cb.dataset.name;
-                        if (!label || label.trim() === '') {
-                        const labelEl = document.querySelector('label[for="' + cb.id + '"]');
-                        if (labelEl) label = labelEl.textContent.replace(/\(.*?\)/, '').trim();
-                        else label = 'Unknown Add-on';
-                        }
-                        const qty = document.getElementById('addon_qty_' + cb.value)?.value || '1';
-                        const price = parseFloat(cb.dataset.price || 0);
-                        const lineTotal = (price * qty * days).toFixed(2);
-                        const li = document.createElement('li');
-                        li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
-                        addonsList.appendChild(li);
-                    });
-                } else {
-                    addonsList.innerHTML = '<li>No extras selected.</li>';
-                }
+                // const addonsList = document.getElementById('conf_addons');
+                // addonsList.innerHTML = '';
+                // if (checkedAddons.length > 0) {
+                //     checkedAddons.forEach(cb => {
+                //         let label = cb.dataset.name;
+                //         if (!label || label.trim() === '') {
+                //         const labelEl = document.querySelector('label[for="' + cb.id + '"]');
+                //         if (labelEl) label = labelEl.textContent.replace(/\(.*?\)/, '').trim();
+                //         else label = 'Unknown Add-on';
+                //         }
+                //         const qty = document.getElementById('addon_qty_' + cb.value)?.value || '1';
+                //         const price = parseFloat(cb.dataset.price || 0);
+                //         const lineTotal = (price * qty * days).toFixed(2);
+                //         const li = document.createElement('li');
+                //         li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
+                //         addonsList.appendChild(li);
+                //     });
+                // } else {
+                //     addonsList.innerHTML = '<li>No extras selected.</li>';
+                // }
             }
         </script>
 
