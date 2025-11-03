@@ -83,3 +83,8 @@
 [2025-11-03 10:54:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $label
 [2025-11-03 10:54:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $qty
 [2025-11-03 10:54:29] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $lineTotal
+[2025-11-03 11:55:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 345) PHP warning: Undefined variable $car_image1
+[2025-11-03 11:55:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image2
+[2025-11-03 11:55:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $label
+[2025-11-03 11:55:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $qty
+[2025-11-03 11:55:08] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 748) PHP warning: Undefined variable $lineTotal

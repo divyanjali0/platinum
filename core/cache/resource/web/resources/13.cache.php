@@ -2,12 +2,12 @@
   'resourceClass' => 'MODX\\Revolution\\modDocument',
   'resource' => 
   array (
-    'id' => 16,
+    'id' => 13,
     'type' => 'document',
-    'pagetitle' => 'about-us',
+    'pagetitle' => 'faq',
     'longtitle' => '',
     'description' => '',
-    'alias' => 'about-us',
+    'alias' => 'faq',
     'link_attributes' => '',
     'published' => 1,
     'pub_date' => 0,
@@ -16,93 +16,142 @@
     'isfolder' => 0,
     'introtext' => '',
     'content' => '<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
-    </div>
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+		<div class="col-md-9 ftco-animate pb-5">
+			<p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQ <i class="ion-ios-arrow-forward"></i></span></p>
+			<h1 class="mb-3 bread">Frequently Asked Questions</h1>
+		</div>
+		</div>
+	</div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
-        </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
+<div class="container my-5">
 
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What types of luxury vehicles do you offer?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Our premium fleet includes high-end sedans, luxury SUVs, exotic sports cars, and executive limousines from brands like Mercedes-Benz, BMW, Audi, Porsche, and more. Each vehicle is meticulously maintained to ensure the highest standards of comfort and performance.
+            </div>
         </div>
 
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Are professional chauffeurs included with all rentals?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Yes, all our rentals come with experienced, professional chauffeurs who are trained in luxury service standards. They are punctual, discreet, and knowledgeable about the area to ensure you have a seamless and comfortable journey.
+            </div>
         </div>
 
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How far in advance should I book?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We recommend booking at least 48-72 hours in advance to ensure vehicle availability, especially for special occasions or peak seasons. However, we also accommodate last-minute bookings subject to fleet availability.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is included in the rental price?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Our rental packages include the luxury vehicle of your choice, professional chauffeur service, comprehensive insurance coverage, fuel costs, and standard amenities. Additional services like special decorations, refreshments, or extended hours can be arranged upon request.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do you provide service for special events?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Absolutely! We specialize in providing luxury transportation for weddings, corporate events, airport transfers, proms, anniversaries, and other special occasions. We can customize our services to meet your specific event requirements.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What are your service areas?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We primarily serve the metropolitan area and surrounding regions. For destinations outside our standard service area, we can arrange special accommodations. Contact us to discuss your specific travel needs.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is your cancellation policy?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We offer flexible cancellation policies depending on your booking type. Generally, cancellations made 48 hours or more before your scheduled service receive a full refund. Cancellations within 48 hours may be subject to a fee. Please refer to your booking confirmation for specific terms.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I make a reservation?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Booking is easy! You can reserve your luxury vehicle through our website, call our customer service team directly, or send us an email. We\'ll confirm your booking details and answer any questions you may have to ensure a perfect experience.
+            </div>
         </div>
     </div>
 
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="[[~2]]" class="cta-button">Book Now!</a>
-    </section>
+    <div class="contact-cta">
+        <h2>Still Have Questions?</h2>
+        <p>Our dedicated team is here to assist you with any inquiries</p>
+        <a href="[[~3]]" class="cta-button">Contact Us</a>
+    </div>
 </div>
+
+<script>
+    const faqItems = document.querySelectorAll(\'.faq-item\');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(\'.faq-question\');
+        
+        question.addEventListener(\'click\', () => {
+            const isActive = item.classList.contains(\'active\');
+            
+            // Close all items
+            faqItems.forEach(faq => faq.classList.remove(\'active\'));
+            
+            // Open clicked item if it wasn\'t active
+            if (!isActive) {
+                item.classList.add(\'active\');
+            }
+        });
+    });
+</script>
 ',
     'richtext' => 1,
     'template' => 2,
-    'menuindex' => 15,
+    'menuindex' => 12,
     'searchable' => 1,
     'cacheable' => 1,
     'createdby' => 2,
-    'createdon' => 1762163589,
+    'createdon' => 1761713618,
     'editedby' => 2,
-    'editedon' => 1762167581,
+    'editedon' => 1761713625,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
-    'publishedon' => 1756714440,
-    'publishedby' => 1,
+    'publishedon' => 1761713625,
+    'publishedby' => 2,
     'menutitle' => '',
     'content_dispo' => 0,
     'hidemenu' => 0,
@@ -181,78 +230,127 @@
 	  </nav>
 
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
-    </div>
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+		<div class="col-md-9 ftco-animate pb-5">
+			<p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQ <i class="ion-ios-arrow-forward"></i></span></p>
+			<h1 class="mb-3 bread">Frequently Asked Questions</h1>
+		</div>
+		</div>
+	</div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
-        </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
+<div class="container my-5">
 
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What types of luxury vehicles do you offer?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Our premium fleet includes high-end sedans, luxury SUVs, exotic sports cars, and executive limousines from brands like Mercedes-Benz, BMW, Audi, Porsche, and more. Each vehicle is meticulously maintained to ensure the highest standards of comfort and performance.
+            </div>
         </div>
 
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Are professional chauffeurs included with all rentals?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Yes, all our rentals come with experienced, professional chauffeurs who are trained in luxury service standards. They are punctual, discreet, and knowledgeable about the area to ensure you have a seamless and comfortable journey.
+            </div>
         </div>
 
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How far in advance should I book?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We recommend booking at least 48-72 hours in advance to ensure vehicle availability, especially for special occasions or peak seasons. However, we also accommodate last-minute bookings subject to fleet availability.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is included in the rental price?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Our rental packages include the luxury vehicle of your choice, professional chauffeur service, comprehensive insurance coverage, fuel costs, and standard amenities. Additional services like special decorations, refreshments, or extended hours can be arranged upon request.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do you provide service for special events?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Absolutely! We specialize in providing luxury transportation for weddings, corporate events, airport transfers, proms, anniversaries, and other special occasions. We can customize our services to meet your specific event requirements.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What are your service areas?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We primarily serve the metropolitan area and surrounding regions. For destinations outside our standard service area, we can arrange special accommodations. Contact us to discuss your specific travel needs.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is your cancellation policy?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                We offer flexible cancellation policies depending on your booking type. Generally, cancellations made 48 hours or more before your scheduled service receive a full refund. Cancellations within 48 hours may be subject to a fee. Please refer to your booking confirmation for specific terms.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I make a reservation?</span>
+                <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+                Booking is easy! You can reserve your luxury vehicle through our website, call our customer service team directly, or send us an email. We\'ll confirm your booking details and answer any questions you may have to ensure a perfect experience.
+            </div>
         </div>
     </div>
 
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="index.php?id=2" class="cta-button">Book Now!</a>
-    </section>
+    <div class="contact-cta">
+        <h2>Still Have Questions?</h2>
+        <p>Our dedicated team is here to assist you with any inquiries</p>
+        <a href="index.php?id=3" class="cta-button">Contact Us</a>
+    </div>
 </div>
+
+<script>
+    const faqItems = document.querySelectorAll(\'.faq-item\');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(\'.faq-question\');
+        
+        question.addEventListener(\'click\', () => {
+            const isActive = item.classList.contains(\'active\');
+            
+            // Close all items
+            faqItems.forEach(faq => faq.classList.remove(\'active\'));
+            
+            // Open clicked item if it wasn\'t active
+            if (!isActive) {
+                item.classList.add(\'active\');
+            }
+        });
+    });
+</script>
 
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">

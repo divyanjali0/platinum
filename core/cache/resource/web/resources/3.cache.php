@@ -2,12 +2,12 @@
   'resourceClass' => 'MODX\\Revolution\\modDocument',
   'resource' => 
   array (
-    'id' => 16,
+    'id' => 3,
     'type' => 'document',
-    'pagetitle' => 'about-us',
+    'pagetitle' => 'contact_us',
     'longtitle' => '',
     'description' => '',
-    'alias' => 'about-us',
+    'alias' => 'contact-us',
     'link_attributes' => '',
     'published' => 1,
     'pub_date' => 0,
@@ -15,89 +15,134 @@
     'parent' => 0,
     'isfolder' => 0,
     'introtext' => '',
-    'content' => '<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
-    </div>
+    'content' => '
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+		<div class="col-md-9 ftco-animate pb-5">
+			<p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+			<h1 class="mb-3 bread">Contact Us</h1>
+		</div>
+		</div>
+	</div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
+<section class="ftco-section contact-section">
+  <div class="container">
+    <div class="row d-flex contact-info">
+      <div class="col-md-5 col-lg-4">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="border w-100 p-3 rounded mb-2 d-flex">
+              <div class="icon mr-3">
+                <span class="icon-mobile-phone"></span>
+              </div>
+              <p><span>Phone:</span> <a href="tel:+94768200099">+94 76 820 0099</a></p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="border w-100 p-3 rounded mb-2 d-flex">
+              <div class="icon mr-3">
+                <span class="icon-envelope-o"></span>
+              </div>
+              <p><span>Email:</span> <a href="mailto:info@platinumdrive.lk">info@platinumdrive.lk</a></p>
+            </div>
+          </div>
         </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
+      </div>
 
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
+      <div class="col-md-7 col-lg-8 block-9">
+		 <!-- Success message box -->
+        <div id="success-message" class="alert alert-success mt-3" style="display:none;">
+          âœ… Your message has been sent successfully!
         </div>
 
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
-        </div>
+        <form id="contact-form" action="https://formspree.io/f/xpwyrpej" method="POST" class="bg-light px-3 py-3 contact-form">
+          <h3>Connect With Us</h3>
 
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
-        </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
+<section class="ftco-section contact-section" style="padding:0; overflow:hidden;">
+	<div class="container-fluid" style="margin:0; padding:0;">
+			<div class="row justify-content-center">
+			<div class="col-md-12">
+				<div class="bg-white">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.8489877559136!2d79.8694241!3d7.1434549999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f1c5f33a01bf%3A0xbf605eaf222e328a!2sPlatinum%20Drive%20Rent%20A%20Car!5e0!3m2!1sen!2slk!4v1756716133695!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+					</iframe>
+				</div>
+			</div> 
+		</div> 
+	</div>
+</section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="[[~2]]" class="cta-button">Book Now!</a>
-    </section>
-</div>
-',
+<script>
+	document.getElementById(\'contact-form\').addEventListener(\'submit\', async function(e) {
+		e.preventDefault(); 
+		const form = e.target;
+
+		const formData = new FormData(form);
+		const action = form.action;
+
+		try {
+			const response = await fetch(action, {
+			method: \'POST\',
+			body: formData,
+			headers: { \'Accept\': \'application/json\' }
+			});
+
+			if (response.ok) {
+			form.reset(); // clear form
+			document.getElementById(\'success-message\').style.display = \'block\';
+			setTimeout(() => {
+				location.reload(); // reload after 3 seconds
+			}, 2000);
+			} else {
+			alert(\'Oops! Something went wrong. Please try again.\');
+			}
+		} catch (error) {
+			alert(\'Error submitting the form. Please check your internet connection.\');
+		}
+	});
+</script>',
     'richtext' => 1,
     'template' => 2,
-    'menuindex' => 15,
+    'menuindex' => 2,
     'searchable' => 1,
     'cacheable' => 1,
-    'createdby' => 2,
-    'createdon' => 1762163589,
+    'createdby' => 1,
+    'createdon' => 1756714388,
     'editedby' => 2,
-    'editedon' => 1762167581,
+    'editedon' => 1761221031,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -180,80 +225,125 @@
 	    </div>
 	  </nav>
 
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
-    </div>
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+		<div class="col-md-9 ftco-animate pb-5">
+			<p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+			<h1 class="mb-3 bread">Contact Us</h1>
+		</div>
+		</div>
+	</div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
+<section class="ftco-section contact-section">
+  <div class="container">
+    <div class="row d-flex contact-info">
+      <div class="col-md-5 col-lg-4">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="border w-100 p-3 rounded mb-2 d-flex">
+              <div class="icon mr-3">
+                <span class="icon-mobile-phone"></span>
+              </div>
+              <p><span>Phone:</span> <a href="tel:+94768200099">+94 76 820 0099</a></p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="border w-100 p-3 rounded mb-2 d-flex">
+              <div class="icon mr-3">
+                <span class="icon-envelope-o"></span>
+              </div>
+              <p><span>Email:</span> <a href="mailto:info@platinumdrive.lk">info@platinumdrive.lk</a></p>
+            </div>
+          </div>
         </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
+      </div>
 
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
+      <div class="col-md-7 col-lg-8 block-9">
+		 <!-- Success message box -->
+        <div id="success-message" class="alert alert-success mt-3" style="display:none;">
+          âœ… Your message has been sent successfully!
         </div>
 
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
-        </div>
+        <form id="contact-form" action="https://formspree.io/f/xpwyrpej" method="POST" class="bg-light px-3 py-3 contact-form">
+          <h3>Connect With Us</h3>
 
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
-        </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
+<section class="ftco-section contact-section" style="padding:0; overflow:hidden;">
+	<div class="container-fluid" style="margin:0; padding:0;">
+			<div class="row justify-content-center">
+			<div class="col-md-12">
+				<div class="bg-white">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.8489877559136!2d79.8694241!3d7.1434549999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f1c5f33a01bf%3A0xbf605eaf222e328a!2sPlatinum%20Drive%20Rent%20A%20Car!5e0!3m2!1sen!2slk!4v1756716133695!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+					</iframe>
+				</div>
+			</div> 
+		</div> 
+	</div>
+</section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="index.php?id=2" class="cta-button">Book Now!</a>
-    </section>
-</div>
+<script>
+	document.getElementById(\'contact-form\').addEventListener(\'submit\', async function(e) {
+		e.preventDefault(); 
+		const form = e.target;
 
+		const formData = new FormData(form);
+		const action = form.action;
+
+		try {
+			const response = await fetch(action, {
+			method: \'POST\',
+			body: formData,
+			headers: { \'Accept\': \'application/json\' }
+			});
+
+			if (response.ok) {
+			form.reset(); // clear form
+			document.getElementById(\'success-message\').style.display = \'block\';
+			setTimeout(() => {
+				location.reload(); // reload after 3 seconds
+			}, 2000);
+			} else {
+			alert(\'Oops! Something went wrong. Please try again.\');
+			}
+		} catch (error) {
+			alert(\'Error submitting the form. Please check your internet connection.\');
+		}
+	});
+</script>
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
 	<div class="container">

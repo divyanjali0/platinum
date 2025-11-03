@@ -2,12 +2,12 @@
   'resourceClass' => 'MODX\\Revolution\\modDocument',
   'resource' => 
   array (
-    'id' => 16,
+    'id' => 2,
     'type' => 'document',
-    'pagetitle' => 'about-us',
+    'pagetitle' => 'fleet',
     'longtitle' => '',
     'description' => '',
-    'alias' => 'about-us',
+    'alias' => 'fleet',
     'link_attributes' => '',
     'published' => 1,
     'pub_date' => 0,
@@ -16,92 +16,41 @@
     'isfolder' => 0,
     'introtext' => '',
     'content' => '<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="[[~1]]">Home <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Cars <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Choose Your Car</h1>
+      </div>
     </div>
+  </div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
-        </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
-        </div>
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row">
+      [[!showVehicles]]
     </div>
-
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="[[~2]]" class="cta-button">Book Now!</a>
-    </section>
-</div>
+  </div>
+</section>
 ',
     'richtext' => 1,
     'template' => 2,
-    'menuindex' => 15,
+    'menuindex' => 1,
     'searchable' => 1,
     'cacheable' => 1,
-    'createdby' => 2,
-    'createdon' => 1762163589,
+    'createdby' => 1,
+    'createdon' => 1756714223,
     'editedby' => 2,
-    'editedon' => 1762167581,
+    'editedon' => 1761844977,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
-    'publishedon' => 1756714440,
+    'publishedon' => 1756714200,
     'publishedby' => 1,
     'menutitle' => '',
     'content_dispo' => 0,
@@ -181,78 +130,27 @@
 	  </nav>
 
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-        <div class="col-md-9 ftco-animate pb-5">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-        </div>
-        </div>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="index.php?id=1">Home <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Cars <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Choose Your Car</h1>
+      </div>
     </div>
+  </div>
 </section>
 
-<div class="container py-5">
-    <!-- INTRO -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>About Platinum Drive</h2>
-            <p>
-                Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
-                For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
-                sophistication, performance, and prestige. Every vehicle in our fleet represents artistry and power,
-                designed for those who demand more than just a drive — they demand excellence.
-            </p>
-        </div>
-        <div class="intro-image">
-            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Premium Fleet</h3>
-            <p>Our collection includes the world’s most iconic brands — each vehicle handpicked and maintained to perfection.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Concierge Service</h3>
-            <p>From doorstep delivery to custom route planning, our team ensures a flawless luxury experience from start to finish.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Trust & Security</h3>
-            <p>Your peace of mind is our highest priority, with full coverage, verified rentals, and discreet, secure transactions.</p>
-        </div>
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row">
+      [[!showVehicles]]
     </div>
-
-    <!-- VALUES -->
-    <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-list">
-            <div class="value-item">
-                <h3>Excellence</h3>
-                <p>We deliver precision, perfection, and prestige in every journey — without compromise.</p>
-            </div>
-            <div class="value-item">
-                <h3>Integrity</h3>
-                <p>Our reputation is built on honesty, trust, and consistent transparency with every client.</p>
-            </div>
-            <div class="value-item">
-                <h3>Luxury</h3>
-                <p>Luxury isn’t a product; it’s an experience — one we tailor uniquely for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Experience the Platinum Drive standard. Reserve your luxury vehicle today and embrace driving perfection.</p>
-        <a href="index.php?id=2" class="cta-button">Book Now!</a>
-    </section>
-</div>
+  </div>
+</section>
 
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -519,6 +417,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 </script>
 
 ',
+    '[[~14? &car_id=`1`]]' => 'index.php?id=14&amp;car_id=1',
+    '[[~14? &car_id=`2`]]' => 'index.php?id=14&amp;car_id=2',
+    '[[~14? &car_id=`3`]]' => 'index.php?id=14&amp;car_id=3',
+    '[[~14? &car_id=`4`]]' => 'index.php?id=14&amp;car_id=4',
+    '[[~14? &car_id=`5`]]' => 'index.php?id=14&amp;car_id=5',
+    '[[~14? &car_id=`6`]]' => 'index.php?id=14&amp;car_id=6',
   ),
   'sourceCache' => 
   array (
@@ -935,6 +839,137 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
     ),
     'MODX\\Revolution\\modSnippet' => 
     array (
+      'showVehicles' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 1,
+          'source' => 1,
+          'property_preprocess' => false,
+          'name' => 'showVehicles',
+          'description' => '',
+          'editor_type' => 0,
+          'category' => 0,
+          'cache_type' => 0,
+          'snippet' => 'include_once MODX_BASE_PATH . \'assets/includes/db_connect.php\';
+
+$output = \'\';
+
+try {
+    $stmt = $conn->query("SELECT * FROM vehicles");
+
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $id = $row[\'id\'];
+        $name = htmlspecialchars($row[\'name\']);
+        $price = number_format($row[\'price_per_day\'], 2);
+        $description = htmlspecialchars($row[\'description\']);
+        $image = $row[\'image\'];
+        $seats = (int)$row[\'no_of_seats\'];
+        $luggage = (int)$row[\'luggages\'];
+
+        // MODX-friendly link to details page
+        $detailsLink = "[[~14? &car_id=`$id`]]"; // 14 = your details page ID
+
+        $output .= "
+        <div class=\'col-md-4\'>
+            <div class=\'car-wrap rounded ftco-animate\'>
+                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image);\'></div>
+                <div class=\'text\'>
+                    <div class=\'d-flex justify-content-between align-items-center mb-1\'>
+                        <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
+                        <small style=\'font-size: 16px; color: #d09c00;\'>
+                            <i class=\'fa fa-users\'></i> $seats&nbsp; |
+                            <i class=\'fa fa-suitcase ml-2\'></i> $luggage
+                        </small>
+                    </div>
+                    <div class=\'d-flex mb-3\'>
+                        <span class=\'cat\'>$description</span>
+                        <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
+                    </div>
+                    <p class=\'d-flex mb-0 d-block justify-content-center\'>
+                        <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
+                    </p>
+                </div>
+            </div>
+        </div>";
+    }
+
+} catch (PDOException $e) {
+    $output = "? Query failed: " . $e->getMessage();
+}
+
+return $output;',
+          'locked' => false,
+          'properties' => 
+          array (
+          ),
+          'moduleguid' => '',
+          'static' => false,
+          'static_file' => '',
+          'content' => 'include_once MODX_BASE_PATH . \'assets/includes/db_connect.php\';
+
+$output = \'\';
+
+try {
+    $stmt = $conn->query("SELECT * FROM vehicles");
+
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $id = $row[\'id\'];
+        $name = htmlspecialchars($row[\'name\']);
+        $price = number_format($row[\'price_per_day\'], 2);
+        $description = htmlspecialchars($row[\'description\']);
+        $image = $row[\'image\'];
+        $seats = (int)$row[\'no_of_seats\'];
+        $luggage = (int)$row[\'luggages\'];
+
+        // MODX-friendly link to details page
+        $detailsLink = "[[~14? &car_id=`$id`]]"; // 14 = your details page ID
+
+        $output .= "
+        <div class=\'col-md-4\'>
+            <div class=\'car-wrap rounded ftco-animate\'>
+                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image);\'></div>
+                <div class=\'text\'>
+                    <div class=\'d-flex justify-content-between align-items-center mb-1\'>
+                        <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
+                        <small style=\'font-size: 16px; color: #d09c00;\'>
+                            <i class=\'fa fa-users\'></i> $seats&nbsp; |
+                            <i class=\'fa fa-suitcase ml-2\'></i> $luggage
+                        </small>
+                    </div>
+                    <div class=\'d-flex mb-3\'>
+                        <span class=\'cat\'>$description</span>
+                        <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
+                    </div>
+                    <p class=\'d-flex mb-0 d-block justify-content-center\'>
+                        <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
+                    </p>
+                </div>
+            </div>
+        </div>";
+    }
+
+} catch (PDOException $e) {
+    $output = "? Query failed: " . $e->getMessage();
+}
+
+return $output;',
+        ),
+        'policies' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'MODX\\Revolution\\Sources\\modFileMediaSource',
+          'properties' => 
+          array (
+          ),
+          'is_stream' => true,
+        ),
+      ),
     ),
     'MODX\\Revolution\\modTemplateVar' => 
     array (
