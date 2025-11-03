@@ -19,7 +19,7 @@
     .container {
         overflow: hidden;
     }
-    
+
     body {
         background: #ffffff;
         color: #0a1628;
@@ -282,7 +282,7 @@
             </p>
         </div>
         <div class="intro-image">
-            <img src="assets/images/about_car.jpg" alt="Luxury car at Platinum Drive">
+            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
         </div>
     </section>
 
@@ -342,7 +342,7 @@
     'createdby' => 2,
     'createdon' => 1762163589,
     'editedby' => 2,
-    'editedon' => 1762165402,
+    'editedon' => 1762165873,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -429,7 +429,7 @@
     .container {
         overflow: hidden;
     }
-    
+
     body {
         background: #ffffff;
         color: #0a1628;
@@ -692,7 +692,7 @@
             </p>
         </div>
         <div class="intro-image">
-            <img src="assets/images/about_car.jpg" alt="Luxury car at Platinum Drive">
+            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
         </div>
     </section>
 

@@ -2,7 +2,7 @@
     .container {
         overflow: hidden;
     }
-    
+
     body {
         background: #ffffff;
         color: #0a1628;
@@ -265,7 +265,7 @@
             </p>
         </div>
         <div class="intro-image">
-            <img src="assets/images/about_car.jpg" alt="Luxury car at Platinum Drive">
+            <img src="assets/images/about_car.webp" alt="Luxury car at Platinum Drive">
         </div>
     </section>
 
