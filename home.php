@@ -103,11 +103,28 @@
 		</div>
   </section>
 
+  	<section class="ftco-section">
+    	<div class="container">
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-12 text-center heading-section ftco-animate">
+					<span class="subheading">Experience Excellence</span>
+					<h2 class="mb-3"> Drive Platinum</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<img src="assets/images/platinum_home.jpg" alt="Our Services" style="width: 100%; height: auto; display: block;">
+				</div>
+			</div>
+		</div>
+	</section>
+
 
   <section class="ftco-section ftco-no-pt bg-light">
 	<div class="container">
 	  <div class="row justify-content-center">
-		<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+		<div class="col-md-12 heading-section text-center ftco-animate mb-3 mt-3">
 		  <span class="subheading">What we offer</span>
 		  <h2 class="mb-2">Our Fleet</h2>
 		</div>
@@ -125,7 +142,7 @@
 							<span class="cat">Suzuki WagonR or Similar</span>
 							<p class="price ml-auto">$ 45 <span>/day</span></p>
 						</div>
-						<p class="d-flex mb-0 d-block"><a href="[[~4]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~4]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+						<p class="d-flex justify-content-center mb-0 d-block"><a href="[[~4]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
@@ -139,7 +156,7 @@
 							<span class="cat">Toyota Vitz or Similar</span>
 							<p class="price ml-auto">$ 55 <span>/day</span></p>
 						</div>
-                        <p class="d-flex mb-0 d-block"><a href="[[~5]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~5]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                        <p class="d-flex justify-content-center mb-0 d-block"><a href="[[~5]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
@@ -153,7 +170,7 @@
 							<span class="cat">Honda Grace or Similar</span>
 							<p class="price ml-auto">$ 85 <span>/day</span></p>
 						</div>
-						<p class="d-flex mb-0 d-block"><a href="[[~6]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~6]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+						<p class="d-flex justify-content-center mb-0 d-block"><a href="[[~6]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
@@ -167,7 +184,7 @@
 							<span class="cat">Honda Civic or Similar</span>
 							<p class="price ml-auto">$ 100 <span>/day</span></p>
 						</div>
-                        <p class="d-flex mb-0 d-block"><a href="[[~7]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~7]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                        <p class="d-flex justify-content-center mb-0 d-block"><a href="[[~7]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
@@ -181,7 +198,7 @@
 							<span class="cat">Honda Civic or Similar</span>
 							<p class="price ml-auto">$ 100 <span>/day</span></p>
 						</div>
-                        <p class="d-flex mb-0 d-block"><a href="[[~8]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~8]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                        <p class="d-flex justify-content-center mb-0 d-block"><a href="[[~8]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
@@ -195,7 +212,7 @@
 							<span class="cat">Honda Civic or Similar</span>
 							<p class="price ml-auto">$ 100 <span>/day</span></p>
 						</div>
-                        <p class="d-flex mb-0 d-block"><a href="[[~9]]" class="btn btn-primary py-2 mr-1">Book now</a> <a href="[[~9]]" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                        <p class="d-flex justify-content-center mb-0 d-block"><a href="[[~9]]" class="btn btn-primary py-2 mr-1">Book now</a></p>
 					</div>
 				</div>
 			</div>
