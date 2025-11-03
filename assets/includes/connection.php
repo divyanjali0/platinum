@@ -69,7 +69,6 @@
     $idp_path = save_uploaded_file('idp_image', $upload_dir, $web_path);
     $passport2_path = save_uploaded_file('passport_image2', $upload_dir, $web_path);
 
-
     // Save booking
     try {
         $stmt = $conn->prepare("
@@ -112,12 +111,24 @@
             ':addon_quantities'=> $addons_json 
         ]);
 
+        $last_id = $conn->lastInsertId();
+
+        $today = date('Ymd'); 
+        $booking_number = 'PD-' . $today . '-' . str_pad($last_id, 3, '0', STR_PAD_LEFT);
+        
+        $update = $conn->prepare("UPDATE bookings SET booking_number = :booking_number WHERE id = :id");
+        $update->execute([
+            ':booking_number' => $booking_number,
+            ':id'             => $last_id
+        ]);
+
         echo "<h3 style='color:green;'>✅ Booking Successful!</h3>";
-        echo "<p>Thank you, <strong>{$name}</strong>. Your booking has been saved.</p>";
+        echo "<p>Thank you, <strong>{$name}</strong>. Your booking number is <strong>{$booking_number}</strong>.</p>";
         echo "<a href='../../../index.php'>← Return Home</a>";
 
     } catch (PDOException $e) {
         echo "<h3 style='color:red;'>❌ Database Error:</h3>";
         echo "<pre>" . htmlspecialchars($e->getMessage()) . "</pre>";
     }
+
 ?>
