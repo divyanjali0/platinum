@@ -6,14 +6,6 @@
 	<div class="container">
 	  <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
 		<div class="col-lg-8 ftco-animate">
-	
-
-		  <!-- <div class="text w-100 text-center mb-md-5 pb-md-5">
-			<h2 style="color: #d09c00;">Experience the Luxury of the Road</h2>
-		</div> -->
-
-
-
 		</div>
 	  </div>
 	</div>
@@ -101,25 +93,21 @@
 					</div>
 			  </div>
 		</div>
-  </section>
+  	</section>
 
-  	<section class="ftco-section">
-    	<div class="container">
-			<div class="row justify-content-center mb-4">
-				<div class="col-md-12 text-center heading-section ftco-animate">
-					<span class="subheading">Experience Excellence</span>
-					<h2 class="mb-3"> Drive Platinum</h2>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-12">
-					<img src="assets/images/platinum_home.jpg" alt="Our Services" style="width: 100%; height: auto; display: block;">
-				</div>
-			</div>
+	<section class="ftco-section" style="position: relative; background: url('assets/images/platinum_home.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 22, 40, 0.7);"></div>
+		<div style="position: relative; max-width: 900px; text-align: center; color: #f2e6b8; padding: 0 20px;">
+			<span style="display: block; font-weight: 600; letter-spacing: 2px; font-size: 1.2em; color: #ffffffff;">Experience Excellence</span>
+			<h2 style="font-size: 3em; font-weight: 800; text-transform: uppercase; margin: 20px 0; letter-spacing: 3px; color: #d2af5f; margin-top: 0;">Drive Platinum</h2>
+			<p style="font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto; color: white;">
+				At <strong>Platinum Drive</strong>, every journey is a statement of sophistication. Our fleet features the most prestigious vehicles, each maintained to perfection, ensuring that your driving experience is as exhilarating as it is elegant.
+			</p>
+			<p style="font-size: 18px; line-height: 1.8; max-width: 800px; margin: 20px auto 0; color: white;">
+				From white-glove delivery to tailored route planning, our concierge service anticipates your every need. We cater to executives, celebrities, and enthusiasts who demand nothing less than perfection.
+			</p>
 		</div>
 	</section>
-
 
   <section class="ftco-section ftco-no-pt bg-light">
 	<div class="container">
