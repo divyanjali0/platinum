@@ -28,13 +28,19 @@
 	</div>
 </section>
 
-<section class="ftco-section contact-section">
+<style>
+  .contact-bg {
+    background: url(\'assets/images/contact-bg.png\') center center / cover no-repeat;
+  }
+</style>
+
+<section class="ftco-section contact-section contact-bg">
   <div class="container">
     <div class="row d-flex contact-info">
       <div class="col-md-5 col-lg-4">
         <div class="row mb-5">
           <div class="col-md-12">
-            <div class="border w-100 p-3 rounded mb-2 d-flex">
+            <div class="border w-100 p-3 rounded mb-2 d-flex bg-white">
               <div class="icon mr-3">
                 <span class="icon-mobile-phone"></span>
               </div>
@@ -42,7 +48,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="border w-100 p-3 rounded mb-2 d-flex">
+            <div class="border w-100 p-3 rounded mb-2 d-flex bg-white">
               <div class="icon mr-3">
                 <span class="icon-envelope-o"></span>
               </div>
@@ -142,7 +148,7 @@
     'createdby' => 1,
     'createdon' => 1756714388,
     'editedby' => 2,
-    'editedon' => 1761221031,
+    'editedon' => 1762233290,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -238,13 +244,19 @@
 	</div>
 </section>
 
-<section class="ftco-section contact-section">
+<style>
+  .contact-bg {
+    background: url(\'assets/images/contact-bg.png\') center center / cover no-repeat;
+  }
+</style>
+
+<section class="ftco-section contact-section contact-bg">
   <div class="container">
     <div class="row d-flex contact-info">
       <div class="col-md-5 col-lg-4">
         <div class="row mb-5">
           <div class="col-md-12">
-            <div class="border w-100 p-3 rounded mb-2 d-flex">
+            <div class="border w-100 p-3 rounded mb-2 d-flex bg-white">
               <div class="icon mr-3">
                 <span class="icon-mobile-phone"></span>
               </div>
@@ -252,7 +264,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="border w-100 p-3 rounded mb-2 d-flex">
+            <div class="border w-100 p-3 rounded mb-2 d-flex bg-white">
               <div class="icon mr-3">
                 <span class="icon-envelope-o"></span>
               </div>

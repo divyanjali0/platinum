@@ -263,7 +263,7 @@
 							<i class="fas fa-map-marked-alt"></i>
 						</div>
 						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Sightseeing Tours</h3>
-						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em; text-align:justify;">
 							Explore the city in unmatched comfort and style. Personalized routes, elite vehicles, and professional chauffeurs make every tour unforgettable.
 						</p>
 					</div>
@@ -275,8 +275,8 @@
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-city"></i>
 						</div>
-						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">City Transfer</h3>
-						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 23px;">City Transfer</h3>
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em; text-align:justify;">
 							Effortless and stylish travel within the city. Our professional drivers and premium fleet ensure stress-free and punctual transfers.
 						</p>
 					</div>
@@ -289,7 +289,7 @@
 							<i class="fas fa-plane"></i>
 						</div>
 						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Airport Transfer</h3>
-						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em; text-align:justify;">
 							Seamless airport pickups and drop-offs. Luxury vehicles, punctual service, and professional drivers ensure a smooth start or end to your journey.
 						</p>
 					</div>
@@ -302,7 +302,7 @@
 							<i class="fas fa-road"></i>
 						</div>
 						<h3 class="heading mb-3" style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;">Drive Experience</h3>
-						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em;">
+						<p style="color: #f0f0f0; line-height: 1.6; font-size: 1.05em; text-align:justify;">
 							Comprehensive travel solutions for every journey. From city tours to special events, enjoy unrivaled luxury, comfort, and peace of mind with Platinum Drive.
 						</p>
 					</div>
@@ -315,43 +315,43 @@
 
 	<!-- Counter Section starts -->
 	<section class="ftco-counter ftco-section img" id="section-counter" style="background: #102c4e;">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row justify-content-center">
-		
-		<!-- Luxury Fleets -->
-		<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="100">
-			<div class="counter-box p-3 shadow-sm rounded-2xl bg-white hover:shadow-lg transition duration-300">
-			<strong class="number d-block fs-2 fw-bold" data-number="80">0</strong>
-			<span class="details d-block mt-2">Luxury <br>Fleets</span>
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+			
+			<!-- Luxury Fleets -->
+			<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="counter-box p-3 shadow-sm rounded-2xl hover:shadow-lg transition duration-300">
+				<strong class="number d-block fs-2 fw-bold" data-number="80">0</strong>
+				<span class="details d-block">Luxury <br>Fleets</span>
+				</div>
 			</div>
-		</div>
 
-		<!-- Professional Chauffeurs -->
-		<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="200">
-			<div class="counter-box p-3 shadow-sm rounded-2xl bg-white hover:shadow-lg transition duration-300">
-			<strong class="number d-block fs-2 fw-bold" data-number="90">0</strong>
-			<span class="details d-block mt-2">Professional <br>Chauffeurs</span>
+			<!-- Professional Chauffeurs -->
+			<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="counter-box p-3 shadow-sm rounded-2xl hover:shadow-lg transition duration-300">
+				<strong class="number d-block fs-2 fw-bold" data-number="90">0</strong>
+				<span class="details d-block">Professional <br>Chauffeurs</span>
+				</div>
 			</div>
-		</div>
 
-		<!-- Happy Customers -->
-		<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="300">
-			<div class="counter-box p-3 shadow-sm rounded-2xl bg-white hover:shadow-lg transition duration-300">
-			<strong class="number d-block fs-2 fw-bold" data-number="180">0</strong>
-			<span class="details d-block mt-2">Happy <br>Customers</span>
+			<!-- Happy Customers -->
+			<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="counter-box p-3 shadow-sm rounded-2xl hover:shadow-lg transition duration-300">
+				<strong class="number d-block fs-2 fw-bold" data-number="180">0</strong>
+				<span class="details d-block">Happy <br>Customers</span>
+				</div>
 			</div>
-		</div>
 
-		<!-- Years of Experience (New) -->
-		<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="400">
-			<div class="counter-box p-3 shadow-sm rounded-2xl bg-white hover:shadow-lg transition duration-300">
-			<strong class="number d-block fs-2 fw-bold" data-number="15">0</strong>
-			<span class="details d-block mt-2">Years of <br>Experience</span>
+			<!-- Years of Experience (New) -->
+			<div class="col-md-6 col-lg-3 counter-wrap text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+				<div class="counter-box p-3 shadow-sm rounded-2xl hover:shadow-lg transition duration-300">
+				<strong class="number d-block fs-2 fw-bold" data-number="15">0</strong>
+				<span class="details d-block">Years of <br>Experience</span>
+				</div>
+			</div>
 			</div>
 		</div>
-		</div>
-	</div>
 	</section>
 
 	<script>
