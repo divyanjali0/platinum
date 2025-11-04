@@ -98,10 +98,9 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     // --- TRIP DETAILS BOX ---
     const tripBoxHeight = 44;
-    doc.setFillColor(250, 250, 225);
-    doc.rect(12, y, 116, tripBoxHeight, "F");
+    doc.setFillColor(255, 255, 255); 
     doc.setDrawColor(darkBlue[0], darkBlue[1], darkBlue[2]);
-    doc.roundedRect(12, y, 116, tripBoxHeight, 3, 3);
+    doc.roundedRect(12, y, 116, tripBoxHeight, 3, 3, "FD");
 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
@@ -115,8 +114,7 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(9);
     doc.setTextColor(0, 0, 0);
-
-    const rowSpacing = 6; 
+    const rowSpacing = 1; 
 
     // Wrap long text
     let pickupLines = doc.splitTextToSize(`Pickup: ${conf.pickup}`, 55);
@@ -141,9 +139,9 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     // --- PASSENGER DETAILS ---
     const passengerBoxHeight = 48;
-    doc.setFillColor(250, 250, 225);
+    doc.setFillColor(255, 255, 255);
     doc.rect(12, y, 116, passengerBoxHeight, "F");
-    doc.roundedRect(12, y, 116, passengerBoxHeight, 3, 3);
+    doc.roundedRect(12, y, 116, passengerBoxHeight, 3, 3, "FD");
 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
@@ -157,8 +155,7 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(9);
     doc.setTextColor(0, 0, 0);
-
-    const passengerSpacing = 6; 
+    const passengerSpacing = 1; 
 
     let nameLines = doc.splitTextToSize(`Name: ${conf.name}`, 55);
     doc.text(nameLines, leftPX, py);
