@@ -1,15 +1,19 @@
-<?php
 include_once MODX_BASE_PATH . 'assets/includes/db_connect.php';
 
 $output = '';
 
 try {
-    $stmt = $conn->query("SELECT * FROM vehicles");
+    // Join vehicles with vehicle_rates to get rate_per_day
+    $stmt = $conn->query("
+        SELECT v.*, vr.rate_per_day 
+        FROM vehicles v
+        LEFT JOIN vehicle_rates vr ON v.id = vr.vehicle_id
+    ");
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $id = $row['id'];
         $name = htmlspecialchars($row['name']);
-        $price = number_format($row['price_per_day'], 2);
+        $price = number_format($row['rate_per_day'], 2); 
         $description = htmlspecialchars($row['description']);
         $image = $row['image'];
         $seats = (int)$row['no_of_seats'];

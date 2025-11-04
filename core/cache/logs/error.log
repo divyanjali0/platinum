@@ -153,3 +153,20 @@
 [2025-11-04 07:02:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 770) PHP warning: Undefined variable $label
 [2025-11-04 07:02:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 770) PHP warning: Undefined variable $qty
 [2025-11-04 07:02:05] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 770) PHP warning: Undefined variable $lineTotal
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:40:10] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 12) PHP warning: Undefined array key "price_per_day"
+[2025-11-04 07:43:30] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 352) PHP warning: Undefined variable $car_image1
+[2025-11-04 07:43:30] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 355) PHP warning: Undefined variable $car_image2
+[2025-11-04 07:43:30] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 777) PHP warning: Undefined variable $label
+[2025-11-04 07:43:30] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 777) PHP warning: Undefined variable $qty
+[2025-11-04 07:43:30] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 777) PHP warning: Undefined variable $lineTotal

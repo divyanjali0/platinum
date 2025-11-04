@@ -1,6 +1,5 @@
 <?php
 
-// Get trip data from session (if available)
 $pickup = $_SESSION['booking']['pickup_location'] ?? '';
 $dropoff = $_SESSION['booking']['dropoff_location'] ?? '';
 $pickup_date = $_SESSION['booking']['pickup_date'] ?? '';
@@ -8,7 +7,6 @@ $pickup_time = $_SESSION['booking']['pickup_time'] ?? '';
 $dropoff_date = $_SESSION['booking']['dropoff_date'] ?? '';
 $dropoff_time = $_SESSION['booking']['dropoff_time'] ?? '';
 
-// ✅ Normalize formats for HTML5 inputs
 if (!empty($pickup_date)) {
     $timestamp = strtotime($pickup_date);
     if ($timestamp) $pickup_date = date('Y-m-d', $timestamp);
@@ -32,7 +30,6 @@ if (!empty($dropoff_time)) {
 
 include_once MODX_BASE_PATH . 'assets/includes/db_connect.php';
 
-// Get car ID from URL
 $car_id = isset($_GET['car_id']) ? intval($_GET['car_id']) : 0;
 
 // Default values
@@ -43,12 +40,18 @@ $car_description = "Suzuki WagonR or Similar";
 $car_image = "assets/images/fleet/3.jpg"; 
 
 try {
-    $stmt = $conn->prepare("SELECT name, price_per_day, description, image, no_of_seats, luggages FROM vehicles WHERE id = ?");
+    $stmt = $conn->prepare("
+        SELECT v.name, vr.rate_per_day, v.description, v.image, v.no_of_seats, v.luggages
+        FROM vehicles v
+        LEFT JOIN vehicle_rates vr ON v.id = vr.vehicle_id
+        WHERE v.id = ?
+        LIMIT 1
+    ");
     $stmt->execute([$car_id]);
     $car = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($car) {
-        $price_per_day = $car['price_per_day'];
+        $price_per_day = $car['rate_per_day']; 
         $seats = $car['no_of_seats'];
         $luggages = $car['luggages'];
         $car_name = $car['name'];
@@ -615,7 +618,6 @@ $output = <<<HTML
                             total += addonPrice * qty * days;
                         });
 
-                        // Update UI
                         tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
                         tripTotalEl.textContent = "$" + total.toFixed(2);
                         if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
