@@ -1,3 +1,4 @@
+<?php
 include_once MODX_BASE_PATH . 'assets/includes/db_connect.php';
 
 $output = '';
@@ -50,3 +51,4 @@ try {
 }
 
 return $output;
+return;
