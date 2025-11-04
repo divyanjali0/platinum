@@ -10402,7 +10402,7 @@ text-align: center;
     .feature-card:hover {
         transform: translateY(-10px);
         border-color: #d4af37;
-        box-shadow: 0 15px 45px rgba(212, 175, 55, 0.25);
+        box-shadow: 0 15px 45px rgb(13 38 79 / 63%);
     }
 
     .feature-icon {
