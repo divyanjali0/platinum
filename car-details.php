@@ -388,7 +388,7 @@ $output = <<<HTML
                     </div>
 
                     <!-- STEP 3: PASSENGERS & TRANSFERS -->
-                    <div class="form-step" data-step="3">
+                   <div class="form-step" data-step="3">
                         <h4>Passengers & Transfers</h4>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -449,7 +449,7 @@ $output = <<<HTML
                                         <input type="file" class="form-control" id="idp_image" name="idp_image" accept="image/*">
                                     </div>
                                     <div class="mb-2">
-                                        <label for="passport_image2">Photograph if the applicant</label>
+                                        <label for="passport_image2">Photograph of the Applicant</label>
                                         <input type="file" class="form-control" id="passport_image2" name="passport_image2" accept="image/*">
                                     </div>
                                 </div>
@@ -466,7 +466,7 @@ $output = <<<HTML
                             </div>
                         </div>
 
-                        <div id="validation_error" class="text-danger mb-3" style="display:none;"> Please fill all required fields before continuing.</div>
+                        <div id="validation_error" class="text-danger mb-3" style="display:none;">Please fill all required fields before continuing.</div>
 
                         <div class="buttons">
                             <button type="button" class="btn btn-secondary prev-step">Back</button>
@@ -553,6 +553,26 @@ $output = <<<HTML
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+        <script>
+            document.getElementById('need_driver').addEventListener('change', function() {
+                const needLicense = document.getElementById('need_license');
+                const licenseUploads = document.getElementById('license_uploads');
+
+                if (this.value === 'yes') {
+                    needLicense.value = 'no';
+                    needLicense.disabled = true;
+                    licenseUploads.style.display = 'none';
+                } else {
+                    // Enable license option again
+                    needLicense.disabled = false;
+                }
+            });
+
+            document.getElementById('need_license').addEventListener('change', function() {
+                const licenseUploads = document.getElementById('license_uploads');
+                licenseUploads.style.display = (this.value === 'yes') ? 'block' : 'none';
+            });
+        </script>
 
         <script>
             document.querySelector('#multiStepForm').addEventListener('submit', function() {
