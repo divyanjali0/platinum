@@ -415,7 +415,7 @@ $output = <<<HTML
                                 <label for="mileage">Mileage <span class="text-danger">*</span></label>
                                 <select class="form-control required-field" id="mileage" name="mileage">
                                     <option value="">Select Mileage</option>
-                                    <option value="0-50">0–50 km</option>
+                                    <option value="0-150">0–150 km</option>
                                     <option value="unlimited">Unlimited</option>
                                 </select>
                             </div>
@@ -439,17 +439,19 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-12" id="license_uploads" style="display:none; margin-top:10px;">
-                                <div class="mb-2">
-                                    <label for="passport_image">Passport</label>
-                                    <input type="file" class="form-control" id="passport_image" name="passport_image" accept="image/*">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="idp_image">International Driving Permit (IDP)</label>
-                                    <input type="file" class="form-control" id="idp_image" name="idp_image" accept="image/*">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="passport_image2">Passport (Second)</label>
-                                    <input type="file" class="form-control" id="passport_image2" name="passport_image2" accept="image/*">
+                                <div style="display: flex; gap: 10px; align-items: center;">
+                                    <div class="mb-2">
+                                        <label for="passport_image">Passport</label>
+                                        <input type="file" class="form-control" id="passport_image" name="passport_image" accept="image/*">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="idp_image">International Driving Permit (IDP)</label>
+                                        <input type="file" class="form-control" id="idp_image" name="idp_image" accept="image/*">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="passport_image2">Photograph if the applicant</label>
+                                        <input type="file" class="form-control" id="passport_image2" name="passport_image2" accept="image/*">
+                                    </div>
                                 </div>
                             </div>
 
