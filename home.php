@@ -95,24 +95,28 @@
 		</div>
   	</section>
 
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5">
-				<div class="col-md-12 text-center heading-section ftco-animate">
-					<span class="subheading">Experience Excellence</span>
-					<h2 class="mb-3"> Drive Platinum</h2>
-				</div>
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center mb-4">
+			<div class="col-md-12 text-center heading-section ftco-animate">
+				<span class="subheading">Experience Excellence</span>
+				<h2 class="mb-3">Drive Platinum</h2>
+				<p class="lead" style="font-size: 16px; margin-bottom:0; text-align:justify;">
+					Discover the art of luxury travel with our exclusive fleet of premium vehicles and world-class chauffeur services — where sophistication meets performance. 
+					Whether you're attending a high-profile event, corporate meeting, or special celebration, Drive Platinum ensures every journey is defined by comfort, elegance, and professionalism. 
+					Enjoy personalized service, immaculate interiors, and attention to every detail — because you deserve nothing less than perfection on the road.
+				</p>
 			</div>
-
-			<!-- Full-width image replacing the services row -->
-			<div class="row">
-				<div class="col-12">
-					<img src="assets/images/platinum_home.jpg" alt="Our Services" style="width: 100%; height: auto; display: block;">
-				</div>
-			</div>
-
 		</div>
-	</section>
+
+		<div class="row">
+			<div class="col-12">
+				<img src="assets/images/platinum_home.jpg" alt="Our Services" style="width: 100%; height: auto; display: block;">
+			</div>
+		</div>
+	</div>
+</section>
+
 
   <section class="ftco-section ftco-no-pt bg-light">
 	<div class="container">
