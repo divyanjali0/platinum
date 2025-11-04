@@ -14,7 +14,7 @@
     <!-- INTRO -->
     <section class="intro-section">
         <div class="intro-content">
-            <h2>About Platinum Drive</h2>
+            <h2><span style="font-size: 32px;">About </span> <br> Platinum Drive</h2>
             <p>
                 Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
                 For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of

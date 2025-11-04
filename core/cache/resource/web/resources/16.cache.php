@@ -31,7 +31,7 @@
     <!-- INTRO -->
     <section class="intro-section">
         <div class="intro-content">
-            <h2>About Platinum Drive</h2>
+            <h2><span style="font-size: 26px;">About </span> <br> Platinum Drive</h2>
             <p>
                 Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
                 For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
@@ -97,7 +97,7 @@
     'createdby' => 2,
     'createdon' => 1762163589,
     'editedby' => 2,
-    'editedon' => 1762167581,
+    'editedon' => 1762237323,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -196,7 +196,7 @@
     <!-- INTRO -->
     <section class="intro-section">
         <div class="intro-content">
-            <h2>About Platinum Drive</h2>
+            <h2><span style="font-size: 26px;">About </span> <br> Platinum Drive</h2>
             <p>
                 Welcome to <strong>Platinum Drive</strong> — the ultimate destination for refined automotive luxury.
                 For over a decade, we have set the gold standard in elite car rentals, offering a seamless blend of
