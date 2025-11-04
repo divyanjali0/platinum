@@ -270,7 +270,7 @@
 			<!-- Services Grid -->
 			<div class="row">
 				<!-- Service 1 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-map-marked-alt"></i>
@@ -283,7 +283,7 @@
 				</div>
 
 				<!-- Service 2 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-city"></i>
@@ -296,7 +296,7 @@
 				</div>
 
 				<!-- Service 3 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-plane"></i>
@@ -309,7 +309,7 @@
 				</div>
 
 				<!-- Service 4 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-road"></i>
@@ -583,7 +583,7 @@
     'createdby' => 1,
     'createdon' => 1756709107,
     'editedby' => 2,
-    'editedon' => 1762171204,
+    'editedon' => 1762230988,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -921,7 +921,7 @@
 			<!-- Services Grid -->
 			<div class="row">
 				<!-- Service 1 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-map-marked-alt"></i>
@@ -934,7 +934,7 @@
 				</div>
 
 				<!-- Service 2 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-city"></i>
@@ -947,7 +947,7 @@
 				</div>
 
 				<!-- Service 3 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-plane"></i>
@@ -960,7 +960,7 @@
 				</div>
 
 				<!-- Service 4 -->
-				<div class="col-md-6 col-lg-3 mb-4">
+				<div class="col-md-6 col-lg-3">
 					<div class="service-card text-center" style="background: #102c4e; padding: 40px; border-radius: 20px; border: 2px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 40px rgba(212,175,55,0.1); transition: all 0.4s ease; height: 92%;">
 						<div class="service-icon" style="font-size: 3em; color: #d4af37; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.4); box-shadow: 0 6px 20px rgba(212,175,55,0.15);">
 							<i class="fas fa-road"></i>
