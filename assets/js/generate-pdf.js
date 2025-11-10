@@ -217,4 +217,22 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     // --- SAVE ---
     doc.save("Booking_" + conf.name.replace(/\s+/g, "_") + ".pdf");
+
+    // --- Convert PDF to Blob ---
+    const pdfBlob = doc.output('blob', { type: 'application/pdf' });
+
+    // --- Prepare FormData ---
+    const formData = new FormData();
+    formData.append('invoice', pdfBlob, `invoice_${conf.name.replace(/\s+/g, "_")}.pdf`);
+    formData.append('booking_number', document.getElementById('conf_booking_number')?.textContent || '');
+
+    // --- Upload to server ---
+    fetch('assets/includes/upload_invoice.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(data => console.log('✅ Invoice uploaded:', data))
+    .catch(err => console.error('❌ Upload error:', err));
+
 }

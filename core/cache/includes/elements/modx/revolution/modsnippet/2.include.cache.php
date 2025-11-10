@@ -1,5 +1,4 @@
 <?php
-
 $pickup = $_SESSION['booking']['pickup_location'] ?? '';
 $dropoff = $_SESSION['booking']['dropoff_location'] ?? '';
 $pickup_date = $_SESSION['booking']['pickup_date'] ?? '';
@@ -59,7 +58,7 @@ try {
         $car_image = $car['image'];
     }
 } catch (PDOException $e) {
-    return "<p>⚠️ Error loading car details: " . htmlspecialchars($e->getMessage()) . "</p>";
+    return "<p>?? Error loading car details: " . htmlspecialchars($e->getMessage()) . "</p>";
 }
 
 // Fetch add-ons from DB
@@ -690,7 +689,9 @@ $output = <<<HTML
             });
         </script>
 
-        <script src="assets/js/generate-pdf.js"></script>
+     <script src="assets/js/generate-pdf.js"></script>
+
+
 
         <script>
             function fillConfirmation() {
@@ -872,3 +873,4 @@ $output = <<<HTML
 HTML;
 
 return $output;
+return;
