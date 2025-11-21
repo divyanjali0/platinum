@@ -13,3 +13,235 @@
 [2025-11-07 11:34:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
 [2025-11-07 11:34:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
 [2025-11-07 11:34:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-10 05:53:18] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-10 05:53:18] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-10 05:53:18] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-10 05:53:18] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-10 05:53:18] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-10 05:53:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-10 05:53:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-10 05:53:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-10 05:53:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-10 05:53:50] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-10 05:54:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-10 05:54:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-10 05:54:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-10 05:54:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-10 05:54:00] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-10 07:21:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-10 07:21:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-10 07:21:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-10 07:21:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-10 07:21:26] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-21 05:26:58] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:26:59] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:26:59] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('6ou2foqc0cif2j6v5oqcp9fntf', 1763699219, 'modx.user.contextTokens|a:0:{}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:27:00] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:27:00] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:27:01] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:27:01] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('6deh772hq1altu6sm6utog7apf', 1763699221, 'modx.user.contextTokens|a:0:{}manager_language|s:2:\"en\";')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:27:21] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:21] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-21 05:27:25] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:25] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-21 05:27:29] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:29] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-21 05:27:37] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:37] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-21 05:27:41] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - 
+[2025-11-21 05:27:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-21 05:27:41] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 251) PHP warning: Trying to access array offset on value of type bool
+[2025-11-21 05:27:45] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:49] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:49] (ERROR @ Unknown0) PHP warning: session_write_close(): Failed to write session data using user defined save handler. (session.save_path: C:\xampp\tmp, handler: MODX\Revolution\modSessionHandler::write)
+[2025-11-21 05:27:51] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:51] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modExtensionPackage`.`id`, `modExtensionPackage`.`namespace`, `modExtensionPackage`.`name`, `modExtensionPackage`.`path`, `modExtensionPackage`.`table_prefix`, `modExtensionPackage`.`service_class`, `modExtensionPackage`.`service_name`, `modExtensionPackage`.`created_at`, `modExtensionPackage`.`updated_at`, Namespace.path AS namespace_path FROM `modx_extension_packages` AS `modExtensionPackage` JOIN `modx_namespaces` `Namespace` ON `modExtensionPackage`.`namespace` =  `Namespace`.`name` ORDER BY namespace ASC 
+[2025-11-21 05:27:55] (ERROR in xPDO\xPDOConnection::connect @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\xPDOConnection.php : 89) SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2025-11-21 05:27:55] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOQuery.php : 670) Could not construct or prepare query because it is invalid or could not connect: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ? 
+[2025-11-21 05:28:14] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 250) Error preparing statement for query: SELECT `modSession`.`id` AS `modSession_id`, `modSession`.`access` AS `modSession_access`, `modSession`.`data` AS `modSession_data` FROM `modx_session` AS `modSession` WHERE `modSession`.`id` = ?  - Array
+(
+    [0] => 00000
+    [1] => 
+    [2] => 
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 534) Error HY000 executing query: SELECT `modUser`.`id` AS `modUser_id`, `modUser`.`username` AS `modUser_username`, `modUser`.`password` AS `modUser_password`, `modUser`.`cachepwd` AS `modUser_cachepwd`, `modUser`.`class_key` AS `modUser_class_key`, `modUser`.`active` AS `modUser_active`, `modUser`.`remote_key` AS `modUser_remote_key`, `modUser`.`remote_data` AS `modUser_remote_data`, `modUser`.`hash_class` AS `modUser_hash_class`, `modUser`.`salt` AS `modUser_salt`, `modUser`.`primary_group` AS `modUser_primary_group`, `modUser`.`session_stale` AS `modUser_session_stale`, `modUser`.`sudo` AS `modUser_sudo`, `modUser`.`createdon` AS `modUser_createdon`, `Profile`.`id` AS `Profile_id`, `Profile`.`internalKey` AS `Profile_internalKey`, `Profile`.`fullname` AS `Profile_fullname`, `Profile`.`email` AS `Profile_email`, `Profile`.`phone` AS `Profile_phone`, `Profile`.`mobilephone` AS `Profile_mobilephone`, `Profile`.`blocked` AS `Profile_blocked`, `Profile`.`blockeduntil` AS `Profile_blockeduntil`, `Profile`.`blockedafter` AS `Profile_blockedafter`, `Profile`.`logincount` AS `Profile_logincount`, `Profile`.`lastlogin` AS `Profile_lastlogin`, `Profile`.`thislogin` AS `Profile_thislogin`, `Profile`.`failedlogincount` AS `Profile_failedlogincount`, `Profile`.`sessionid` AS `Profile_sessionid`, `Profile`.`dob` AS `Profile_dob`, `Profile`.`gender` AS `Profile_gender`, `Profile`.`address` AS `Profile_address`, `Profile`.`country` AS `Profile_country`, `Profile`.`city` AS `Profile_city`, `Profile`.`state` AS `Profile_state`, `Profile`.`zip` AS `Profile_zip`, `Profile`.`fax` AS `Profile_fax`, `Profile`.`photo` AS `Profile_photo`, `Profile`.`comment` AS `Profile_comment`, `Profile`.`website` AS `Profile_website`, `Profile`.`extended` AS `Profile_extended`, `UserSettings`.`user` AS `UserSettings_user`, `UserSettings`.`key` AS `UserSettings_key`, `UserSettings`.`value` AS `UserSettings_value`, `UserSettings`.`xtype` AS `UserSettings_xtype`, `UserSettings`.`namespace` AS `UserSettings_namespace`, `UserSettings`.`area` AS `UserSettings_area`, `UserSettings`.`editedon` AS `UserSettings_editedon` FROM `modx_users` AS `modUser` LEFT JOIN `modx_user_attributes` `Profile` ON `modUser`.`id` = `Profile`.`internalKey` LEFT JOIN `modx_user_settings` `UserSettings` ON `modUser`.`id` = `UserSettings`.`user` WHERE `modUser`.`username` = ? ORDER BY `modUser`.`id` ASC  - Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:15] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('6deh772hq1altu6sm6utog7apf', 1763699295, 'modx.user.contextTokens|a:0:{}manager_language|s:2:\"en\";')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 227) Error HY000 executing statement: 
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:28:32] (ERROR @ C:\xampp\htdocs\platinum\core\vendor\xpdo\xpdo\src\xPDO\Om\xPDOObject.php : 1447) Error HY000 executing statement:
+INSERT INTO `modx_session` (`id`, `access`, `data`) VALUES ('6deh772hq1altu6sm6utog7apf', 1763699312, 'modx.user.contextTokens|a:0:{}')
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+[2025-11-21 05:52:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-21 05:52:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-21 05:52:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-21 05:52:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-21 05:52:04] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:09] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-21 06:40:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-21 06:40:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-21 06:40:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-21 06:40:37] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 19) PHP warning: Undefined array key "no_of_seats"
+[2025-11-21 06:40:39] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\1.include.cache.php : 20) PHP warning: Undefined array key "luggages"
+[2025-11-21 06:40:42] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 348) PHP warning: Undefined variable $car_image1
+[2025-11-21 06:40:42] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 351) PHP warning: Undefined variable $car_image2
+[2025-11-21 06:40:42] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $label
+[2025-11-21 06:40:42] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $qty
+[2025-11-21 06:40:42] (ERROR @ C:\xampp\htdocs\platinum\core\cache\includes\elements\modx\revolution\modsnippet\2.include.cache.php : 772) PHP warning: Undefined variable $lineTotal

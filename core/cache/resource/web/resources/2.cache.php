@@ -423,6 +423,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
     '[[~14? &car_id=`4`]]' => 'index.php?id=14&amp;car_id=4',
     '[[~14? &car_id=`5`]]' => 'index.php?id=14&amp;car_id=5',
     '[[~14? &car_id=`6`]]' => 'index.php?id=14&amp;car_id=6',
+    '[[~14? &car_id=`7`]]' => 'index.php?id=14&amp;car_id=7',
+    '[[~14? &car_id=`8`]]' => 'index.php?id=14&amp;car_id=8',
+    '[[~14? &car_id=`9`]]' => 'index.php?id=14&amp;car_id=9',
+    '[[~14? &car_id=`10`]]' => 'index.php?id=14&amp;car_id=10',
+    '[[~14? &car_id=`11`]]' => 'index.php?id=14&amp;car_id=11',
+    '[[~14? &car_id=`12`]]' => 'index.php?id=14&amp;car_id=12',
   ),
   'sourceCache' => 
   array (
@@ -856,33 +862,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 $output = \'\';
 
 try {
-    // Join vehicles with vehicle_rates to get rate_per_day
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     $stmt = $conn->query("
-        SELECT v.*, vr.rate_per_day 
-        FROM vehicles v
-        LEFT JOIN vehicle_rates vr ON v.id = vr.vehicle_id
+        SELECT id, name, description, passengers, suitcases, image, avg_price
+        FROM car_categories
+        ORDER BY id
     ");
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $id = $row[\'id\'];
         $name = htmlspecialchars($row[\'name\']);
-        $price = number_format($row[\'rate_per_day\'], 2); 
+        $price = number_format($row[\'avg_price\'], 2);
         $description = htmlspecialchars($row[\'description\']);
         $image = $row[\'image\'];
-        $seats = (int)$row[\'no_of_seats\'];
-        $luggage = (int)$row[\'luggages\'];
-
-        $detailsLink = "[[~14? &car_id=`$id`]]"; 
+        $seats = (int)$row[\'passengers\'];
+        $luggage = (int)$row[\'suitcases\'];
+        $detailsLink = "[[~14? &car_id=`$id`]]";
 
         $output .= "
-        <div class=\'col-md-4\'>
+        <div class=\'col-md-4 mb-4\'>
             <div class=\'car-wrap rounded ftco-animate\'>
-                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image);\'></div>
-                <div class=\'text\'>
+                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image); height: 220px; background-size: cover; background-position: center;\'></div>
+                <div class=\'text p-3\'>
                     <div class=\'d-flex justify-content-between align-items-center mb-1\'>
                         <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
                         <small style=\'font-size: 16px; color: #d09c00;\'>
-                            <i class=\'fa fa-users\'></i> $seats&nbsp; |
+                            <i class=\'fa fa-users\'></i> $seats |
                             <i class=\'fa fa-suitcase ml-2\'></i> $luggage
                         </small>
                     </div>
@@ -892,11 +898,57 @@ try {
                     </div>
                     <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
+                        <button class=\'btn btn-secondary py-2 view-vehicles-btn\' data-id=\'$id\'>View Vehicles</button>
                     </p>
                 </div>
             </div>
         </div>";
     }
+
+    // Add Bootstrap modal container at the end
+    $output .= "
+    <!-- Vehicle Modal -->
+    <div class=\'modal fade\' id=\'vehicleModal\' tabindex=\'-1\' role=\'dialog\' aria-labelledby=\'vehicleModalLabel\' aria-hidden=\'true\'>
+      <div class=\'modal-dialog modal-lg modal-dialog-centered\' role=\'document\'>
+        <div class=\'modal-content\'>
+          <div class=\'modal-header\'>
+            <h5 class=\'modal-title\' id=\'vehicleModalLabel\'>Related Vehicles</h5>
+            <button type=\'button\' class=\'close\' data-dismiss=\'modal\' aria-label=\'Close\'>
+              <span aria-hidden=\'true\'>&times;</span>
+            </button>
+          </div>
+          <div class=\'modal-body\'>
+            <div id=\'vehicleModalContent\' class=\'row\'>
+              <!-- Vehicles will load here dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener(\'DOMContentLoaded\', function() {
+        const buttons = document.querySelectorAll(\'.view-vehicles-btn\');
+        buttons.forEach(btn => {
+            btn.addEventListener(\'click\', function() {
+                const vehicleId = this.getAttribute(\'data-id\');
+
+                // Fetch related vehicles via AJAX (you can replace this with your logic)
+                fetch(\'get_related_vehicles.php?id=\' + vehicleId)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(\'vehicleModalContent\').innerHTML = html;
+                    $(\'#vehicleModal\').modal(\'show\');
+                })
+                .catch(err => {
+                    document.getElementById(\'vehicleModalContent\').innerHTML = \'<p class=\\"text-danger\\">Failed to load vehicles.</p>\';
+                    $(\'#vehicleModal\').modal(\'show\');
+                });
+            });
+        });
+    });
+    </script>
+    ";
 
 } catch (PDOException $e) {
     $output = "? Query failed: " . $e->getMessage();
@@ -915,33 +967,33 @@ return $output;',
 $output = \'\';
 
 try {
-    // Join vehicles with vehicle_rates to get rate_per_day
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     $stmt = $conn->query("
-        SELECT v.*, vr.rate_per_day 
-        FROM vehicles v
-        LEFT JOIN vehicle_rates vr ON v.id = vr.vehicle_id
+        SELECT id, name, description, passengers, suitcases, image, avg_price
+        FROM car_categories
+        ORDER BY id
     ");
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $id = $row[\'id\'];
         $name = htmlspecialchars($row[\'name\']);
-        $price = number_format($row[\'rate_per_day\'], 2); 
+        $price = number_format($row[\'avg_price\'], 2);
         $description = htmlspecialchars($row[\'description\']);
         $image = $row[\'image\'];
-        $seats = (int)$row[\'no_of_seats\'];
-        $luggage = (int)$row[\'luggages\'];
-
-        $detailsLink = "[[~14? &car_id=`$id`]]"; 
+        $seats = (int)$row[\'passengers\'];
+        $luggage = (int)$row[\'suitcases\'];
+        $detailsLink = "[[~14? &car_id=`$id`]]";
 
         $output .= "
-        <div class=\'col-md-4\'>
+        <div class=\'col-md-4 mb-4\'>
             <div class=\'car-wrap rounded ftco-animate\'>
-                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image);\'></div>
-                <div class=\'text\'>
+                <div class=\'img rounded d-flex align-items-end\' style=\'background-image: url($image); height: 220px; background-size: cover; background-position: center;\'></div>
+                <div class=\'text p-3\'>
                     <div class=\'d-flex justify-content-between align-items-center mb-1\'>
                         <h2 class=\'mb-0\' style=\'color: #102c4e !important; font-size: 1.25rem;\'>$name</h2>
                         <small style=\'font-size: 16px; color: #d09c00;\'>
-                            <i class=\'fa fa-users\'></i> $seats&nbsp; |
+                            <i class=\'fa fa-users\'></i> $seats |
                             <i class=\'fa fa-suitcase ml-2\'></i> $luggage
                         </small>
                     </div>
@@ -951,11 +1003,57 @@ try {
                     </div>
                     <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
+                        <button class=\'btn btn-secondary py-2 view-vehicles-btn\' data-id=\'$id\'>View Vehicles</button>
                     </p>
                 </div>
             </div>
         </div>";
     }
+
+    // Add Bootstrap modal container at the end
+    $output .= "
+    <!-- Vehicle Modal -->
+    <div class=\'modal fade\' id=\'vehicleModal\' tabindex=\'-1\' role=\'dialog\' aria-labelledby=\'vehicleModalLabel\' aria-hidden=\'true\'>
+      <div class=\'modal-dialog modal-lg modal-dialog-centered\' role=\'document\'>
+        <div class=\'modal-content\'>
+          <div class=\'modal-header\'>
+            <h5 class=\'modal-title\' id=\'vehicleModalLabel\'>Related Vehicles</h5>
+            <button type=\'button\' class=\'close\' data-dismiss=\'modal\' aria-label=\'Close\'>
+              <span aria-hidden=\'true\'>&times;</span>
+            </button>
+          </div>
+          <div class=\'modal-body\'>
+            <div id=\'vehicleModalContent\' class=\'row\'>
+              <!-- Vehicles will load here dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener(\'DOMContentLoaded\', function() {
+        const buttons = document.querySelectorAll(\'.view-vehicles-btn\');
+        buttons.forEach(btn => {
+            btn.addEventListener(\'click\', function() {
+                const vehicleId = this.getAttribute(\'data-id\');
+
+                // Fetch related vehicles via AJAX (you can replace this with your logic)
+                fetch(\'get_related_vehicles.php?id=\' + vehicleId)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(\'vehicleModalContent\').innerHTML = html;
+                    $(\'#vehicleModal\').modal(\'show\');
+                })
+                .catch(err => {
+                    document.getElementById(\'vehicleModalContent\').innerHTML = \'<p class=\\"text-danger\\">Failed to load vehicles.</p>\';
+                    $(\'#vehicleModal\').modal(\'show\');
+                });
+            });
+        });
+    });
+    </script>
+    ";
 
 } catch (PDOException $e) {
     $output = "? Query failed: " . $e->getMessage();
