@@ -662,6 +662,53 @@ $output = <<<HTML
         </script>
 
         <script>
+            function validateTripDetails() {
+    const pickup = document.getElementById('pickup_location');
+    const dropoff = document.getElementById('dropoff_location');
+    const pickupDate = document.getElementById('pickup_date');
+    const dropoffDate = document.getElementById('dropoff_date');
+
+    let valid = true;
+
+    // Reset previous errors
+    [pickup, dropoff, pickupDate, dropoffDate].forEach(field => {
+        field.classList.remove('is-invalid');
+    });
+
+    if (!pickup.value.trim()) {
+        pickup.classList.add('is-invalid');
+        valid = false;
+    }
+    if (!dropoff.value.trim()) {
+        dropoff.classList.add('is-invalid');
+        valid = false;
+    }
+    if (!pickupDate.value) {
+        pickupDate.classList.add('is-invalid');
+        valid = false;
+    }
+    if (!dropoffDate.value) {
+        dropoffDate.classList.add('is-invalid');
+        valid = false;
+    }
+
+    // Date logic
+    if (pickupDate.value && dropoffDate.value) {
+        const d1 = new Date(pickupDate.value);
+        const d2 = new Date(dropoffDate.value);
+
+        if (d2 < d1) {
+            dropoffDate.classList.add('is-invalid');
+            valid = false;
+        }
+    }
+
+    return valid;
+}
+
+            </script>
+
+        <script>
             document.getElementById('multiStepForm').addEventListener('submit', function(e){
                 e.preventDefault(); 
 
@@ -824,26 +871,33 @@ $output = <<<HTML
             }
 
             document.querySelectorAll('.next-step').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const current = document.querySelector('.form-step.active');
-                    const nextStep = parseInt(current.dataset.step) + 1;
+              btn.addEventListener('click', () => {
+    const current = document.querySelector('.form-step.active');
+    const nextStep = parseInt(current.dataset.step) + 1;
 
-                    if (current.dataset.step === "3" && !validateStep(2)) {
-                        return;
-                    }
+    // STEP 1 VALIDATION (Trip details)
+    if (current.dataset.step === "1") {
+        if (!validateTripDetails()) {
+            return; // Stop user from going forward
+        }
+    }
 
-                    showStep(nextStep - 1);
+    // STEP 3 validation (already exists)
+    if (current.dataset.step === "3" && !validateStep(2)) {
+        return;
+    }
 
-                    if (nextStep === 4) {
-                        document.querySelectorAll('.addon-checkbox').forEach(cb => {
-                            const qtySelect = document.getElementById('addon_qty_' + cb.value);
-                            if (qtySelect) {
-                                qtySelect.disabled = !cb.checked;
-                            }
-                        });
-                    fillConfirmation();
-                    }
-                });
+    showStep(nextStep - 1);
+
+    if (nextStep === 4) {
+        document.querySelectorAll('.addon-checkbox').forEach(cb => {
+            const qtySelect = document.getElementById('addon_qty_' + cb.value);
+            if (qtySelect) qtySelect.disabled = !cb.checked;
+        });
+        fillConfirmation();
+    }
+});
+
             });
 
             document.querySelectorAll('.prev-step').forEach(btn => {
