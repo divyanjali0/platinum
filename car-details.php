@@ -906,8 +906,14 @@ $output = <<<HTML
             });
 
             // Make progress bar clickable
-            progressItems.forEach((item, index) => {
-                item.addEventListener('click', () => showStep(index));
+            // progressItems.forEach((item, index) => {
+            //     item.addEventListener('click', () => showStep(index));
+            // });
+
+            // Disable progress bar clicks
+            progressItems.forEach(item => {
+                item.style.pointerEvents = "none";
+                item.style.cursor = "default";
             });
 
             // License upload toggle

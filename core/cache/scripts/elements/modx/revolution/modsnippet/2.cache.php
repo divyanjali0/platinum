@@ -870,33 +870,32 @@ $output = <<<HTML
             }
 
             document.querySelectorAll(\'.next-step\').forEach(btn => {
-              btn.addEventListener(\'click\', () => {
-    const current = document.querySelector(\'.form-step.active\');
-    const nextStep = parseInt(current.dataset.step) + 1;
+                btn.addEventListener(\'click\', () => {
+                    const current = document.querySelector(\'.form-step.active\');
+                    const nextStep = parseInt(current.dataset.step) + 1;
 
-    // STEP 1 VALIDATION (Trip details)
-    if (current.dataset.step === "1") {
-        if (!validateTripDetails()) {
-            return; // Stop user from going forward
-        }
-    }
+                    // STEP 1 VALIDATION (Trip details)
+                    if (current.dataset.step === "1") {
+                        if (!validateTripDetails()) {
+                            return; // Stop user from going forward
+                        }
+                    }
 
-    // STEP 3 validation (already exists)
-    if (current.dataset.step === "3" && !validateStep(2)) {
-        return;
-    }
+                    // STEP 3 validation (already exists)
+                    if (current.dataset.step === "3" && !validateStep(2)) {
+                        return;
+                    }
 
-    showStep(nextStep - 1);
+                    showStep(nextStep - 1);
 
-    if (nextStep === 4) {
-        document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
-            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
-            if (qtySelect) qtySelect.disabled = !cb.checked;
-        });
-        fillConfirmation();
-    }
-});
-
+                    if (nextStep === 4) {
+                        document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
+                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+                            if (qtySelect) qtySelect.disabled = !cb.checked;
+                        });
+                        fillConfirmation();
+                    }
+                });
             });
 
             document.querySelectorAll(\'.prev-step\').forEach(btn => {
@@ -906,9 +905,16 @@ $output = <<<HTML
             });
 
             // Make progress bar clickable
-            progressItems.forEach((item, index) => {
-                item.addEventListener(\'click\', () => showStep(index));
-            });
+            // progressItems.forEach((item, index) => {
+            //     item.addEventListener(\'click\', () => showStep(index));
+            // });
+
+            // Disable progress bar clicks
+progressItems.forEach(item => {
+    item.style.pointerEvents = "none";
+    item.style.cursor = "default";
+});
+
 
             // License upload toggle
             const needLicense = document.getElementById(\'need_license\');
