@@ -128,150 +128,150 @@ $output = <<<HTML
         </div>
 
         <style>
-        .progressbar {
-            display: flex;
-            justify-content: space-between;
-            counter-reset: step;
-            margin-bottom: 30px;
-            list-style-type: none;
-            padding: 0;
-        }
-        .progressbar li {
-            position: relative;
-            text-align: center;
-            flex: 1;
-            cursor: pointer;
-        }
-        .progressbar li:before {
-            content: counter(step);
-            counter-increment: step;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            display: block;
-            border: 2px solid #ccc;
-            border-radius: 50%;
-            background: white;
-            margin: 0 auto 10px auto;
-        }
-        .progressbar li.active:before,
-        .progressbar li.completed:before {
-            border-color: #007bff;
-            background: #007bff;
-            color: white;
-        }
-        .progressbar li:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: #ccc;
-            top: 15px;
-            left: -50%;
-            z-index: -1;
-        }
-        .progressbar li:first-child:after { content: none; }
-        .progressbar li.completed + li:after { background: #007bff; }
+            .progressbar {
+                display: flex;
+                justify-content: space-between;
+                counter-reset: step;
+                margin-bottom: 30px;
+                list-style-type: none;
+                padding: 0;
+            }
+            .progressbar li {
+                position: relative;
+                text-align: center;
+                flex: 1;
+                cursor: pointer;
+            }
+            .progressbar li:before {
+                content: counter(step);
+                counter-increment: step;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                display: block;
+                border: 2px solid #ccc;
+                border-radius: 50%;
+                background: white;
+                margin: 0 auto 10px auto;
+            }
+            .progressbar li.active:before,
+            .progressbar li.completed:before {
+                border-color: #007bff;
+                background: #007bff;
+                color: white;
+            }
+            .progressbar li:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                top: 15px;
+                left: -50%;
+                z-index: -1;
+            }
+            .progressbar li:first-child:after { content: none; }
+            .progressbar li.completed + li:after { background: #007bff; }
 
-        /* Hide steps by default */
-        .form-step { display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .form-step.active { display: block; opacity: 1; }
+            /* Hide steps by default */
+            .form-step { display: none; opacity: 0; transition: opacity 0.3s ease; }
+            .form-step.active { display: block; opacity: 1; }
 
-        .side-box {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            background: #f8f9fa;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .side-box h5 {
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .help-box {
-            margin-top: 20px;
-            border: 1px solid #e2e2e2;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            background: #fff;
-        }
-        .help-box a {
-            color: #007bff;
-            font-weight: 600;
-            text-decoration: none;
-        }
+            .side-box {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 20px;
+                background: #f8f9fa;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            }
+            .side-box h5 {
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            .help-box {
+                margin-top: 20px;
+                border: 1px solid #e2e2e2;
+                border-radius: 10px;
+                padding: 15px;
+                text-align: center;
+                background: #fff;
+            }
+            .help-box a {
+                color: #007bff;
+                font-weight: 600;
+                text-decoration: none;
+            }
 
-        .buttons {
-            display: flex;
-            justify-content: end;
-            gap: 8px;
-        }
+            .buttons {
+                display: flex;
+                justify-content: end;
+                gap: 8px;
+            }
 
-        .price-summary {
-            border-radius: 8px;
-            padding: 12px 15px;
-            background-color: #f8f9fa;
-            margin-top: 10px;
-            text-align: left;
-        }
-        .price-summary h6 {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .price-summary p {
-            margin-bottom: 5px;
-        }
+            .price-summary {
+                border-radius: 8px;
+                padding: 12px 15px;
+                background-color: #f8f9fa;
+                margin-top: 10px;
+                text-align: left;
+            }
+            .price-summary h6 {
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+            .price-summary p {
+                margin-bottom: 5px;
+            }
 
-        #confirmation_summary {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
+            #confirmation_summary {
+                max-width: 900px;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
 
-        .conf-row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
+            .conf-row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
 
-        .conf-row p {
-            width: 48%;
-            margin: 0;
-            word-break: break-word;
-        }
+            .conf-row p {
+                width: 48%;
+                margin: 0;
+                word-break: break-word;
+            }
 
-        .conf-row.full p {
-            width: 100%;
-        }
+            .conf-row.full p {
+                width: 100%;
+            }
 
-        #confirmation_summary strong {
-            color: #333;
-        }
+            #confirmation_summary strong {
+                color: #333;
+            }
 
-        #confirmation_summary span {
-            color: #555;
-        }
+            #confirmation_summary span {
+                color: #555;
+            }
 
-        #confirmation_summary ul {
-            margin: 0;
-            padding-left: 20px;
-        }
+            #confirmation_summary ul {
+                margin: 0;
+                padding-left: 20px;
+            }
 
-        #confirmation_summary li {
-            list-style-type: disc;
-        }
+            #confirmation_summary li {
+                list-style-type: disc;
+            }
 
-        .carousel-control-next , .carousel-control-prev {
-            height: fit-content;
-            top: 50%;
-            color: black;
-            background-color: black;
-            width: auto;
-        }
+            .carousel-control-next , .carousel-control-prev {
+                height: fit-content;
+                top: 50%;
+                color: black;
+                background-color: black;
+                width: auto;
+            }
         </style>
 
         <div class="row">
@@ -280,7 +280,7 @@ $output = <<<HTML
                  <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p style="font-size: 24px;"><strong>Total Price :</strong> $ <span id="trip_total">-</span></p>
+                    <p style="font-size: 24px;"><strong>Total Price :</strong> <span id="trip_total">-</span></p>
                 </div>
                 
                 <div class="side-box">
