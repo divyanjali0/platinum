@@ -5,6 +5,7 @@
         die('Invalid request.');
     }
 
+    $car_category = $_POST['car_category'] ?? '';
     $vehicle_id       = intval($_POST['car_id'] ?? 0);
     $pickup_location  = trim($_POST['pickup_location'] ?? '');
     $dropoff_location = trim($_POST['dropoff_location'] ?? '');
@@ -94,13 +95,13 @@
         // Save booking
         $stmt = $conn->prepare("
             INSERT INTO bookings 
-            (vehicle_id, pickup_location, dropoff_location, pickup_date, dropoff_date,
+            (vehicle_id, car_category, pickup_location, dropoff_location, pickup_date, dropoff_date,
             pickup_time, dropoff_time, trip_days, mileage,
             passenger_name, passenger_email, passenger_phone, flight_number, passengers,
             need_driver, need_license, passport_image, passport_image2, idp_image, total_price,
             addons, addon_quantities, booking_number, invoice_path, created_at)
             VALUES
-            (:vehicle_id, :pickup_location, :dropoff_location, :pickup_date, :dropoff_date,
+            (:vehicle_id, :car_category, :pickup_location, :dropoff_location, :pickup_date, :dropoff_date,
             :pickup_time, :dropoff_time, :trip_days, :mileage,
             :passenger_name, :passenger_email, :passenger_phone, :flight_number, :passengers,
             :need_driver, :need_license, :passport_image, :passport_image2, :idp_image, :total_price,
@@ -131,7 +132,8 @@
             ':addons' => json_encode(array_keys($addons_data)),
             ':addon_quantities' => $addons_json,
             ':booking_number' => $booking_number,
-            ':invoice_path' => $invoice_url
+            ':invoice_path' => $invoice_url,
+            ':car_category' => $car_category,
         ]);
 
         echo "<h3 style='color:green;'>✅ Booking Successful!</h3>";
