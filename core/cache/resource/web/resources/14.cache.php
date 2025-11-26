@@ -1084,7 +1084,7 @@ $output = <<<HTML
                  <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p style="font-size: 24px;"><strong>Total Price :</strong> <span id="trip_total">-</span></p>
+                    <p style="font-size: 24px;"><strong>Total Price :</strong> $ <span id="trip_total">-</span></p>
                 </div>
                 
                 <div class="side-box">
@@ -1391,6 +1391,9 @@ $output = <<<HTML
                     hidden.value = val;
                     this.appendChild(hidden);
                 });
+
+                // Also include total_price and duration
+                document.querySelector(\'#total_price\').value = document.getElementById(\'trip_total\').textContent;
             });
 
             document.addEventListener("DOMContentLoaded", () => {
@@ -1398,50 +1401,65 @@ $output = <<<HTML
                 const dropoffDateInput = document.getElementById(\'dropoff_date\');
                 const tripDaysEl = document.getElementById(\'trip_days\');
                 const tripTotalEl = document.getElementById(\'trip_total\');
-                const helpTotalEl = document.getElementById(\'help_total\');
+                const confTotalEl = document.getElementById(\'conf_total\');
+                const confDaysEl = document.getElementById(\'conf_days\');
+                const totalPriceInput = document.getElementById(\'total_price\');
                 const pricePerDay = parseFloat("{$price_per_day}");
 
                 function calculateTrip() {
-                    const pickupDate = new Date(pickupDateInput.value);
-                    const dropoffDate = new Date(dropoffDateInput.value);
-                    const helpTotalEl = document.getElementById(\'help_total\'); 
+                    const pickup = pickupDateInput.value;
+                    const dropoff = dropoffDateInput.value;
+                    if (!pickup || !dropoff) return;
 
-                    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
-                        // Calculate rental days
-                        const diffTime = dropoffDate - pickupDate;
-                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-                        if (days < 1) days = 1;
+                    const carCategory = "{$car_category}";
 
-                        // Base rental total
-                        let total = days * pricePerDay;
+                    fetch("get_rate.php?car_category=" + encodeURIComponent(carCategory) + 
+                        "&pickup_date=" + encodeURIComponent(pickup) +
+                        "&dropoff_date=" + encodeURIComponent(dropoff))            
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            tripDaysEl.textContent = \'-\';
+                            tripTotalEl.textContent = \'-\';
+                            confDaysEl.textContent = \'-\';
+                            confTotalEl.textContent = \'-\';
+                            totalPriceInput.value = \'\';
+                            return;
+                        }
 
-                        document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
+                        const days = data.requested_days;
+                        let total = data.total_price; // base car price
+
+                        // Add-ons calculation
+                        const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
+                        checkedAddons.forEach(cb => {
                             const addonPrice = parseFloat(cb.dataset.price || 0);
-                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
-                            const qty = parseInt(qtySelect?.value || 1);
+                            const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
                             total += addonPrice * qty * days;
                         });
 
-                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
-                        tripTotalEl.textContent = "$" + total.toFixed(2);
-                        if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
+                        // Update UI
+                        tripDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
+                        tripTotalEl.textContent = total.toFixed(2);
+                        confDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
+                        confTotalEl.textContent = \'$\' + total.toFixed(2);
 
-                    } else {
-                        tripDaysEl.textContent = "-";
-                        tripTotalEl.textContent = "-";
-                        if (helpTotalEl) helpTotalEl.textContent = "-";
-                    }
+                        // Update hidden input for form submission
+                        totalPriceInput.value = total.toFixed(2);
+                    });
                 }
 
-                // Calculate when date changes
+                // Recalculate when dates change
                 pickupDateInput.addEventListener(\'change\', calculateTrip);
                 dropoffDateInput.addEventListener(\'change\', calculateTrip);
 
-                calculateTrip();
-
+                // Recalculate when addons change
                 document.querySelectorAll(\'.addon-checkbox, .addon-qty\').forEach(el => {
                     el.addEventListener(\'change\', calculateTrip);
                 });
+
+                // Initial calculation on page load
+                calculateTrip();
             });
         </script>
 
@@ -1494,9 +1512,7 @@ $output = <<<HTML
             });
         </script>
 
-     <script src="assets/js/generate-pdf.js"></script>
-
-
+        <script src="assets/js/generate-pdf.js"></script>
 
         <script>
             function fillConfirmation() {
@@ -1546,40 +1562,10 @@ $output = <<<HTML
                     days = Math.ceil(diff / (1000 * 60 * 60 * 24));
                 }
 
-                let total = days * pricePerDay;
-
-                // Add-ons
-                const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
-                checkedAddons.forEach(cb => {
-                    const addonPrice = parseFloat(cb.dataset.price || 0);
-                    const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
-                    total += addonPrice * qty * days;
-                });
-
-                document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
+                // Use already calculated total from sidebar (API + addons)
+                const total = parseFloat(document.getElementById(\'trip_total\').textContent) || 0;
                 document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
-                document.getElementById(\'total_price\').value = total.toFixed(2); 
-
-                // const addonsList = document.getElementById(\'conf_addons\');
-                // addonsList.innerHTML = \'\';
-                // if (checkedAddons.length > 0) {
-                //     checkedAddons.forEach(cb => {
-                //         let label = cb.dataset.name;
-                //         if (!label || label.trim() === \'\') {
-                //         const labelEl = document.querySelector(\'label[for="\' + cb.id + \'"]\');
-                //         if (labelEl) label = labelEl.textContent.replace(/\\(.*?\\)/, \'\').trim();
-                //         else label = \'Unknown Add-on\';
-                //         }
-                //         const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
-                //         const price = parseFloat(cb.dataset.price || 0);
-                //         const lineTotal = (price * qty * days).toFixed(2);
-                //         const li = document.createElement(\'li\');
-                //         li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
-                //         addonsList.appendChild(li);
-                //     });
-                // } else {
-                //     addonsList.innerHTML = \'<li>No extras selected.</li>\';
-                // }
+                document.getElementById(\'total_price\').value = total.toFixed(2);
             }
         </script>
 
@@ -1966,7 +1952,7 @@ $output = <<<HTML
                  <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p style="font-size: 24px;"><strong>Total Price :</strong> <span id="trip_total">-</span></p>
+                    <p style="font-size: 24px;"><strong>Total Price :</strong> $ <span id="trip_total">-</span></p>
                 </div>
                 
                 <div class="side-box">
@@ -2273,6 +2259,9 @@ $output = <<<HTML
                     hidden.value = val;
                     this.appendChild(hidden);
                 });
+
+                // Also include total_price and duration
+                document.querySelector(\'#total_price\').value = document.getElementById(\'trip_total\').textContent;
             });
 
             document.addEventListener("DOMContentLoaded", () => {
@@ -2280,50 +2269,65 @@ $output = <<<HTML
                 const dropoffDateInput = document.getElementById(\'dropoff_date\');
                 const tripDaysEl = document.getElementById(\'trip_days\');
                 const tripTotalEl = document.getElementById(\'trip_total\');
-                const helpTotalEl = document.getElementById(\'help_total\');
+                const confTotalEl = document.getElementById(\'conf_total\');
+                const confDaysEl = document.getElementById(\'conf_days\');
+                const totalPriceInput = document.getElementById(\'total_price\');
                 const pricePerDay = parseFloat("{$price_per_day}");
 
                 function calculateTrip() {
-                    const pickupDate = new Date(pickupDateInput.value);
-                    const dropoffDate = new Date(dropoffDateInput.value);
-                    const helpTotalEl = document.getElementById(\'help_total\'); 
+                    const pickup = pickupDateInput.value;
+                    const dropoff = dropoffDateInput.value;
+                    if (!pickup || !dropoff) return;
 
-                    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
-                        // Calculate rental days
-                        const diffTime = dropoffDate - pickupDate;
-                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-                        if (days < 1) days = 1;
+                    const carCategory = "{$car_category}";
 
-                        // Base rental total
-                        let total = days * pricePerDay;
+                    fetch("get_rate.php?car_category=" + encodeURIComponent(carCategory) + 
+                        "&pickup_date=" + encodeURIComponent(pickup) +
+                        "&dropoff_date=" + encodeURIComponent(dropoff))            
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            tripDaysEl.textContent = \'-\';
+                            tripTotalEl.textContent = \'-\';
+                            confDaysEl.textContent = \'-\';
+                            confTotalEl.textContent = \'-\';
+                            totalPriceInput.value = \'\';
+                            return;
+                        }
 
-                        document.querySelectorAll(\'.addon-checkbox:checked\').forEach(cb => {
+                        const days = data.requested_days;
+                        let total = data.total_price; // base car price
+
+                        // Add-ons calculation
+                        const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
+                        checkedAddons.forEach(cb => {
                             const addonPrice = parseFloat(cb.dataset.price || 0);
-                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
-                            const qty = parseInt(qtySelect?.value || 1);
+                            const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
                             total += addonPrice * qty * days;
                         });
 
-                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
-                        tripTotalEl.textContent = "$" + total.toFixed(2);
-                        if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
+                        // Update UI
+                        tripDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
+                        tripTotalEl.textContent = total.toFixed(2);
+                        confDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
+                        confTotalEl.textContent = \'$\' + total.toFixed(2);
 
-                    } else {
-                        tripDaysEl.textContent = "-";
-                        tripTotalEl.textContent = "-";
-                        if (helpTotalEl) helpTotalEl.textContent = "-";
-                    }
+                        // Update hidden input for form submission
+                        totalPriceInput.value = total.toFixed(2);
+                    });
                 }
 
-                // Calculate when date changes
+                // Recalculate when dates change
                 pickupDateInput.addEventListener(\'change\', calculateTrip);
                 dropoffDateInput.addEventListener(\'change\', calculateTrip);
 
-                calculateTrip();
-
+                // Recalculate when addons change
                 document.querySelectorAll(\'.addon-checkbox, .addon-qty\').forEach(el => {
                     el.addEventListener(\'change\', calculateTrip);
                 });
+
+                // Initial calculation on page load
+                calculateTrip();
             });
         </script>
 
@@ -2376,9 +2380,7 @@ $output = <<<HTML
             });
         </script>
 
-     <script src="assets/js/generate-pdf.js"></script>
-
-
+        <script src="assets/js/generate-pdf.js"></script>
 
         <script>
             function fillConfirmation() {
@@ -2428,40 +2430,10 @@ $output = <<<HTML
                     days = Math.ceil(diff / (1000 * 60 * 60 * 24));
                 }
 
-                let total = days * pricePerDay;
-
-                // Add-ons
-                const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
-                checkedAddons.forEach(cb => {
-                    const addonPrice = parseFloat(cb.dataset.price || 0);
-                    const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
-                    total += addonPrice * qty * days;
-                });
-
-                document.getElementById(\'conf_days\').textContent = days + (days === 1 ? \' day\' : \' days\');
+                // Use already calculated total from sidebar (API + addons)
+                const total = parseFloat(document.getElementById(\'trip_total\').textContent) || 0;
                 document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
-                document.getElementById(\'total_price\').value = total.toFixed(2); 
-
-                // const addonsList = document.getElementById(\'conf_addons\');
-                // addonsList.innerHTML = \'\';
-                // if (checkedAddons.length > 0) {
-                //     checkedAddons.forEach(cb => {
-                //         let label = cb.dataset.name;
-                //         if (!label || label.trim() === \'\') {
-                //         const labelEl = document.querySelector(\'label[for="\' + cb.id + \'"]\');
-                //         if (labelEl) label = labelEl.textContent.replace(/\\(.*?\\)/, \'\').trim();
-                //         else label = \'Unknown Add-on\';
-                //         }
-                //         const qty = document.getElementById(\'addon_qty_\' + cb.value)?.value || \'1\';
-                //         const price = parseFloat(cb.dataset.price || 0);
-                //         const lineTotal = (price * qty * days).toFixed(2);
-                //         const li = document.createElement(\'li\');
-                //         li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
-                //         addonsList.appendChild(li);
-                //     });
-                // } else {
-                //     addonsList.innerHTML = \'<li>No extras selected.</li>\';
-                // }
+                document.getElementById(\'total_price\').value = total.toFixed(2);
             }
         </script>
 

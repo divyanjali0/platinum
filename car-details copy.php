@@ -1,34 +1,35 @@
-<?php  return '$pickup = $_SESSION[\'booking\'][\'pickup_location\'] ?? \'\';
-$dropoff = $_SESSION[\'booking\'][\'dropoff_location\'] ?? \'\';
-$pickup_date = $_SESSION[\'booking\'][\'pickup_date\'] ?? \'\';
-$pickup_time = $_SESSION[\'booking\'][\'pickup_time\'] ?? \'\';
-$dropoff_date = $_SESSION[\'booking\'][\'dropoff_date\'] ?? \'\';
-$dropoff_time = $_SESSION[\'booking\'][\'dropoff_time\'] ?? \'\';
+<?php
+$pickup = $_SESSION['booking']['pickup_location'] ?? '';
+$dropoff = $_SESSION['booking']['dropoff_location'] ?? '';
+$pickup_date = $_SESSION['booking']['pickup_date'] ?? '';
+$pickup_time = $_SESSION['booking']['pickup_time'] ?? '';
+$dropoff_date = $_SESSION['booking']['dropoff_date'] ?? '';
+$dropoff_time = $_SESSION['booking']['dropoff_time'] ?? '';
 
 if (!empty($pickup_date)) {
     $timestamp = strtotime($pickup_date);
-    if ($timestamp) $pickup_date = date(\'Y-m-d\', $timestamp);
+    if ($timestamp) $pickup_date = date('Y-m-d', $timestamp);
 }
 
 if (!empty($dropoff_date)) {
     $timestamp = strtotime($dropoff_date);
-    if ($timestamp) $dropoff_date = date(\'Y-m-d\', $timestamp);
+    if ($timestamp) $dropoff_date = date('Y-m-d', $timestamp);
 }
 
 if (!empty($pickup_time)) {
     $timestamp = strtotime($pickup_time);
-    if ($timestamp) $pickup_time = date(\'H:i\', $timestamp);
+    if ($timestamp) $pickup_time = date('H:i', $timestamp);
 }
 
 if (!empty($dropoff_time)) {
     $timestamp = strtotime($dropoff_time);
-    if ($timestamp) $dropoff_time = date(\'H:i\', $timestamp);
+    if ($timestamp) $dropoff_time = date('H:i', $timestamp);
 }
 
 
-include_once MODX_BASE_PATH . \'assets/includes/db_connect.php\';
+include_once MODX_BASE_PATH . 'assets/includes/db_connect.php';
 
-$car_category = isset($_GET[\'car_category\']) ? $_GET[\'car_category\'] : \'\';
+$car_category = isset($_GET['car_category']) ? $_GET['car_category'] : '';
 $car_category = rawurldecode($car_category);
 
 try {
@@ -49,12 +50,12 @@ try {
     $car = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($car) {
-        $price_per_day = $car[\'avg_price\']; 
-        $seats = $car[\'no_of_seats\'];
-        $luggages = $car[\'luggages\'];
-        $car_name = ucfirst($car[\'name\']);
-        $car_description = $car[\'description\'];
-        $car_image = $car[\'image\'];
+        $price_per_day = $car['avg_price']; 
+        $seats = $car['no_of_seats'];
+        $luggages = $car['luggages'];
+        $car_name = ucfirst($car['name']);
+        $car_description = $car['description'];
+        $car_image = $car['image'];
     }
 } catch (PDOException $e) {
     return "<p>?? Error loading car details: " . htmlspecialchars($e->getMessage()) . "</p>";
@@ -62,7 +63,7 @@ try {
 
 
 // Fetch add-ons from DB
-$addons_html = \'<div class="row" id="addons_section" style="margin-top:15px;"><div class="col-12"><h6 style="font-weight:600;">Available Add-ons</h6><div class="form-row">\';
+$addons_html = '<div class="row" id="addons_section" style="margin-top:15px;"><div class="col-12"><h6 style="font-weight:600;">Available Add-ons</h6><div class="form-row">';
 try {
     $stmt = $conn->prepare("SELECT id, name, price_per_day FROM addons ORDER BY name ASC");
     $stmt->execute();
@@ -70,36 +71,36 @@ try {
 
     if ($addons) {
         foreach ($addons as $addon) {
-            $addons_html .= \'
+            $addons_html .= '
             <div class="form-group col-md-6">
                 <div class="form-check d-flex align-items-center justify-content-around">
                     <div>
-                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_\' . $addon[\'id\'] . \'" name="addons[]" value="\' . $addon[\'id\'] . \'" data-name="\' . htmlspecialchars(trim($addon[\'name\']), ENT_QUOTES) . \'"data-price="\' . $addon[\'price_per_day\'] . \'">
-                        <label class="form-check-label" for="addon_\' . $addon[\'id\'] . \'">\'
-                            . htmlspecialchars($addon[\'name\']) . 
-                            \' (<strong>$\' . number_format($addon[\'price_per_day\'], 2) . \'</strong>/day)
+                        <input class="form-check-input addon-checkbox" type="checkbox" id="addon_' . $addon['id'] . '" name="addons[]" value="' . $addon['id'] . '" data-name="' . htmlspecialchars(trim($addon['name']), ENT_QUOTES) . '"data-price="' . $addon['price_per_day'] . '">
+                        <label class="form-check-label" for="addon_' . $addon['id'] . '">'
+                            . htmlspecialchars($addon['name']) . 
+                            ' (<strong>$' . number_format($addon['price_per_day'], 2) . '</strong>/day)
                         </label>
                     </div>
-                    <select class="form-control form-control-sm addon-qty" name="addon_qty[\' . $addon[\'id\'] . \']" id="addon_qty_\' . $addon[\'id\'] . \'" style="width:70px;" disabled>
+                    <select class="form-control form-control-sm addon-qty" name="addon_qty[' . $addon['id'] . ']" id="addon_qty_' . $addon['id'] . '" style="width:70px;" disabled>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                 </div>
-            </div>\';
+            </div>';
         }
     } else {
-        $addons_html .= \'<p>No add-ons available.</p>\';
+        $addons_html .= '<p>No add-ons available.</p>';
     }
 } catch (PDOException $e) {
-    $addons_html .= \'<p>Error loading add-ons.</p>\';
+    $addons_html .= '<p>Error loading add-ons.</p>';
 }
-$addons_html .= \'</div></div></div>\';
+$addons_html .= '</div></div></div>';
 
 // Build output using heredoc
 $output = <<<HTML
 <!-- Hero Section -->
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(\'assets/images/bg_3.jpg\');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('assets/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
@@ -127,150 +128,150 @@ $output = <<<HTML
         </div>
 
         <style>
-        .progressbar {
-            display: flex;
-            justify-content: space-between;
-            counter-reset: step;
-            margin-bottom: 30px;
-            list-style-type: none;
-            padding: 0;
-        }
-        .progressbar li {
-            position: relative;
-            text-align: center;
-            flex: 1;
-            cursor: pointer;
-        }
-        .progressbar li:before {
-            content: counter(step);
-            counter-increment: step;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            display: block;
-            border: 2px solid #ccc;
-            border-radius: 50%;
-            background: white;
-            margin: 0 auto 10px auto;
-        }
-        .progressbar li.active:before,
-        .progressbar li.completed:before {
-            border-color: #007bff;
-            background: #007bff;
-            color: white;
-        }
-        .progressbar li:after {
-            content: \'\';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: #ccc;
-            top: 15px;
-            left: -50%;
-            z-index: -1;
-        }
-        .progressbar li:first-child:after { content: none; }
-        .progressbar li.completed + li:after { background: #007bff; }
+            .progressbar {
+                display: flex;
+                justify-content: space-between;
+                counter-reset: step;
+                margin-bottom: 30px;
+                list-style-type: none;
+                padding: 0;
+            }
+            .progressbar li {
+                position: relative;
+                text-align: center;
+                flex: 1;
+                cursor: pointer;
+            }
+            .progressbar li:before {
+                content: counter(step);
+                counter-increment: step;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                display: block;
+                border: 2px solid #ccc;
+                border-radius: 50%;
+                background: white;
+                margin: 0 auto 10px auto;
+            }
+            .progressbar li.active:before,
+            .progressbar li.completed:before {
+                border-color: #007bff;
+                background: #007bff;
+                color: white;
+            }
+            .progressbar li:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                top: 15px;
+                left: -50%;
+                z-index: -1;
+            }
+            .progressbar li:first-child:after { content: none; }
+            .progressbar li.completed + li:after { background: #007bff; }
 
-        /* Hide steps by default */
-        .form-step { display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .form-step.active { display: block; opacity: 1; }
+            /* Hide steps by default */
+            .form-step { display: none; opacity: 0; transition: opacity 0.3s ease; }
+            .form-step.active { display: block; opacity: 1; }
 
-        .side-box {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            background: #f8f9fa;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .side-box h5 {
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .help-box {
-            margin-top: 20px;
-            border: 1px solid #e2e2e2;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            background: #fff;
-        }
-        .help-box a {
-            color: #007bff;
-            font-weight: 600;
-            text-decoration: none;
-        }
+            .side-box {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 20px;
+                background: #f8f9fa;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            }
+            .side-box h5 {
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            .help-box {
+                margin-top: 20px;
+                border: 1px solid #e2e2e2;
+                border-radius: 10px;
+                padding: 15px;
+                text-align: center;
+                background: #fff;
+            }
+            .help-box a {
+                color: #007bff;
+                font-weight: 600;
+                text-decoration: none;
+            }
 
-        .buttons {
-            display: flex;
-            justify-content: end;
-            gap: 8px;
-        }
+            .buttons {
+                display: flex;
+                justify-content: end;
+                gap: 8px;
+            }
 
-        .price-summary {
-            border-radius: 8px;
-            padding: 12px 15px;
-            background-color: #f8f9fa;
-            margin-top: 10px;
-            text-align: left;
-        }
-        .price-summary h6 {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .price-summary p {
-            margin-bottom: 5px;
-        }
+            .price-summary {
+                border-radius: 8px;
+                padding: 12px 15px;
+                background-color: #f8f9fa;
+                margin-top: 10px;
+                text-align: left;
+            }
+            .price-summary h6 {
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+            .price-summary p {
+                margin-bottom: 5px;
+            }
 
-        #confirmation_summary {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
+            #confirmation_summary {
+                max-width: 900px;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
 
-        .conf-row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
+            .conf-row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
 
-        .conf-row p {
-            width: 48%;
-            margin: 0;
-            word-break: break-word;
-        }
+            .conf-row p {
+                width: 48%;
+                margin: 0;
+                word-break: break-word;
+            }
 
-        .conf-row.full p {
-            width: 100%;
-        }
+            .conf-row.full p {
+                width: 100%;
+            }
 
-        #confirmation_summary strong {
-            color: #333;
-        }
+            #confirmation_summary strong {
+                color: #333;
+            }
 
-        #confirmation_summary span {
-            color: #555;
-        }
+            #confirmation_summary span {
+                color: #555;
+            }
 
-        #confirmation_summary ul {
-            margin: 0;
-            padding-left: 20px;
-        }
+            #confirmation_summary ul {
+                margin: 0;
+                padding-left: 20px;
+            }
 
-        #confirmation_summary li {
-            list-style-type: disc;
-        }
+            #confirmation_summary li {
+                list-style-type: disc;
+            }
 
-        .carousel-control-next , .carousel-control-prev {
-            height: fit-content;
-            top: 50%;
-            color: black;
-            background-color: black;
-            width: auto;
-        }
+            .carousel-control-next , .carousel-control-prev {
+                height: fit-content;
+                top: 50%;
+                color: black;
+                background-color: black;
+                width: auto;
+            }
         </style>
 
         <div class="row">
@@ -279,7 +280,7 @@ $output = <<<HTML
                  <div class="price-summary mt-3">
                     <h6>Trip Summary</h6>
                     <hr class="my-2">
-                    <p style="font-size: 24px;"><strong>Total Price :</strong> $ <span id="trip_total">-</span></p>
+                    <p style="font-size: 24px;"><strong>Total Price :</strong> <span id="trip_total">-</span></p>
                 </div>
                 
                 <div class="side-box">
@@ -368,7 +369,7 @@ $output = <<<HTML
                                         <p><strong>Seats:</strong> {$seats} | <strong>Luggages:</strong> {$luggages}</p>
                                     </div>
                                 </div>
-                                <p><strong>Price per Day :</strong> \\$ {$price_per_day}</p>
+                                <p><strong>Price per Day :</strong> \$ {$price_per_day}</p>
                             </div>
                         </div>
 
@@ -432,7 +433,7 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="need_license">Do you need a Driver\'s License? <span class="text-danger">*</span></label>
+                                <label for="need_license">Do you need a Driver's License? <span class="text-danger">*</span></label>
                                 <select class="form-control required-field" id="need_license" name="need_license">
                                     <option value="">Select</option>
                                     <option value="yes">Yes</option>
@@ -504,7 +505,7 @@ $output = <<<HTML
                                 <p><strong>Car:</strong> {$car_name}</p>
                             </div>
                             <div class="conf-row">
-                                <p><strong>Price/Day:</strong> \\$ {$price_per_day}</p>
+                                <p><strong>Price/Day:</strong> \$ {$price_per_day}</p>
                                 <p><strong>Seats:</strong> {$seats}</p>
                             </div>
                             <div class="conf-row">
@@ -556,139 +557,121 @@ $output = <<<HTML
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
         <script>
-            document.getElementById(\'need_driver\').addEventListener(\'change\', function() {
-                const needLicense = document.getElementById(\'need_license\');
-                const licenseUploads = document.getElementById(\'license_uploads\');
+            document.getElementById('need_driver').addEventListener('change', function() {
+                const needLicense = document.getElementById('need_license');
+                const licenseUploads = document.getElementById('license_uploads');
 
-                if (this.value === \'yes\') {
-                    needLicense.value = \'no\';
+                if (this.value === 'yes') {
+                    needLicense.value = 'no';
                     needLicense.disabled = true;
-                    licenseUploads.style.display = \'none\';
+                    licenseUploads.style.display = 'none';
                 } else {
                     // Enable license option again
                     needLicense.disabled = false;
                 }
             });
 
-            document.getElementById(\'need_license\').addEventListener(\'change\', function() {
-                const licenseUploads = document.getElementById(\'license_uploads\');
-                licenseUploads.style.display = (this.value === \'yes\') ? \'block\' : \'none\';
+            document.getElementById('need_license').addEventListener('change', function() {
+                const licenseUploads = document.getElementById('license_uploads');
+                licenseUploads.style.display = (this.value === 'yes') ? 'block' : 'none';
             });
         </script>
 
         <script>
-            document.querySelector(\'#multiStepForm\').addEventListener(\'submit\', function() {
-                [\'pickup_location\',\'dropoff_location\',\'pickup_date\',\'dropoff_date\',\'pickup_time\',\'dropoff_time\'].forEach(id => {
-                    const val = document.getElementById(id)?.value || \'\';
-                    let hidden = document.createElement(\'input\');
-                    hidden.type = \'hidden\';
+            document.querySelector('#multiStepForm').addEventListener('submit', function() {
+                ['pickup_location','dropoff_location','pickup_date','dropoff_date','pickup_time','dropoff_time'].forEach(id => {
+                    const val = document.getElementById(id)?.value || '';
+                    let hidden = document.createElement('input');
+                    hidden.type = 'hidden';
                     hidden.name = id;
                     hidden.value = val;
                     this.appendChild(hidden);
                 });
-
-                // Also include total_price and duration
-                document.querySelector(\'#total_price\').value = document.getElementById(\'trip_total\').textContent;
             });
 
             document.addEventListener("DOMContentLoaded", () => {
-                const pickupDateInput = document.getElementById(\'pickup_date\');
-                const dropoffDateInput = document.getElementById(\'dropoff_date\');
-                const tripDaysEl = document.getElementById(\'trip_days\');
-                const tripTotalEl = document.getElementById(\'trip_total\');
-                const confTotalEl = document.getElementById(\'conf_total\');
-                const confDaysEl = document.getElementById(\'conf_days\');
-                const totalPriceInput = document.getElementById(\'total_price\');
+                const pickupDateInput = document.getElementById('pickup_date');
+                const dropoffDateInput = document.getElementById('dropoff_date');
+                const tripDaysEl = document.getElementById('trip_days');
+                const tripTotalEl = document.getElementById('trip_total');
+                const helpTotalEl = document.getElementById('help_total');
                 const pricePerDay = parseFloat("{$price_per_day}");
 
                 function calculateTrip() {
-                    const pickup = pickupDateInput.value;
-                    const dropoff = dropoffDateInput.value;
-                    if (!pickup || !dropoff) return;
+                    const pickupDate = new Date(pickupDateInput.value);
+                    const dropoffDate = new Date(dropoffDateInput.value);
+                    const helpTotalEl = document.getElementById('help_total'); 
 
-                    const carCategory = "{$car_category}";
+                    if (pickupDateInput.value && dropoffDateInput.value && dropoffDate >= pickupDate) {
+                        // Calculate rental days
+                        const diffTime = dropoffDate - pickupDate;
+                        let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                        if (days < 1) days = 1;
 
-                    fetch("get_rate.php?car_category=" + encodeURIComponent(carCategory) + 
-                        "&pickup_date=" + encodeURIComponent(pickup) +
-                        "&dropoff_date=" + encodeURIComponent(dropoff))            
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.error) {
-                            tripDaysEl.textContent = \'-\';
-                            tripTotalEl.textContent = \'-\';
-                            confDaysEl.textContent = \'-\';
-                            confTotalEl.textContent = \'-\';
-                            totalPriceInput.value = \'\';
-                            return;
-                        }
+                        // Base rental total
+                        let total = days * pricePerDay;
 
-                        const days = data.requested_days;
-                        let total = data.total_price; // base car price
-
-                        // Add-ons calculation
-                        const checkedAddons = document.querySelectorAll(\'.addon-checkbox:checked\');
-                        checkedAddons.forEach(cb => {
+                        document.querySelectorAll('.addon-checkbox:checked').forEach(cb => {
                             const addonPrice = parseFloat(cb.dataset.price || 0);
-                            const qty = parseInt(document.getElementById(\'addon_qty_\' + cb.value)?.value || 1);
+                            const qtySelect = document.getElementById('addon_qty_' + cb.value);
+                            const qty = parseInt(qtySelect?.value || 1);
                             total += addonPrice * qty * days;
                         });
 
-                        // Update UI
-                        tripDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
-                        tripTotalEl.textContent = total.toFixed(2);
-                        confDaysEl.textContent = days + (days === 1 ? \' day\' : \' days\');
-                        confTotalEl.textContent = \'$\' + total.toFixed(2);
+                        tripDaysEl.textContent = days + (days === 1 ? " day" : " days");
+                        tripTotalEl.textContent = "$" + total.toFixed(2);
+                        if (helpTotalEl) helpTotalEl.textContent = "$" + total.toFixed(2);
 
-                        // Update hidden input for form submission
-                        totalPriceInput.value = total.toFixed(2);
-                    });
+                    } else {
+                        tripDaysEl.textContent = "-";
+                        tripTotalEl.textContent = "-";
+                        if (helpTotalEl) helpTotalEl.textContent = "-";
+                    }
                 }
 
-                // Recalculate when dates change
-                pickupDateInput.addEventListener(\'change\', calculateTrip);
-                dropoffDateInput.addEventListener(\'change\', calculateTrip);
+                // Calculate when date changes
+                pickupDateInput.addEventListener('change', calculateTrip);
+                dropoffDateInput.addEventListener('change', calculateTrip);
 
-                // Recalculate when addons change
-                document.querySelectorAll(\'.addon-checkbox, .addon-qty\').forEach(el => {
-                    el.addEventListener(\'change\', calculateTrip);
-                });
-
-                // Initial calculation on page load
                 calculateTrip();
+
+                document.querySelectorAll('.addon-checkbox, .addon-qty').forEach(el => {
+                    el.addEventListener('change', calculateTrip);
+                });
             });
         </script>
 
         <script>
-            document.getElementById(\'multiStepForm\').addEventListener(\'submit\', function(e){
+            document.getElementById('multiStepForm').addEventListener('submit', function(e){
                 e.preventDefault(); 
 
                 const form = this;
 
                 // Get total price
-                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'$\',\'\').trim();
-                document.getElementById(\'total_price\').value = totalPrice;
+                const totalPrice = document.getElementById('conf_total').textContent.replace('$','').trim();
+                document.getElementById('total_price').value = totalPrice;
 
                 const formData = new FormData(form);
 
                 // Send via AJAX
                 fetch(form.action, {
-                    method: \'POST\',
+                    method: 'POST',
                     body: formData
                 })
                 .then(response => response.text()) 
                 .then(data => {
                     // Show toast
-                    const toast = document.createElement(\'div\');
-                    toast.textContent = \'Booking Submitted Successfully!\';
-                    toast.style.background = \'#28a745\';
-                    toast.style.color = \'#fff\';
-                    toast.style.padding = \'10px 20px\';
-                    toast.style.borderRadius = \'5px\';
-                    toast.style.boxShadow = \'0 2px 5px rgba(0,0,0,0.2)\';
-                    toast.style.marginBottom = \'10px\';
-                    toast.style.opacity = \'0\';
-                    toast.style.transition = \'opacity 0.5s\';
-                    document.getElementById(\'toast_container\').appendChild(toast);
+                    const toast = document.createElement('div');
+                    toast.textContent = 'Booking Submitted Successfully!';
+                    toast.style.background = '#28a745';
+                    toast.style.color = '#fff';
+                    toast.style.padding = '10px 20px';
+                    toast.style.borderRadius = '5px';
+                    toast.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+                    toast.style.marginBottom = '10px';
+                    toast.style.opacity = '0';
+                    toast.style.transition = 'opacity 0.5s';
+                    document.getElementById('toast_container').appendChild(toast);
                     setTimeout(() => toast.style.opacity = 1, 10);
 
                     // Generate PDF using jsPDF
@@ -697,7 +680,7 @@ $output = <<<HTML
                     // Optional redirect after 2s
                     setTimeout(() => {
                         toast.style.opacity = 0;
-                        setTimeout(() => window.location.href = \'[[~2]]\', 500);
+                        setTimeout(() => window.location.href = '[[~2]]', 500);
                     }, 2000);
                 })
                 .catch(err => {
@@ -712,41 +695,41 @@ $output = <<<HTML
         <script>
             function fillConfirmation() {
                 const inputs = {
-                    pickup: document.getElementById(\'pickup_location\'),
-                    dropoff: document.getElementById(\'dropoff_location\'),
-                    pickupDate: document.getElementById(\'pickup_date\'),
-                    pickupTime: document.getElementById(\'pickup_time\'),
-                    dropoffDate: document.getElementById(\'dropoff_date\'),
-                    dropoffTime: document.getElementById(\'dropoff_time\'),
-                    name: document.getElementById(\'passenger_name\'),
-                    email: document.getElementById(\'passenger_email\'),
-                    phone: document.getElementById(\'passenger_phone\'),
-                    flight: document.getElementById(\'flight_number\'),
-                    mileage: document.getElementById(\'mileage\'),
-                    driver: document.getElementById(\'need_driver\'),
-                    license: document.getElementById(\'need_license\'),
-                    passengers: document.getElementById(\'num_passengers\'),
-                    other: document.getElementById(\'other_info\'),
+                    pickup: document.getElementById('pickup_location'),
+                    dropoff: document.getElementById('dropoff_location'),
+                    pickupDate: document.getElementById('pickup_date'),
+                    pickupTime: document.getElementById('pickup_time'),
+                    dropoffDate: document.getElementById('dropoff_date'),
+                    dropoffTime: document.getElementById('dropoff_time'),
+                    name: document.getElementById('passenger_name'),
+                    email: document.getElementById('passenger_email'),
+                    phone: document.getElementById('passenger_phone'),
+                    flight: document.getElementById('flight_number'),
+                    mileage: document.getElementById('mileage'),
+                    driver: document.getElementById('need_driver'),
+                    license: document.getElementById('need_license'),
+                    passengers: document.getElementById('num_passengers'),
+                    other: document.getElementById('other_info'),
                 };
 
                 const pricePerDay = parseFloat("{$price_per_day}");
 
                 // Fill trip details
-                document.getElementById(\'conf_pickup\').textContent = inputs.pickup.value || \'-\';
-                document.getElementById(\'conf_dropoff\').textContent = inputs.dropoff.value || \'-\';
-                document.getElementById(\'conf_pickup_date\').textContent = inputs.pickupDate.value || \'-\';
-                document.getElementById(\'conf_pickup_time\').textContent = inputs.pickupTime.value || \'-\';
-                document.getElementById(\'conf_dropoff_date\').textContent = inputs.dropoffDate.value || \'-\';
-                document.getElementById(\'conf_dropoff_time\').textContent = inputs.dropoffTime.value || \'-\';
-                document.getElementById(\'conf_name\').textContent = inputs.name.value || \'-\';
-                document.getElementById(\'conf_email\').textContent = inputs.email.value || \'-\';
-                document.getElementById(\'conf_phone\').textContent = inputs.phone.value || \'-\';
-                document.getElementById(\'conf_flight\').textContent = inputs.flight.value || \'-\';
-                document.getElementById(\'conf_mileage\').textContent = inputs.mileage.value || \'-\';
-                document.getElementById(\'conf_driver\').textContent = inputs.driver.value || \'-\';
-                document.getElementById(\'conf_license\').textContent = inputs.license.value || \'-\';
-                document.getElementById(\'conf_passengers\').textContent = inputs.passengers.value || \'-\';
-                document.getElementById(\'conf_other\').textContent = inputs.other.value || \'-\';
+                document.getElementById('conf_pickup').textContent = inputs.pickup.value || '-';
+                document.getElementById('conf_dropoff').textContent = inputs.dropoff.value || '-';
+                document.getElementById('conf_pickup_date').textContent = inputs.pickupDate.value || '-';
+                document.getElementById('conf_pickup_time').textContent = inputs.pickupTime.value || '-';
+                document.getElementById('conf_dropoff_date').textContent = inputs.dropoffDate.value || '-';
+                document.getElementById('conf_dropoff_time').textContent = inputs.dropoffTime.value || '-';
+                document.getElementById('conf_name').textContent = inputs.name.value || '-';
+                document.getElementById('conf_email').textContent = inputs.email.value || '-';
+                document.getElementById('conf_phone').textContent = inputs.phone.value || '-';
+                document.getElementById('conf_flight').textContent = inputs.flight.value || '-';
+                document.getElementById('conf_mileage').textContent = inputs.mileage.value || '-';
+                document.getElementById('conf_driver').textContent = inputs.driver.value || '-';
+                document.getElementById('conf_license').textContent = inputs.license.value || '-';
+                document.getElementById('conf_passengers').textContent = inputs.passengers.value || '-';
+                document.getElementById('conf_other').textContent = inputs.other.value || '-';
 
                 // Calculate trip days
                 const pickup = new Date(inputs.pickupDate.value);
@@ -757,50 +740,80 @@ $output = <<<HTML
                     days = Math.ceil(diff / (1000 * 60 * 60 * 24));
                 }
 
-                // Use already calculated total from sidebar (API + addons)
-                const total = parseFloat(document.getElementById(\'trip_total\').textContent) || 0;
-                document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
-                document.getElementById(\'total_price\').value = total.toFixed(2);
+                let total = days * pricePerDay;
+
+                // Add-ons
+                const checkedAddons = document.querySelectorAll('.addon-checkbox:checked');
+                checkedAddons.forEach(cb => {
+                    const addonPrice = parseFloat(cb.dataset.price || 0);
+                    const qty = parseInt(document.getElementById('addon_qty_' + cb.value)?.value || 1);
+                    total += addonPrice * qty * days;
+                });
+
+                document.getElementById('conf_days').textContent = days + (days === 1 ? ' day' : ' days');
+                document.getElementById('conf_total').textContent = '$' + total.toFixed(2);
+                document.getElementById('total_price').value = total.toFixed(2); 
+
+                // const addonsList = document.getElementById('conf_addons');
+                // addonsList.innerHTML = '';
+                // if (checkedAddons.length > 0) {
+                //     checkedAddons.forEach(cb => {
+                //         let label = cb.dataset.name;
+                //         if (!label || label.trim() === '') {
+                //         const labelEl = document.querySelector('label[for="' + cb.id + '"]');
+                //         if (labelEl) label = labelEl.textContent.replace(/\(.*?\)/, '').trim();
+                //         else label = 'Unknown Add-on';
+                //         }
+                //         const qty = document.getElementById('addon_qty_' + cb.value)?.value || '1';
+                //         const price = parseFloat(cb.dataset.price || 0);
+                //         const lineTotal = (price * qty * days).toFixed(2);
+                //         const li = document.createElement('li');
+                //         li.innerHTML = `${label} — <strong>Qty:</strong> ${qty} <strong>Total:</strong> $${lineTotal}`;
+                //         addonsList.appendChild(li);
+                //     });
+                // } else {
+                //     addonsList.innerHTML = '<li>No extras selected.</li>';
+                // }
             }
         </script>
 
         <script>
-            const steps = document.querySelectorAll(\'.form-step\');
-            const progressItems = document.querySelectorAll(\'.progressbar li\');
+            const steps = document.querySelectorAll('.form-step');
+            const progressItems = document.querySelectorAll('.progressbar li');
             let currentStep = 0;
 
             function showStep(step) {
                 steps.forEach((s, i) => {
-                    s.classList.toggle(\'active\', i === step);
-                    progressItems[i].classList.toggle(\'active\', i === step);
-                    progressItems[i].classList.toggle(\'completed\', i < step);
+                    s.classList.toggle('active', i === step);
+                    progressItems[i].classList.toggle('active', i === step);
+                    progressItems[i].classList.toggle('completed', i < step);
                 });
                 currentStep = step;
             }
 
             function validateStep(stepIndex) {
                 const step = steps[stepIndex];
-                const requiredFields = step.querySelectorAll(\'.required-field\');
+                const requiredFields = step.querySelectorAll('.required-field');
                 let valid = true;
 
                 requiredFields.forEach(field => {
                     if (!field.value.trim()) {
-                        field.classList.add(\'is-invalid\');
+                        field.classList.add('is-invalid');
                         valid = false;
                     } else {
-                        field.classList.remove(\'is-invalid\');
+                        field.classList.remove('is-invalid');
                     }
                 });
 
-                const errorBox = step.querySelector(\'#validation_error\');
-                if (errorBox) errorBox.style.display = valid ? \'none\' : \'block\';
+                const errorBox = step.querySelector('#validation_error');
+                if (errorBox) errorBox.style.display = valid ? 'none' : 'block';
 
                 return valid;
             }
 
-            document.querySelectorAll(\'.next-step\').forEach(btn => {
-                btn.addEventListener(\'click\', () => {
-                    const current = document.querySelector(\'.form-step.active\');
+            document.querySelectorAll('.next-step').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const current = document.querySelector('.form-step.active');
                     const nextStep = parseInt(current.dataset.step) + 1;
 
                     if (current.dataset.step === "3" && !validateStep(2)) {
@@ -810,8 +823,8 @@ $output = <<<HTML
                     showStep(nextStep - 1);
 
                     if (nextStep === 4) {
-                        document.querySelectorAll(\'.addon-checkbox\').forEach(cb => {
-                            const qtySelect = document.getElementById(\'addon_qty_\' + cb.value);
+                        document.querySelectorAll('.addon-checkbox').forEach(cb => {
+                            const qtySelect = document.getElementById('addon_qty_' + cb.value);
                             if (qtySelect) {
                                 qtySelect.disabled = !cb.checked;
                             }
@@ -821,22 +834,22 @@ $output = <<<HTML
                 });
             });
 
-            document.querySelectorAll(\'.prev-step\').forEach(btn => {
-                btn.addEventListener(\'click\', () => {
+            document.querySelectorAll('.prev-step').forEach(btn => {
+                btn.addEventListener('click', () => {
                     if (currentStep > 0) showStep(currentStep - 1);
                 });
             });
 
             // Make progress bar clickable
             progressItems.forEach((item, index) => {
-                item.addEventListener(\'click\', () => showStep(index));
+                item.addEventListener('click', () => showStep(index));
             });
 
             // License upload toggle
-            const needLicense = document.getElementById(\'need_license\');
-            const licenseUploads = document.getElementById(\'license_uploads\');
-            needLicense.addEventListener(\'change\', function() {
-                licenseUploads.style.display = (this.value === \'yes\') ? \'block\' : \'none\';
+            const needLicense = document.getElementById('need_license');
+            const licenseUploads = document.getElementById('license_uploads');
+            needLicense.addEventListener('change', function() {
+                licenseUploads.style.display = (this.value === 'yes') ? 'block' : 'none';
             });
 
             // Initialize
@@ -845,9 +858,9 @@ $output = <<<HTML
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                document.querySelectorAll(\'.addon-checkbox\').forEach(checkbox => {
-                    checkbox.addEventListener(\'change\', function() {
-                        const qtySelect = document.getElementById(\'addon_qty_\' + this.value);
+                document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        const qtySelect = document.getElementById('addon_qty_' + this.value);
                         if (qtySelect) {
                             qtySelect.disabled = !this.checked;
                         }
@@ -859,5 +872,3 @@ $output = <<<HTML
 HTML;
 
 return $output;
-return;
-';
