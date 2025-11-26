@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+
 require_once "assets/includes/db_connect.php";
 
 $car_category = $_GET['car_category'] ?? '';
@@ -17,20 +18,18 @@ try {
     $requested_days = $start->diff($end)->days;
     if ($requested_days < 1) $requested_days = 1;
 
-    // Fetch all rates for this car category and date range
+    // Fetch all rates for this car category
     $stmt = $conn->prepare("
         SELECT duration, rate
         FROM rental_rates
         WHERE car_category = ?
-        AND pickup_date <= ?
-        AND dropoff_date >= ?
         ORDER BY duration ASC
     ");
-    $stmt->execute([$car_category, $pickup_date, $dropoff_date]);
+    $stmt->execute([$car_category]);
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if (!$rows) {
-        echo json_encode(["error" => "No rates found for this car category in the selected dates"]);
+        echo json_encode(["error" => "No rates found for this car category"]);
         exit;
     }
 
@@ -44,8 +43,9 @@ try {
 
     $per_day = [];
     $total_price = 0;
-    $currentDate = clone $start;
 
+    // Build per-day rates with actual dates
+    $currentDate = clone $start;
     for ($day = 1; $day <= $requested_days; $day++) {
         $rate = $rates_per_day[$day] ?? $last_rate;
         $per_day[] = [
