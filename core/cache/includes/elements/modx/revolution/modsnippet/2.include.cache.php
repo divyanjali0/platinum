@@ -950,3 +950,4 @@ $output = <<<HTML
 HTML;
 
 return $output;
+return;
