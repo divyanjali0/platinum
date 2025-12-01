@@ -463,6 +463,11 @@ $output = <<<HTML
                             </div>
 
                             <div class="form-group col-md-6">
+                                <label for="num_luggages">Number of Luggages <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control required-field" id="num_luggages" name="num_luggages" min="1" value="1">
+                            </div>
+
+                            <div class="form-group col-md-6">
                                 <label for="other_info">Other Information</label>
                                 <input type="text" class="form-control" id="other_info" name="other_info" placeholder="Any notes...">
                             </div>
@@ -525,6 +530,7 @@ $output = <<<HTML
                             </div>
                             <div class="conf-row">
                                 <p><strong>Passengers:</strong> <span id="conf_passengers"></span></p>
+                                <p><strong>Luggages:</strong> <span id="conf_luggages"></span></p>
                                 <p><strong>Need Driver:</strong> <span id="conf_driver"></span></p>
                             </div>
                             <div class="conf-row">
@@ -662,50 +668,49 @@ $output = <<<HTML
 
         <script>
             function validateTripDetails() {
-    const pickup = document.getElementById(\'pickup_location\');
-    const dropoff = document.getElementById(\'dropoff_location\');
-    const pickupDate = document.getElementById(\'pickup_date\');
-    const dropoffDate = document.getElementById(\'dropoff_date\');
+                const pickup = document.getElementById(\'pickup_location\');
+                const dropoff = document.getElementById(\'dropoff_location\');
+                const pickupDate = document.getElementById(\'pickup_date\');
+                const dropoffDate = document.getElementById(\'dropoff_date\');
 
-    let valid = true;
+                let valid = true;
 
-    // Reset previous errors
-    [pickup, dropoff, pickupDate, dropoffDate].forEach(field => {
-        field.classList.remove(\'is-invalid\');
-    });
+                // Reset previous errors
+                [pickup, dropoff, pickupDate, dropoffDate].forEach(field => {
+                    field.classList.remove(\'is-invalid\');
+                });
 
-    if (!pickup.value.trim()) {
-        pickup.classList.add(\'is-invalid\');
-        valid = false;
-    }
-    if (!dropoff.value.trim()) {
-        dropoff.classList.add(\'is-invalid\');
-        valid = false;
-    }
-    if (!pickupDate.value) {
-        pickupDate.classList.add(\'is-invalid\');
-        valid = false;
-    }
-    if (!dropoffDate.value) {
-        dropoffDate.classList.add(\'is-invalid\');
-        valid = false;
-    }
+                if (!pickup.value.trim()) {
+                    pickup.classList.add(\'is-invalid\');
+                    valid = false;
+                }
+                if (!dropoff.value.trim()) {
+                    dropoff.classList.add(\'is-invalid\');
+                    valid = false;
+                }
+                if (!pickupDate.value) {
+                    pickupDate.classList.add(\'is-invalid\');
+                    valid = false;
+                }
+                if (!dropoffDate.value) {
+                    dropoffDate.classList.add(\'is-invalid\');
+                    valid = false;
+                }
 
-    // Date logic
-    if (pickupDate.value && dropoffDate.value) {
-        const d1 = new Date(pickupDate.value);
-        const d2 = new Date(dropoffDate.value);
+                // Date logic
+                if (pickupDate.value && dropoffDate.value) {
+                    const d1 = new Date(pickupDate.value);
+                    const d2 = new Date(dropoffDate.value);
 
-        if (d2 < d1) {
-            dropoffDate.classList.add(\'is-invalid\');
-            valid = false;
-        }
-    }
+                    if (d2 < d1) {
+                        dropoffDate.classList.add(\'is-invalid\');
+                        valid = false;
+                    }
+                }
 
-    return valid;
-}
-
-            </script>
+                return valid;
+            }
+        </script>
 
         <script>
             document.getElementById(\'multiStepForm\').addEventListener(\'submit\', function(e){
@@ -776,6 +781,7 @@ $output = <<<HTML
                     driver: document.getElementById(\'need_driver\'),
                     license: document.getElementById(\'need_license\'),
                     passengers: document.getElementById(\'num_passengers\'),
+                    luggages: document.getElementById(\'num_luggages\'),
                     other: document.getElementById(\'other_info\'),
                 };
 
@@ -796,6 +802,7 @@ $output = <<<HTML
                 document.getElementById(\'conf_driver\').textContent = inputs.driver.value || \'-\';
                 document.getElementById(\'conf_license\').textContent = inputs.license.value || \'-\';
                 document.getElementById(\'conf_passengers\').textContent = inputs.passengers.value || \'-\';
+                document.getElementById(\'conf_luggages\').textContent = inputs.luggages.value || \'-\';
                 document.getElementById(\'conf_other\').textContent = inputs.other.value || \'-\';
 
                 // Calculate trip days

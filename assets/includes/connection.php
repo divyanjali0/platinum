@@ -19,6 +19,7 @@
     $phone            = trim($_POST['passenger_phone'] ?? '');
     $flight           = trim($_POST['flight_number'] ?? '');
     $passengers       = intval($_POST['num_passengers'] ?? 1);
+    $luggages         = intval($_POST['num_luggages'] ?? 1);
     $need_driver      = $_POST['need_driver'] ?? 'no';
     $need_license     = $_POST['need_license'] ?? 'no';
     $other_info       = trim($_POST['other_info'] ?? '');
@@ -97,13 +98,13 @@
             INSERT INTO bookings 
             (vehicle_id, car_category, pickup_location, dropoff_location, pickup_date, dropoff_date,
             pickup_time, dropoff_time, trip_days, mileage,
-            passenger_name, passenger_email, passenger_phone, flight_number, passengers,
+            passenger_name, passenger_email, passenger_phone, flight_number, passengers, luggages,
             need_driver, need_license, passport_image, passport_image2, idp_image, total_price,
             addons, addon_quantities, booking_number, invoice_path, created_at)
             VALUES
             (:vehicle_id, :car_category, :pickup_location, :dropoff_location, :pickup_date, :dropoff_date,
             :pickup_time, :dropoff_time, :trip_days, :mileage,
-            :passenger_name, :passenger_email, :passenger_phone, :flight_number, :passengers,
+            :passenger_name, :passenger_email, :passenger_phone, :flight_number, :passengers, :luggages,
             :need_driver, :need_license, :passport_image, :passport_image2, :idp_image, :total_price,
             :addons, :addon_quantities, :booking_number, :invoice_path, NOW())
         ");
@@ -123,6 +124,7 @@
             ':passenger_phone' => $phone,
             ':flight_number' => $flight,
             ':passengers' => $passengers,
+            ':luggages' => $luggages,
             ':need_driver' => $need_driver,
             ':need_license' => $need_license,
             ':passport_image' => $passport_path,
