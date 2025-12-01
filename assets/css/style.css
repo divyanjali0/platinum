@@ -10541,3 +10541,81 @@ text-align: center;
         font-size: 28px;
       }
     }
+
+
+/* whatsapp stylings */
+.wa-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Popup */
+.wa-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+    z-index: 999999;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.wa-header {
+    background: #25D366;
+    color: white;
+    padding: 6px 14px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+font-weight:700;
+}
+
+.wa-header span {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wa-body {
+    padding: 12px;
+font-size:14px;
+}
+
+#wa-chat-input {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#wa-send-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 4px;
+    border: none;
+    background: #25D366;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}

@@ -754,6 +754,7 @@ $output = <<<HTML
                     console.error(err);
                 });
             });
+
         </script>
 
         <script src="assets/js/generate-pdf.js"></script>
@@ -910,11 +911,10 @@ $output = <<<HTML
             // });
 
             // Disable progress bar clicks
-progressItems.forEach(item => {
-    item.style.pointerEvents = "none";
-    item.style.cursor = "default";
-});
-
+            progressItems.forEach(item => {
+                item.style.pointerEvents = "none";
+                item.style.cursor = "default";
+            });
 
             // License upload toggle
             const needLicense = document.getElementById(\'need_license\');

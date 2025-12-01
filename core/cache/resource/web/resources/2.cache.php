@@ -208,6 +208,63 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <!-- WhatsApp Chat Popup starts -->
+<div id="whatsapp-chat-btn" class="wa-button">
+    <img src="assets/images/whatsapp-icon.png" class="img-fluid" style="width:30px">
+</div>
+
+<div id="whatsapp-chat-popup" class="wa-popup hidden">
+    <div class="wa-header">
+        <i class="bi bi-whatsapp"></i> Chat With Us
+        <span id="close-chat">×</span>
+    </div>
+
+    <div class="wa-body">
+        <p style="font-size:14px;">Hey! Looking to rent a car? We\'re here to help!</p>
+        <textarea id="wa-chat-input" placeholder="Type your message..." sty></textarea>
+        <button id="wa-send-btn">Send</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatBtn = document.getElementById("whatsapp-chat-btn");
+        const chatPopup = document.getElementById("whatsapp-chat-popup");
+        const closeChat = document.getElementById("close-chat");
+        const sendBtn = document.getElementById("wa-send-btn");
+        const messageBox = document.getElementById("wa-chat-input");
+        const phone = "94764428250";
+
+        // Open popup
+        chatBtn.addEventListener("click", () => {
+            chatPopup.classList.remove("hidden");
+        });
+
+        // Close popup
+        closeChat.addEventListener("click", () => {
+            chatPopup.classList.add("hidden");
+        });
+
+        // Send message
+        sendBtn.addEventListener("click", () => {
+            let msg = messageBox.value.trim();
+            if (!msg) msg = "Hello! I need more information ?";
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, "_blank");
+
+            messageBox.value = "";
+            chatPopup.classList.add("hidden");
+        });
+    });
+</script>
+<!-- WhatsApp Chat Popup ends -->
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
@@ -383,6 +440,63 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- WhatsApp Chat Popup starts -->
+<div id="whatsapp-chat-btn" class="wa-button">
+    <img src="assets/images/whatsapp-icon.png" class="img-fluid" style="width:30px">
+</div>
+
+<div id="whatsapp-chat-popup" class="wa-popup hidden">
+    <div class="wa-header">
+        <i class="bi bi-whatsapp"></i> Chat With Us
+        <span id="close-chat">×</span>
+    </div>
+
+    <div class="wa-body">
+        <p style="font-size:14px;">Hey! Looking to rent a car? We\'re here to help!</p>
+        <textarea id="wa-chat-input" placeholder="Type your message..." sty></textarea>
+        <button id="wa-send-btn">Send</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatBtn = document.getElementById("whatsapp-chat-btn");
+        const chatPopup = document.getElementById("whatsapp-chat-popup");
+        const closeChat = document.getElementById("close-chat");
+        const sendBtn = document.getElementById("wa-send-btn");
+        const messageBox = document.getElementById("wa-chat-input");
+        const phone = "94764428250";
+
+        // Open popup
+        chatBtn.addEventListener("click", () => {
+            chatPopup.classList.remove("hidden");
+        });
+
+        // Close popup
+        closeChat.addEventListener("click", () => {
+            chatPopup.classList.add("hidden");
+        });
+
+        // Send message
+        sendBtn.addEventListener("click", () => {
+            let msg = messageBox.value.trim();
+            if (!msg) msg = "Hello! I need more information ?";
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, "_blank");
+
+            messageBox.value = "";
+            chatPopup.classList.add("hidden");
+        });
+    });
+</script>
+<!-- WhatsApp Chat Popup ends -->
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 
 <script src="assets/js/jquery.min.js"></script>
@@ -698,6 +812,63 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <!-- WhatsApp Chat Popup starts -->
+<div id="whatsapp-chat-btn" class="wa-button">
+    <img src="assets/images/whatsapp-icon.png" class="img-fluid" style="width:30px">
+</div>
+
+<div id="whatsapp-chat-popup" class="wa-popup hidden">
+    <div class="wa-header">
+        <i class="bi bi-whatsapp"></i> Chat With Us
+        <span id="close-chat">×</span>
+    </div>
+
+    <div class="wa-body">
+        <p style="font-size:14px;">Hey! Looking to rent a car? We\'re here to help!</p>
+        <textarea id="wa-chat-input" placeholder="Type your message..." sty></textarea>
+        <button id="wa-send-btn">Send</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatBtn = document.getElementById("whatsapp-chat-btn");
+        const chatPopup = document.getElementById("whatsapp-chat-popup");
+        const closeChat = document.getElementById("close-chat");
+        const sendBtn = document.getElementById("wa-send-btn");
+        const messageBox = document.getElementById("wa-chat-input");
+        const phone = "94764428250";
+
+        // Open popup
+        chatBtn.addEventListener("click", () => {
+            chatPopup.classList.remove("hidden");
+        });
+
+        // Close popup
+        closeChat.addEventListener("click", () => {
+            chatPopup.classList.add("hidden");
+        });
+
+        // Send message
+        sendBtn.addEventListener("click", () => {
+            let msg = messageBox.value.trim();
+            if (!msg) msg = "Hello! I need more information ?";
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, "_blank");
+
+            messageBox.value = "";
+            chatPopup.classList.add("hidden");
+        });
+    });
+</script>
+<!-- WhatsApp Chat Popup ends -->
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
@@ -792,6 +963,63 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- WhatsApp Chat Popup starts -->
+<div id="whatsapp-chat-btn" class="wa-button">
+    <img src="assets/images/whatsapp-icon.png" class="img-fluid" style="width:30px">
+</div>
+
+<div id="whatsapp-chat-popup" class="wa-popup hidden">
+    <div class="wa-header">
+        <i class="bi bi-whatsapp"></i> Chat With Us
+        <span id="close-chat">×</span>
+    </div>
+
+    <div class="wa-body">
+        <p style="font-size:14px;">Hey! Looking to rent a car? We\'re here to help!</p>
+        <textarea id="wa-chat-input" placeholder="Type your message..." sty></textarea>
+        <button id="wa-send-btn">Send</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatBtn = document.getElementById("whatsapp-chat-btn");
+        const chatPopup = document.getElementById("whatsapp-chat-popup");
+        const closeChat = document.getElementById("close-chat");
+        const sendBtn = document.getElementById("wa-send-btn");
+        const messageBox = document.getElementById("wa-chat-input");
+        const phone = "94764428250";
+
+        // Open popup
+        chatBtn.addEventListener("click", () => {
+            chatPopup.classList.remove("hidden");
+        });
+
+        // Close popup
+        closeChat.addEventListener("click", () => {
+            chatPopup.classList.add("hidden");
+        });
+
+        // Send message
+        sendBtn.addEventListener("click", () => {
+            let msg = messageBox.value.trim();
+            if (!msg) msg = "Hello! I need more information ?";
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, "_blank");
+
+            messageBox.value = "";
+            chatPopup.classList.add("hidden");
+        });
+    });
+</script>
+<!-- WhatsApp Chat Popup ends -->
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 
 <script src="assets/js/jquery.min.js"></script>
@@ -911,7 +1139,7 @@ try {
                     </div>
                     <div class=\'d-flex mb-3\'>
                         <span class=\'cat\'>$description</span>
-                        <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
+                        <p class=\'price ml-auto\'>€ $price <span>/day</span></p>
                     </div>
                     <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
@@ -988,7 +1216,7 @@ try {
                     </div>
                     <div class=\'d-flex mb-3\'>
                         <span class=\'cat\'>$description</span>
-                        <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
+                        <p class=\'price ml-auto\'>€ $price <span>/day</span></p>
                     </div>
                     <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>

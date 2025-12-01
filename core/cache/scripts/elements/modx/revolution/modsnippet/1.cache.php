@@ -52,7 +52,7 @@ try {
                     </div>
                     <div class=\'d-flex mb-3\'>
                         <span class=\'cat\'>$description</span>
-                        <p class=\'price ml-auto\'>\\$ $price <span>/day</span></p>
+                        <p class=\'price ml-auto\'>€ $price <span>/day</span></p>
                     </div>
                     <p class=\'d-flex mb-0 d-block justify-content-center\'>
                         <a href=\'$detailsLink\' class=\'btn btn-primary py-2 mr-1\'>Book now</a>
