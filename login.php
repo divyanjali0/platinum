@@ -71,8 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     .login-card img {
         display: block;
-        margin: 0 auto 20px;
-        width: 100px;
+        margin: 0 auto 8px;
+        width: 150px;
         transition: transform 0.3s ease;
     }
     .login-card img:hover {
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <div class="login-card">
-    <img src="assets/images/logo1.png" alt="Logo">
+    <img src="assets/images/image.png" alt="Logo">
     <h4 class="text-center mb-4 text-dark fw-bold">Platinum Drive Login</h4>
 
     <!-- Session Messages -->
