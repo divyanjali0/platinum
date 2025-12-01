@@ -1752,7 +1752,7 @@ $output = <<<HTML
                 const form = this;
 
                 // Get total price
-                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'$\',\'\').trim();
+                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'€\',\'\').trim();
                 document.getElementById(\'total_price\').value = totalPrice;
 
                 const formData = new FormData(form);
@@ -1849,7 +1849,7 @@ $output = <<<HTML
 
                 // Use already calculated total from sidebar (API + addons)
                 const total = parseFloat(document.getElementById(\'trip_total\').textContent) || 0;
-                document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
+                document.getElementById(\'conf_total\').textContent = \'€\' + total.toFixed(2);
                 document.getElementById(\'total_price\').value = total.toFixed(2);
 
 
@@ -2711,7 +2711,7 @@ $output = <<<HTML
                 const form = this;
 
                 // Get total price
-                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'$\',\'\').trim();
+                const totalPrice = document.getElementById(\'conf_total\').textContent.replace(\'€\',\'\').trim();
                 document.getElementById(\'total_price\').value = totalPrice;
 
                 const formData = new FormData(form);
@@ -2808,7 +2808,7 @@ $output = <<<HTML
 
                 // Use already calculated total from sidebar (API + addons)
                 const total = parseFloat(document.getElementById(\'trip_total\').textContent) || 0;
-                document.getElementById(\'conf_total\').textContent = \'$\' + total.toFixed(2);
+                document.getElementById(\'conf_total\').textContent = \'€\' + total.toFixed(2);
                 document.getElementById(\'total_price\').value = total.toFixed(2);
 
 

@@ -20,6 +20,7 @@ function generatePDF() {
         phone: document.getElementById('conf_phone')?.textContent || '-',
         flight: document.getElementById('conf_flight')?.textContent || '-',
         passengers: document.getElementById('conf_passengers')?.textContent || '-',
+        luggages: document.getElementById('conf_luggages')?.textContent || '-',
         mileage: document.getElementById('conf_mileage')?.textContent || '-',
         driver: document.getElementById('conf_driver')?.textContent || '-',
         license: document.getElementById('conf_license')?.textContent || '-',
@@ -171,9 +172,16 @@ function finalizePDF(doc, conf, logo, gold, darkBlue) {
 
     let passengerLines = doc.splitTextToSize(`Passengers: ${conf.passengers}`, 55);
     doc.text(passengerLines, leftPX, py);
+
+    let luggageLines = doc.splitTextToSize(`Luggages: ${conf.luggages}`, 55);
+    doc.text(luggageLines, rightPX, py);
+
+    py += Math.max(passengerLines.length, luggageLines.length) * 4 + passengerSpacing;
+
     let mileageLines = doc.splitTextToSize(`Mileage: ${conf.mileage}`, 55);
     doc.text(mileageLines, rightPX, py);
-    py += Math.max(passengerLines.length, mileageLines.length) * 4 + passengerSpacing;
+    
+    py += Math.max(mileageLines.length) * 4 + passengerSpacing;
 
     let driverLines = doc.splitTextToSize(`Driver: ${conf.driver}`, 55);
     doc.text(driverLines, leftPX, py);
